@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type='text/xsl' href='MassDataHandlerLogFile.xsl'?>
+<LogFile titleName="PLCTags.xml" projectName="C:\Users\lutsk\OneDrive\Documents\Automation\PLCTags.xlsx" typeText="Type" messageText="Message" timeText="Time">
+  <LogEntry type="Error" dateTime="9:17:29 AM">
+    <Message>Error found while loading file C:\Users\lutsk\OneDrive\Documents\Automation\PLCTags.xlsx, the file may be in use or read-only.</Message>
+  </LogEntry>
+</LogFile>
