@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='ConversionLogFile.xsl'?>
+<LogFile projectName="PLC_Siemens1200" typeText="Type" messageText="Message" timeText="Time">
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="8/14/2025 9:22:50 AM">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Upgrade started" />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Information" Timestamp="8/14/2025 9:22:51 AM">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Project upgraded from Version: 1900.0.6801.3." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <MessageCell ServiceId="80" MessageId="30" MessageClass="Error" Timestamp="8/14/2025 9:22:52 AM">
+    <Number ServiceNumber="80" MessageNumber="30" />
+    <Text FeedbackText="Upgrade failed.&#xA;&#xA;For more information, see the log file. If the project still cannot be upgraded. please contact Siemens Customer Support." />
+    <Help HelpId="-1" />
+  </MessageCell>
+  <Details ServiceId="80" MessageId="30" Timestamp="8/14/2025 9:22:52 AM" Debug="false">
+    <Text>FS Server error: Reorganization failed in IntegrateFilePhase! RootCause: ReintegrationResult: Failed! Reason: It could not exchange the files, ErrorDetail: StorageController.Exchange: IOException occured: System.IO.IOException: Cannot create a file when that file already exists.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageReintegrationFileExchange.RenameFiles()
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageReintegrationFileExchange.Exchange()
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageController.Exchange(String temporaryFullPath, Int32 backupPreserveCount)
+   at Siemens.Automation.ObjectFrame.FileStorage.Client.DataStoreExceptionHandler.ServerExceptionWrapper(Exception ex)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Command.CommonRequestBase.HandleError(EventHandler`1 exceptionAction, StorageResponse response)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Command.CommonRequestBase.ExecuteForClient(Func`2 action, EventHandler`1 exceptionAction, IEncoderDecoder commandbuilder)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Ipc.IpcConnector.Execute(IStorageRequest request, EventHandler`1 exceptionAction)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Ipc.IpcConnector.SyncIpcConnector.Execute(IStorageRequest request, EventHandler`1 exceptionAction)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Client.BasicServerAccess.InternalExecuteCommand(StorageRequest request)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Client.BasicServerAccess.ExecuteCommand(StorageRequest request)
+   at Siemens.Automation.ObjectFrame.Private.ProviderExceptionHandler.ExecuteWithErrorHandler(Func`2 action, IStorageRequest request)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Client.StorageOperation.ExecuteCommand(StorageRequest request)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.Client.StorageOperation.Reorganize(String fullPath, Boolean force, Int32 processId, Boolean checkQualifyingParamter, Boolean throwExceptionOnError)
+   at Siemens.Automation.ObjectFrame.FileStorage.Client.DataStoreManager.Reorganize(String url, Boolean force, Boolean checkQualifyingParamter, Boolean throwExceptionOnError)
+   at Siemens.Automation.ObjectFrame.FileStorage.Client.Provider.Siemens.Automation.ObjectFrame.Data.IProvider.Reorganize(String url, Boolean force, Boolean checkQualifyingParamter, Boolean throwExceptionOnError)
+   at Siemens.Automation.ObjectFrame.Private.Configuration.CoreConfigurationData.DataProvider.ProviderWrapper.&lt;&gt;c__DisplayClass10_0.&lt;Reorganize&gt;b__0()
+   at Siemens.Automation.ObjectFrame.Private.Configuration.CoreConfigurationData.DataProvider.ProviderWrapper.ExceptionFunctionDecorator[T](Func`1 f)
+   at Siemens.Automation.ObjectFrame.Private.ProjectHandlingHelper.Reorganize(Boolean force, Boolean checkQualifyingParamter, Boolean throwExceptionOnError)
+   at Siemens.Automation.ObjectFrame.Conversion.ConversionHandler.ReorganizeConvertedProject()
+   at Siemens.Automation.ObjectFrame.Conversion.ConversionHandler.RunRepairPatch(Boolean runReorganisationBefore, DataIntegrityPatches patch, String title, String expectedResultText)
+   at Siemens.Automation.ObjectFrame.Conversion.ConversionHandler.Siemens.Automation.ObjectFrame.Conversion.IConversionHandler.RepairLostAndFoundCoreObjects()
+   at Siemens.Automation.ObjectFrame.Conversion.ConversionProcess.Repair(IConversionHandler conversionHandler, ICascadedProgress cascadedProgress)
+   at Siemens.Automation.ObjectFrame.Conversion.ConversionProcess.RepairAndUpgradeMeta(IConversionHandler conversionHandler, ICascadedProgress cascadedProgress)
+   at Siemens.Automation.ObjectFrame.Conversion.ConversionProcess.Run()</Text>
+  </Details>
+  <Details ServiceId="80" MessageId="30" Timestamp="8/14/2025 9:22:52 AM" Debug="false">
+    <Text>Reorganization failed in IntegrateFilePhase! RootCause: ReintegrationResult: Failed! Reason: It could not exchange the files, ErrorDetail: StorageController.Exchange: IOException occured: System.IO.IOException: Cannot create a file when that file already exists.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageReintegrationFileExchange.RenameFiles()
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageReintegrationFileExchange.Exchange()
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageController.Exchange(String temporaryFullPath, Int32 backupPreserveCount)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationTask.HandleReorganizationException(Boolean isThread, Boolean throwExceptionOnError, Exception ex, ReorganizationTaskState reorgTaskState, String&amp; reorgErrorMessage)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationTask.IntegrateFile(Boolean isThread, Boolean reintegration, Boolean upgradeToNewestMeta, String&amp; reorgErrorMessage, Boolean throwExceptionOnError)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationTask.ReorganizationProcess(Boolean isThread, Boolean throwExceptionOnError, String targetFullPath, Boolean updateMeta, Boolean updateCluster, Boolean ignorePreservedList, Boolean reintegration, ReorganizationTaskState&amp; phase, String&amp; reorgErrorMessage)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationTask.ExecuteReorganization(Boolean isThread, Boolean throwExceptionOnError, String targetFullPath, Boolean updateMeta)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationTask.Reorganize(String targetFullPath, Boolean upgradeToNewestMeta, Boolean throwExceptionOnError)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationTask.SyncReorganizationTask.Reorganize(String targetFullPath, Boolean upgradeToNewestMeta, Boolean throwExceptionOnError)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationService.Reorganize(Int32 storageId, IStorage storage, Boolean force, Boolean checkQualifyingParamter, Boolean throwExceptionOnError, String targetFullPath, Boolean upgradeToNewestMeta)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.CommandRouting.ServerAction.Reorganize(Int32 clientId, String fullPath, Boolean force, Boolean checkQualifyingParameter, Boolean throwExceptionOnError, String targetFullPath, Boolean upgradeToNewestMeta)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.CommandRouting.ServerAction.Siemens.Automation.ObjectFrame.Storage.Base.IStorageCommandVisitor&lt;Siemens.Automation.ObjectFrame.FileStorage.Base.Command.StorageResponse,Siemens.Automation.ObjectFrame.FileStorage.Base.Command.StorageRequest&gt;.OnReorganize(StorageRequest arg0)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.CommandRouting.Recorder.CommandExecuterRecordingDecorator.Execute(Byte[] requestBuffer, Int32 connectionId)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.CommandRouting.CommandExecuterPerformanceMonitoringDecorator.Execute(Byte[] requestBuffer, Int32 connectionId)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.CommandRouting.ServerEngineTarget.Execute(Byte[] requestBuff, Int32 connectionId)</Text>
+  </Details>
+  <Details ServiceId="80" MessageId="30" Timestamp="8/14/2025 9:22:52 AM" Debug="false">
+    <Text>ReintegrationResult: Failed! Reason: It could not exchange the files, ErrorDetail: StorageController.Exchange: IOException occured: System.IO.IOException: Cannot create a file when that file already exists.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageReintegrationFileExchange.RenameFiles()
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageReintegrationFileExchange.Exchange()
+   at Siemens.Automation.ObjectFrame.FileStorage.Base.IO.StorageController.Exchange(String temporaryFullPath, Int32 backupPreserveCount)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.CommandHandling.ReintegrationController.Execute(String temporaryFullPath, Offset offset, ClientsManager clientsManager, GlobalCommandBufferManager globalCommandBufferManager, FSSMemoryManager fssMemoryManager, Boolean isShrinkEnabled, Boolean runLowLevelInvestigationChecks, String&amp; reorgErrorMessage)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.CommandHandling.StorageData.ReIntegrate(String fullPath, Offset eof, Boolean upgradeToNewestMeta, String&amp; reorgErrorMessage, Boolean throwExceptionOnError, Boolean isShrinkEnabled, Boolean runLowLevelInvestigationChecks)
+   at Siemens.Automation.ObjectFrame.FileStorage.Server.ReOrganization.ReorganizationTask.IntegrateFile(Boolean isThread, Boolean reintegration, Boolean upgradeToNewestMeta, String&amp; reorgErrorMessage, Boolean throwExceptionOnError)</Text>
+  </Details>
+  <MessageCell ServiceId="Automation-ObjectFrame-Feedbacks" MessageId="ConversionInfoTabProjectFailed" MessageClass="Error" Timestamp="8/14/2025 9:22:52 AM">
+    <Number ServiceNumber="80" MessageNumber="33" />
+    <Text FeedbackText="Project 'C:\Users\lutsk\OneDrive\Рабочий стол\RCVProject\PLC_Siemens1200\System\PEData.plf' could not be upgraded." />
+    <Help HelpId="-1" HelpFile="" />
+  </MessageCell>
+</LogFile>
