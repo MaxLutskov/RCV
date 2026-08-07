@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:19.8859944Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="WaterCounter_InWater" Datatype="&quot;FlowCounter&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input" />
+        <Section Name="Output" />
+        <Section Name="InOut">
+          <Member Name="Pulse" Datatype="Bool" />
+          <Member Name="DailyCount" Datatype="DInt" />
+          <Member Name="TotalCount" Datatype="DInt" />
+          <Member Name="PulseWeight" Datatype="Real" />
+          <Member Name="Consumption" Datatype="Real" />
+          <Member Name="DailyValue" Datatype="Real" />
+          <Member Name="TotalValue" Datatype="Real" />
+        </Section>
+        <Section Name="Static">
+          <Member Name="R_TRIG_Instance" Datatype="R_TRIG" Version="1.0">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CLK" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Stat_Bit" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HourTimer" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PrevValue" Datatype="Real" />
+          <Member Name="TimeNow" Datatype="DTL" Version="1.0" />
+          <Member Name="TimeLast" Datatype="DTL" Version="1.0" />
+          <Member Name="Ret" Datatype="Int" />
+          <Member Name="TimeDif" Datatype="Time" />
+          <Member Name="FilterArr" Datatype="Array[0..3] of Real" />
+          <Member Name="i" Datatype="Int" />
+          <Member Name="NoFlowTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="WaterCounter_OutWater" Datatype="&quot;FlowCounter&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input" />
+        <Section Name="Output" />
+        <Section Name="InOut">
+          <Member Name="Pulse" Datatype="Bool" />
+          <Member Name="DailyCount" Datatype="DInt" />
+          <Member Name="TotalCount" Datatype="DInt" />
+          <Member Name="PulseWeight" Datatype="Real" />
+          <Member Name="Consumption" Datatype="Real" />
+          <Member Name="DailyValue" Datatype="Real" />
+          <Member Name="TotalValue" Datatype="Real" />
+        </Section>
+        <Section Name="Static">
+          <Member Name="R_TRIG_Instance" Datatype="R_TRIG" Version="1.0">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CLK" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Stat_Bit" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HourTimer" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PrevValue" Datatype="Real" />
+          <Member Name="TimeNow" Datatype="DTL" Version="1.0" />
+          <Member Name="TimeLast" Datatype="DTL" Version="1.0" />
+          <Member Name="Ret" Datatype="Int" />
+          <Member Name="TimeDif" Datatype="Time" />
+          <Member Name="FilterArr" Datatype="Array[0..3] of Real" />
+          <Member Name="i" Datatype="Int" />
+          <Member Name="NoFlowTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DelayTON" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="ChlorCounter_1" Datatype="&quot;FlowCounter&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input" />
+        <Section Name="Output" />
+        <Section Name="InOut">
+          <Member Name="Pulse" Datatype="Bool" />
+          <Member Name="DailyCount" Datatype="DInt" />
+          <Member Name="TotalCount" Datatype="DInt" />
+          <Member Name="PulseWeight" Datatype="Real" />
+          <Member Name="Consumption" Datatype="Real" />
+          <Member Name="DailyValue" Datatype="Real" />
+          <Member Name="TotalValue" Datatype="Real" />
+        </Section>
+        <Section Name="Static">
+          <Member Name="R_TRIG_Instance" Datatype="R_TRIG" Version="1.0">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CLK" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Stat_Bit" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HourTimer" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PrevValue" Datatype="Real" />
+          <Member Name="TimeNow" Datatype="DTL" Version="1.0" />
+          <Member Name="TimeLast" Datatype="DTL" Version="1.0" />
+          <Member Name="Ret" Datatype="Int" />
+          <Member Name="TimeDif" Datatype="Time" />
+          <Member Name="FilterArr" Datatype="Array[0..3] of Real" />
+          <Member Name="i" Datatype="Int" />
+          <Member Name="NoFlowTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="ChlorCounter_2" Datatype="&quot;FlowCounter&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input" />
+        <Section Name="Output" />
+        <Section Name="InOut">
+          <Member Name="Pulse" Datatype="Bool" />
+          <Member Name="DailyCount" Datatype="DInt" />
+          <Member Name="TotalCount" Datatype="DInt" />
+          <Member Name="PulseWeight" Datatype="Real" />
+          <Member Name="Consumption" Datatype="Real" />
+          <Member Name="DailyValue" Datatype="Real" />
+          <Member Name="TotalValue" Datatype="Real" />
+        </Section>
+        <Section Name="Static">
+          <Member Name="R_TRIG_Instance" Datatype="R_TRIG" Version="1.0">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CLK" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Stat_Bit" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HourTimer" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PrevValue" Datatype="Real" />
+          <Member Name="TimeNow" Datatype="DTL" Version="1.0" />
+          <Member Name="TimeLast" Datatype="DTL" Version="1.0" />
+          <Member Name="Ret" Datatype="Int" />
+          <Member Name="TimeDif" Datatype="Time" />
+          <Member Name="FilterArr" Datatype="Array[0..3] of Real" />
+          <Member Name="i" Datatype="Int" />
+          <Member Name="NoFlowTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>WaterCounter</Name>
+      <Namespace />
+      <Number>1</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="Call" UId="21">
+    <CallInfo UId="22" BlockType="FB" Name="FlowCounter">
+      <Instance Scope="LocalVariable" UId="23">
+        <Component Name="WaterCounter_InWater" UId="24" />
+      </Instance>
+      <Token Text="(" UId="25" />
+      <Parameter Name="Pulse" UId="26">
+        <Token Text=":=" UId="27" />
+        <Access Scope="GlobalVariable" UId="28">
+          <Symbol UId="29">
+            <Component Name="WaterCounterInPulse" UId="30">
+              <BooleanAttribute Name="HasQuotes" UId="31">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="32" />
+      <NewLine Num="1" UId="33" />
+      <Blank Num="22" UId="34" />
+      <Parameter Name="DailyCount" UId="35">
+        <Token Text=":=" UId="36" />
+        <Access Scope="GlobalVariable" UId="37">
+          <Symbol UId="38">
+            <Component Name="MB" UId="39">
+              <BooleanAttribute Name="HasQuotes" UId="40">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="41" />
+            <Component Name="Table" UId="42" />
+            <Token Text="." UId="43" />
+            <Component Name="WaterCounterIn_DailyCount" UId="44" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="45" />
+      <NewLine Num="1" UId="46" />
+      <Blank Num="22" UId="47" />
+      <Parameter Name="TotalCount" UId="48">
+        <Token Text=":=" UId="49" />
+        <Access Scope="GlobalVariable" UId="50">
+          <Symbol UId="51">
+            <Component Name="MB" UId="52">
+              <BooleanAttribute Name="HasQuotes" UId="53">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="54" />
+            <Component Name="Table" UId="55" />
+            <Token Text="." UId="56" />
+            <Component Name="WaterCounterIn_TotalCount" UId="57" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="58" />
+      <NewLine Num="1" UId="59" />
+      <Blank Num="22" UId="60" />
+      <Parameter Name="PulseWeight" UId="61">
+        <Token Text=":=" UId="62" />
+        <Access Scope="GlobalVariable" UId="63">
+          <Symbol UId="64">
+            <Component Name="MB" UId="65">
+              <BooleanAttribute Name="HasQuotes" UId="66">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="67" />
+            <Component Name="Table" UId="68" />
+            <Token Text="." UId="69" />
+            <Component Name="WaterCounterInPulseValue" UId="70" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="71" />
+      <NewLine Num="1" UId="72" />
+      <Blank Num="22" UId="73" />
+      <Parameter Name="Consumption" UId="74">
+        <Token Text=":=" UId="75" />
+        <Access Scope="GlobalVariable" UId="76">
+          <Symbol UId="77">
+            <Component Name="MB" UId="78">
+              <BooleanAttribute Name="HasQuotes" UId="79">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="80" />
+            <Component Name="Table" UId="81" />
+            <Token Text="." UId="82" />
+            <Component Name="WaterConsumption" UId="83" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="84" />
+      <NewLine Num="1" UId="85" />
+      <Blank Num="22" UId="86" />
+      <Parameter Name="DailyValue" UId="87">
+        <Token Text=":=" UId="88" />
+        <Access Scope="GlobalVariable" UId="89">
+          <Symbol UId="90">
+            <Component Name="MB" UId="91">
+              <BooleanAttribute Name="HasQuotes" UId="92">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="93" />
+            <Component Name="Table" UId="94" />
+            <Token Text="." UId="95" />
+            <Component Name="WaterCounterInDailyValue" UId="96" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="97" />
+      <NewLine Num="1" UId="98" />
+      <Blank Num="22" UId="99" />
+      <Parameter Name="TotalValue" UId="100">
+        <Token Text=":=" UId="101" />
+        <Access Scope="GlobalVariable" UId="102">
+          <Symbol UId="103">
+            <Component Name="MB" UId="104">
+              <BooleanAttribute Name="HasQuotes" UId="105">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="106" />
+            <Component Name="Table" UId="107" />
+            <Token Text="." UId="108" />
+            <Component Name="WaterCounterInTotalValue" UId="109" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="110" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="111" />
+  <NewLine Num="2" UId="112" />
+  <Access Scope="Call" UId="113">
+    <CallInfo UId="114" BlockType="FB" Name="FlowCounter">
+      <Instance Scope="LocalVariable" UId="115">
+        <Component Name="WaterCounter_OutWater" UId="116" />
+      </Instance>
+      <Token Text="(" UId="117" />
+      <Parameter Name="Pulse" UId="118">
+        <Blank Num="1" UId="119" />
+        <Token Text=":=" UId="120" />
+        <Blank Num="1" UId="121" />
+        <Access Scope="GlobalVariable" UId="122">
+          <Symbol UId="123">
+            <Component Name="WaterCounterOutPulse" UId="124">
+              <BooleanAttribute Name="HasQuotes" UId="125">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="126" />
+      <NewLine Num="1" UId="127" />
+      <Blank Num="23" UId="128" />
+      <Parameter Name="DailyCount" UId="129">
+        <Blank Num="1" UId="130" />
+        <Token Text=":=" UId="131" />
+        <Blank Num="1" UId="132" />
+        <Access Scope="GlobalVariable" UId="133">
+          <Symbol UId="134">
+            <Component Name="MB" UId="135">
+              <BooleanAttribute Name="HasQuotes" UId="136">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="137" />
+            <Component Name="Table" UId="138" />
+            <Token Text="." UId="139" />
+            <Component Name="WaterCounterOut_DailyCount" UId="140" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="141" />
+      <NewLine Num="1" UId="142" />
+      <Blank Num="23" UId="143" />
+      <Parameter Name="TotalCount" UId="144">
+        <Blank Num="1" UId="145" />
+        <Token Text=":=" UId="146" />
+        <Blank Num="1" UId="147" />
+        <Access Scope="GlobalVariable" UId="148">
+          <Symbol UId="149">
+            <Component Name="MB" UId="150">
+              <BooleanAttribute Name="HasQuotes" UId="151">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="152" />
+            <Component Name="Table" UId="153" />
+            <Token Text="." UId="154" />
+            <Component Name="WaterCounterOut_TotalCount" UId="155" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="156" />
+      <NewLine Num="1" UId="157" />
+      <Blank Num="23" UId="158" />
+      <Parameter Name="PulseWeight" UId="159">
+        <Blank Num="1" UId="160" />
+        <Token Text=":=" UId="161" />
+        <Blank Num="1" UId="162" />
+        <Access Scope="GlobalVariable" UId="163">
+          <Symbol UId="164">
+            <Component Name="MB" UId="165">
+              <BooleanAttribute Name="HasQuotes" UId="166">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="167" />
+            <Component Name="Table" UId="168" />
+            <Token Text="." UId="169" />
+            <Component Name="WaterCounterOut_PulseValue" UId="170" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="171" />
+      <NewLine Num="1" UId="172" />
+      <Blank Num="23" UId="173" />
+      <Parameter Name="Consumption" UId="174">
+        <Blank Num="1" UId="175" />
+        <Token Text=":=" UId="176" />
+        <Blank Num="1" UId="177" />
+        <Access Scope="GlobalVariable" UId="178">
+          <Symbol UId="179">
+            <Component Name="MB" UId="180">
+              <BooleanAttribute Name="HasQuotes" UId="181">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="182" />
+            <Component Name="Table" UId="183" />
+            <Token Text="." UId="184" />
+            <Component Name="WaterCounterOut_Consumption" UId="185" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="186" />
+      <NewLine Num="1" UId="187" />
+      <Blank Num="23" UId="188" />
+      <Parameter Name="DailyValue" UId="189">
+        <Blank Num="1" UId="190" />
+        <Token Text=":=" UId="191" />
+        <Blank Num="1" UId="192" />
+        <Access Scope="GlobalVariable" UId="193">
+          <Symbol UId="194">
+            <Component Name="MB" UId="195">
+              <BooleanAttribute Name="HasQuotes" UId="196">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="197" />
+            <Component Name="Table" UId="198" />
+            <Token Text="." UId="199" />
+            <Component Name="WaterCounterOut_DailyValue" UId="200" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="201" />
+      <NewLine Num="1" UId="202" />
+      <Blank Num="23" UId="203" />
+      <Parameter Name="TotalValue" UId="204">
+        <Blank Num="1" UId="205" />
+        <Token Text=":=" UId="206" />
+        <Blank Num="1" UId="207" />
+        <Access Scope="GlobalVariable" UId="208">
+          <Symbol UId="209">
+            <Component Name="MB" UId="210">
+              <BooleanAttribute Name="HasQuotes" UId="211">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="212" />
+            <Component Name="Table" UId="213" />
+            <Token Text="." UId="214" />
+            <Component Name="WaterCounterOut_TotalValue" UId="215" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="216" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="217" />
+  <NewLine Num="2" UId="218" />
+  <Token Text="IF" UId="219" />
+  <Blank Num="1" UId="220" />
+  <Access Scope="LocalVariable" UId="221">
+    <Symbol UId="222">
+      <Component Name="WaterCounter_OutWater" UId="223" />
+      <Token Text="." UId="224" />
+      <Component Name="R_TRIG_Instance" UId="225" />
+      <Token Text="." UId="226" />
+      <Component Name="Q" UId="227" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="228" />
+  <Token Text="THEN" UId="229" />
+  <NewLine Num="1" UId="230" />
+  <Blank Num="4" UId="231" />
+  <Access Scope="GlobalVariable" UId="232">
+    <Symbol UId="233">
+      <Component Name="Config" UId="234">
+        <BooleanAttribute Name="HasQuotes" UId="235">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="236" />
+      <Component Name="WaterPulseDuble" UId="237" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="238" />
+  <Token Text=":=" UId="239" />
+  <Blank Num="1" UId="240" />
+  <Access Scope="LiteralConstant" UId="241">
+    <Constant UId="242">
+      <ConstantValue UId="244">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="245" />
+  <NewLine Num="1" UId="246" />
+  <Token Text="END_IF" UId="247" />
+  <Token Text=";" UId="248" />
+  <NewLine Num="4" UId="249" />
+  <Token Text="IF" UId="250" />
+  <Blank Num="1" UId="251" />
+  <Token Text="NOT" UId="252" />
+  <Blank Num="1" UId="253" />
+  <Access Scope="GlobalVariable" UId="254">
+    <Symbol UId="255">
+      <Component Name="MB" UId="256">
+        <BooleanAttribute Name="HasQuotes" UId="257">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="258" />
+      <Component Name="Table" UId="259" />
+      <Token Text="." UId="260" />
+      <Component Name="Chloration_ChooseCounter" UId="261" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="262" />
+  <Token Text="THEN" UId="263" />
+  <NewLine Num="1" UId="264" />
+  <Blank Num="4" UId="265" />
+  <Access Scope="GlobalVariable" UId="266">
+    <Symbol UId="267">
+      <Component Name="ChlorationOut" UId="268">
+        <BooleanAttribute Name="HasQuotes" UId="269">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="270" />
+  <Token Text=":=" UId="271" />
+  <Blank Num="1" UId="272" />
+  <Access Scope="GlobalVariable" UId="273">
+    <Symbol UId="274">
+      <Component Name="WaterCounterOutPulse" UId="275">
+        <BooleanAttribute Name="HasQuotes" UId="276">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="277" />
+  <NewLine Num="1" UId="278" />
+  <Token Text="ELSE" UId="279" />
+  <NewLine Num="1" UId="280" />
+  <Blank Num="4" UId="281" />
+  <Access Scope="GlobalVariable" UId="282">
+    <Symbol UId="283">
+      <Component Name="ChlorationOut" UId="284">
+        <BooleanAttribute Name="HasQuotes" UId="285">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="286" />
+  <Token Text=":=" UId="287" />
+  <Blank Num="1" UId="288" />
+  <Access Scope="GlobalVariable" UId="289">
+    <Symbol UId="290">
+      <Component Name="WaterCounterInPulse" UId="291">
+        <BooleanAttribute Name="HasQuotes" UId="292">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="293" />
+  <NewLine Num="1" UId="294" />
+  <Token Text="END_IF" UId="295" />
+  <Token Text=";" UId="296" />
+  <NewLine Num="2" UId="297" />
+  <Token Text="IF" UId="298" />
+  <Blank Num="1" UId="299" />
+  <Access Scope="GlobalVariable" UId="300">
+    <Symbol UId="301">
+      <Component Name="MB" UId="302">
+        <BooleanAttribute Name="HasQuotes" UId="303">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="304" />
+      <Component Name="Table" UId="305" />
+      <Token Text="." UId="306" />
+      <Component Name="WaterCounterOut_Consumption" UId="307" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="308" />
+  <Token Text="&lt;" UId="309" />
+  <Blank Num="1" UId="310" />
+  <Access Scope="LiteralConstant" UId="311">
+    <Constant UId="312">
+      <ConstantValue UId="314">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="315" />
+  <Token Text="THEN" UId="316" />
+  <NewLine Num="1" UId="317" />
+  <Blank Num="4" UId="318" />
+  <Access Scope="GlobalVariable" UId="319">
+    <Symbol UId="320">
+      <Component Name="FlowAO" UId="321">
+        <BooleanAttribute Name="HasQuotes" UId="322">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="323" />
+  <Token Text=":=" UId="324" />
+  <Blank Num="1" UId="325" />
+  <Access Scope="LiteralConstant" UId="326">
+    <Constant UId="327">
+      <ConstantValue UId="329">5520</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="330" />
+  <NewLine Num="1" UId="331" />
+  <Token Text="ELSIF" UId="332" />
+  <Blank Num="1" UId="333" />
+  <Access Scope="GlobalVariable" UId="334">
+    <Symbol UId="335">
+      <Component Name="MB" UId="336">
+        <BooleanAttribute Name="HasQuotes" UId="337">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="338" />
+      <Component Name="Table" UId="339" />
+      <Token Text="." UId="340" />
+      <Component Name="WaterCounterOut_Consumption" UId="341" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="342" />
+  <Token Text="&gt;" UId="343" />
+  <Blank Num="1" UId="344" />
+  <Access Scope="LiteralConstant" UId="345">
+    <Constant UId="346">
+      <ConstantValue UId="348">80.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="349" />
+  <Token Text="THEN" UId="350" />
+  <NewLine Num="1" UId="351" />
+  <Blank Num="4" UId="352" />
+  <Access Scope="GlobalVariable" UId="353">
+    <Symbol UId="354">
+      <Component Name="FlowAO" UId="355">
+        <BooleanAttribute Name="HasQuotes" UId="356">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="357" />
+  <Token Text=":=" UId="358" />
+  <Blank Num="1" UId="359" />
+  <Access Scope="LiteralConstant" UId="360">
+    <Constant UId="361">
+      <ConstantValue UId="363">27648</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="364" />
+  <NewLine Num="1" UId="365" />
+  <Token Text="ELSE" UId="366" />
+  <NewLine Num="1" UId="367" />
+  <Blank Num="4" UId="368" />
+  <Access Scope="GlobalVariable" UId="369">
+    <Symbol UId="370">
+      <Component Name="FlowAO" UId="371">
+        <BooleanAttribute Name="HasQuotes" UId="372">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="373" />
+  <Token Text=":=" UId="374" />
+  <Blank Num="1" UId="375" />
+  <Access Scope="Call" UId="376">
+    <Instruction Name="REAL_TO_INT" UId="377">
+      <Token Text="(" UId="378" />
+      <NamelessParameter UId="379">
+        <Token Text="(" UId="380" />
+        <Access Scope="GlobalVariable" UId="381">
+          <Symbol UId="382">
+            <Component Name="MB" UId="383">
+              <BooleanAttribute Name="HasQuotes" UId="384">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="385" />
+            <Component Name="Table" UId="386" />
+            <Token Text="." UId="387" />
+            <Component Name="WaterCounterOut_Consumption" UId="388" />
+          </Symbol>
+        </Access>
+        <Token Text=")" UId="389" />
+        <Blank Num="1" UId="390" />
+        <Token Text="/" UId="391" />
+        <Blank Num="1" UId="392" />
+        <Token Text="(" UId="393" />
+        <Access Scope="LiteralConstant" UId="394">
+          <Constant UId="395">
+            <ConstantValue UId="397">80</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text=")" UId="398" />
+        <Blank Num="1" UId="399" />
+        <Token Text="*" UId="400" />
+        <Blank Num="1" UId="401" />
+        <Token Text="(" UId="402" />
+        <Access Scope="LiteralConstant" UId="403">
+          <Constant UId="404">
+            <ConstantValue UId="406">27648</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="407" />
+        <Token Text="-" UId="408" />
+        <Blank Num="1" UId="409" />
+        <Access Scope="LiteralConstant" UId="410">
+          <Constant UId="411">
+            <ConstantValue UId="413">5520</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text=")" UId="414" />
+        <Blank Num="1" UId="415" />
+        <Token Text="+" UId="416" />
+        <Blank Num="1" UId="417" />
+        <Access Scope="LiteralConstant" UId="418">
+          <Constant UId="419">
+            <ConstantValue UId="421">5520</ConstantValue>
+          </Constant>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="423" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="424" />
+  <NewLine Num="1" UId="425" />
+  <Token Text="END_IF" UId="426" />
+  <Token Text=";" UId="427" />
+  <NewLine Num="2" UId="428" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="429">
+    <Text UId="430"> IF "MB".Table.WaterConsumption &lt; 0 THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="431" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="432">
+    <Text UId="433">     "OsmosAO" := 5520;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="434" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="435">
+    <Text UId="436"> ELSIF "MB".Table.WaterConsumption &gt; 80.0 THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="437" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="438">
+    <Text UId="439">     "OsmosAO" := 27648;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="440" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="441">
+    <Text UId="442"> ELSE</Text>
+  </LineComment>
+  <NewLine Num="1" UId="443" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="444">
+    <Text UId="445">     "OsmosAO" := REAL_TO_INT(("MB".Table.WaterConsumption - "MB".Table.RecerculationFlow) / (80) * (27648 - 5520) + 5520);</Text>
+  </LineComment>
+  <NewLine Num="1" UId="446" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="447">
+    <Text UId="448"> END_IF;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="449" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="450">
+    <Text UId="451"> "MB".Table.FlowWithouRecerculation := "MB".Table.WaterConsumption - "MB".Table.RecerculationFlow;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="452" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="453">
+    <Text UId="454"> IF "MB".Table.FlowWithouRecerculation &lt; 0 THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="455" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="456">
+    <Text UId="457">     "MB".Table.FlowWithouRecerculation := 0;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="458" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="459">
+    <Text UId="460"> END_IF;</Text>
+  </LineComment>
+  <NewLine Num="3" UId="461" />
+  <Access Scope="Call" UId="462">
+    <CallInfo UId="463" BlockType="FB" Name="FlowCounter">
+      <Instance Scope="LocalVariable" UId="464">
+        <Component Name="ChlorCounter_1" UId="465" />
+      </Instance>
+      <Token Text="(" UId="466" />
+      <Parameter Name="Pulse" UId="467">
+        <Token Text=":=" UId="468" />
+        <Access Scope="GlobalVariable" UId="469">
+          <Symbol UId="470">
+            <Component Name="Doser1" UId="471">
+              <BooleanAttribute Name="HasQuotes" UId="472">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="473" />
+      <NewLine Num="1" UId="474" />
+      <Blank Num="16" UId="475" />
+      <Parameter Name="DailyCount" UId="476">
+        <Token Text=":=" UId="477" />
+        <Access Scope="GlobalVariable" UId="478">
+          <Symbol UId="479">
+            <Component Name="MB" UId="480">
+              <BooleanAttribute Name="HasQuotes" UId="481">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="482" />
+            <Component Name="Table" UId="483" />
+            <Token Text="." UId="484" />
+            <Component Name="Doser1_DailyPulses" UId="485" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="486" />
+      <NewLine Num="1" UId="487" />
+      <Blank Num="16" UId="488" />
+      <Parameter Name="TotalCount" UId="489">
+        <Token Text=":=" UId="490" />
+        <Access Scope="GlobalVariable" UId="491">
+          <Symbol UId="492">
+            <Component Name="MB" UId="493">
+              <BooleanAttribute Name="HasQuotes" UId="494">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="495" />
+            <Component Name="Table" UId="496" />
+            <Token Text="." UId="497" />
+            <Component Name="Doser1_TotalPulses" UId="498" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="499" />
+      <NewLine Num="1" UId="500" />
+      <Blank Num="15" UId="501" />
+      <Parameter Name="PulseWeight" UId="502">
+        <Token Text=":=" UId="503" />
+        <Access Scope="GlobalVariable" UId="504">
+          <Symbol UId="505">
+            <Component Name="MB" UId="506">
+              <BooleanAttribute Name="HasQuotes" UId="507">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="508" />
+            <Component Name="Table" UId="509" />
+            <Token Text="." UId="510" />
+            <Component Name="Doser1_PulseValue" UId="511" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="512" />
+      <NewLine Num="1" UId="513" />
+      <Blank Num="15" UId="514" />
+      <Parameter Name="Consumption" UId="515">
+        <Blank Num="1" UId="516" />
+        <Token Text=":=" UId="517" />
+        <Blank Num="1" UId="518" />
+        <Access Scope="GlobalVariable" UId="519">
+          <Symbol UId="520">
+            <Component Name="MB" UId="521">
+              <BooleanAttribute Name="HasQuotes" UId="522">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="523" />
+            <Component Name="Table" UId="524" />
+            <Token Text="." UId="525" />
+            <Component Name="Doser1_Cunsumption" UId="526" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="527" />
+      <NewLine Num="1" UId="528" />
+      <Blank Num="15" UId="529" />
+      <Parameter Name="DailyValue" UId="530">
+        <Token Text=":=" UId="531" />
+        <Access Scope="GlobalVariable" UId="532">
+          <Symbol UId="533">
+            <Component Name="MB" UId="534">
+              <BooleanAttribute Name="HasQuotes" UId="535">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="536" />
+            <Component Name="Table" UId="537" />
+            <Token Text="." UId="538" />
+            <Component Name="Doser1_DailyValue" UId="539" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="540" />
+      <NewLine Num="1" UId="541" />
+      <Blank Num="15" UId="542" />
+      <Parameter Name="TotalValue" UId="543">
+        <Token Text=":=" UId="544" />
+        <Access Scope="GlobalVariable" UId="545">
+          <Symbol UId="546">
+            <Component Name="MB" UId="547">
+              <BooleanAttribute Name="HasQuotes" UId="548">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="549" />
+            <Component Name="Table" UId="550" />
+            <Token Text="." UId="551" />
+            <Component Name="Doser1_TotalValue" UId="552" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="553" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="554" />
+  <NewLine Num="2" UId="555" />
+  <Access Scope="Call" UId="556">
+    <CallInfo UId="557" BlockType="FB" Name="FlowCounter">
+      <Instance Scope="LocalVariable" UId="558">
+        <Component Name="ChlorCounter_2" UId="559" />
+      </Instance>
+      <Token Text="(" UId="560" />
+      <Parameter Name="Pulse" UId="561">
+        <Blank Num="1" UId="562" />
+        <Token Text=":=" UId="563" />
+        <Blank Num="1" UId="564" />
+        <Access Scope="GlobalVariable" UId="565">
+          <Symbol UId="566">
+            <Component Name="Doser2" UId="567">
+              <BooleanAttribute Name="HasQuotes" UId="568">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="569" />
+      <NewLine Num="1" UId="570" />
+      <Blank Num="16" UId="571" />
+      <Parameter Name="DailyCount" UId="572">
+        <Blank Num="1" UId="573" />
+        <Token Text=":=" UId="574" />
+        <Blank Num="1" UId="575" />
+        <Access Scope="GlobalVariable" UId="576">
+          <Symbol UId="577">
+            <Component Name="MB" UId="578">
+              <BooleanAttribute Name="HasQuotes" UId="579">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="580" />
+            <Component Name="Table" UId="581" />
+            <Token Text="." UId="582" />
+            <Component Name="Doser2_DailyPulses" UId="583" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="584" />
+      <NewLine Num="1" UId="585" />
+      <Blank Num="16" UId="586" />
+      <Parameter Name="TotalCount" UId="587">
+        <Blank Num="1" UId="588" />
+        <Token Text=":=" UId="589" />
+        <Blank Num="1" UId="590" />
+        <Access Scope="GlobalVariable" UId="591">
+          <Symbol UId="592">
+            <Component Name="MB" UId="593">
+              <BooleanAttribute Name="HasQuotes" UId="594">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="595" />
+            <Component Name="Table" UId="596" />
+            <Token Text="." UId="597" />
+            <Component Name="Doser2_TotalPulses" UId="598" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="599" />
+      <NewLine Num="1" UId="600" />
+      <Blank Num="15" UId="601" />
+      <Parameter Name="PulseWeight" UId="602">
+        <Blank Num="1" UId="603" />
+        <Token Text=":=" UId="604" />
+        <Blank Num="1" UId="605" />
+        <Access Scope="GlobalVariable" UId="606">
+          <Symbol UId="607">
+            <Component Name="MB" UId="608">
+              <BooleanAttribute Name="HasQuotes" UId="609">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="610" />
+            <Component Name="Table" UId="611" />
+            <Token Text="." UId="612" />
+            <Component Name="Doser2_PulseValue" UId="613" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="614" />
+      <NewLine Num="1" UId="615" />
+      <Blank Num="15" UId="616" />
+      <Parameter Name="Consumption" UId="617">
+        <Blank Num="1" UId="618" />
+        <Token Text=":=" UId="619" />
+        <Blank Num="1" UId="620" />
+        <Access Scope="GlobalVariable" UId="621">
+          <Symbol UId="622">
+            <Component Name="MB" UId="623">
+              <BooleanAttribute Name="HasQuotes" UId="624">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="625" />
+            <Component Name="Table" UId="626" />
+            <Token Text="." UId="627" />
+            <Component Name="Doser2_Cunsumption" UId="628" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="629" />
+      <NewLine Num="1" UId="630" />
+      <Blank Num="15" UId="631" />
+      <Parameter Name="DailyValue" UId="632">
+        <Blank Num="1" UId="633" />
+        <Token Text=":=" UId="634" />
+        <Blank Num="1" UId="635" />
+        <Access Scope="GlobalVariable" UId="636">
+          <Symbol UId="637">
+            <Component Name="MB" UId="638">
+              <BooleanAttribute Name="HasQuotes" UId="639">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="640" />
+            <Component Name="Table" UId="641" />
+            <Token Text="." UId="642" />
+            <Component Name="Doser2_DailyValue" UId="643" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="644" />
+      <NewLine Num="1" UId="645" />
+      <Blank Num="15" UId="646" />
+      <Parameter Name="TotalValue" UId="647">
+        <Blank Num="1" UId="648" />
+        <Token Text=":=" UId="649" />
+        <Blank Num="1" UId="650" />
+        <Access Scope="GlobalVariable" UId="651">
+          <Symbol UId="652">
+            <Component Name="MB" UId="653">
+              <BooleanAttribute Name="HasQuotes" UId="654">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="655" />
+            <Component Name="Table" UId="656" />
+            <Token Text="." UId="657" />
+            <Component Name="Doser2_TotalValue" UId="658" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="659" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="660" />
+  <NewLine Num="3" UId="661" />
+  <Blank Num="8" UId="662" />
+  <NewLine Num="2" UId="663" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

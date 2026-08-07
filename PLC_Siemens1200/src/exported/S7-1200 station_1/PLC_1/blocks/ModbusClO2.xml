@@ -1,0 +1,1407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:29.221812Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="ProportionalDosingExternal" Datatype="DWord" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="AbsoluteDosing" Datatype="DWord" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="SystemProductivity" Datatype="DWord" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Pressure" Datatype="Word" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Doser1Productivity" Datatype="Word" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Doser2Productivity" Datatype="Word" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>ModbusClO2</Name>
+      <Namespace />
+      <Number>26</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="GlobalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="ModbusMaster" UId="23">
+        <BooleanAttribute Name="HasQuotes" UId="24">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="25">
+    <Instruction UId="26">
+      <Token Text="(" UId="27" />
+      <Parameter Name="REQ" UId="28">
+        <Blank Num="1" UId="29" />
+        <Token Text=":=" UId="30" />
+        <Blank Num="1" UId="31" />
+        <Access Scope="GlobalVariable" UId="32">
+          <Symbol UId="33">
+            <Component Name="ModbusLoad" UId="34">
+              <BooleanAttribute Name="HasQuotes" UId="35">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="36" />
+            <Component Name="DONE" UId="37" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="38" />
+      <NewLine Num="1" UId="39" />
+      <Blank Num="21" UId="40" />
+      <Parameter Name="MB_ADDR" UId="41">
+        <Blank Num="1" UId="42" />
+        <Token Text=":=" UId="43" />
+        <Blank Num="1" UId="44" />
+        <Access Scope="LiteralConstant" UId="45">
+          <Constant UId="46">
+            <ConstantValue UId="48">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="49" />
+      <NewLine Num="1" UId="50" />
+      <Blank Num="21" UId="51" />
+      <Parameter Name="MODE" UId="52">
+        <Blank Num="1" UId="53" />
+        <Token Text=":=" UId="54" />
+        <Blank Num="1" UId="55" />
+        <Access Scope="LiteralConstant" UId="56">
+          <Constant UId="57">
+            <ConstantValue UId="59">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="60" />
+      <NewLine Num="1" UId="61" />
+      <Blank Num="21" UId="62" />
+      <Parameter Name="DATA_ADDR" UId="63">
+        <Blank Num="1" UId="64" />
+        <Token Text=":=" UId="65" />
+        <Blank Num="1" UId="66" />
+        <Access Scope="LiteralConstant" UId="67">
+          <Constant UId="68">
+            <ConstantValue UId="70">40014</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="71" />
+      <NewLine Num="1" UId="72" />
+      <Blank Num="21" UId="73" />
+      <Parameter Name="DATA_LEN" UId="74">
+        <Blank Num="1" UId="75" />
+        <Token Text=":=" UId="76" />
+        <Blank Num="1" UId="77" />
+        <Access Scope="LiteralConstant" UId="78">
+          <Constant UId="79">
+            <ConstantValue UId="81">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="82" />
+      <NewLine Num="1" UId="83" />
+      <Blank Num="21" UId="84" />
+      <Parameter Name="DATA_PTR" UId="85">
+        <Blank Num="1" UId="86" />
+        <Token Text=":=" UId="87" />
+        <Blank Num="1" UId="88" />
+        <Access Scope="GlobalVariable" UId="89">
+          <Symbol UId="90">
+            <Component Name="MB" UId="91">
+              <BooleanAttribute Name="HasQuotes" UId="92">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="93" />
+            <Component Name="Table" UId="94" />
+            <Token Text="." UId="95" />
+            <Component Name="ClO2" UId="96" />
+            <Token Text="." UId="97" />
+            <Component Name="WorkMode" UId="98" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="99" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="100" />
+  <Blank Num="1" UId="101" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="102">
+    <Text UId="103">OK</Text>
+  </LineComment>
+  <NewLine Num="2" UId="104" />
+  <Access Scope="GlobalVariable" UId="105">
+    <Symbol UId="106">
+      <Component Name="ModbusMaster" UId="107">
+        <BooleanAttribute Name="HasQuotes" UId="108">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="109">
+    <Instruction UId="110">
+      <Token Text="(" UId="111" />
+      <Parameter Name="REQ" UId="112">
+        <Blank Num="1" UId="113" />
+        <Token Text=":=" UId="114" />
+        <Blank Num="1" UId="115" />
+        <Access Scope="GlobalVariable" UId="116">
+          <Symbol UId="117">
+            <Component Name="ModbusLoad" UId="118">
+              <BooleanAttribute Name="HasQuotes" UId="119">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="120" />
+            <Component Name="DONE" UId="121" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="122" />
+      <NewLine Num="1" UId="123" />
+      <Blank Num="6" UId="124" />
+      <Parameter Name="MB_ADDR" UId="125">
+        <Blank Num="1" UId="126" />
+        <Token Text=":=" UId="127" />
+        <Blank Num="1" UId="128" />
+        <Access Scope="LiteralConstant" UId="129">
+          <Constant UId="130">
+            <ConstantValue UId="132">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="133" />
+      <NewLine Num="1" UId="134" />
+      <Blank Num="6" UId="135" />
+      <Parameter Name="MODE" UId="136">
+        <Blank Num="1" UId="137" />
+        <Token Text=":=" UId="138" />
+        <Blank Num="1" UId="139" />
+        <Access Scope="LiteralConstant" UId="140">
+          <Constant UId="141">
+            <ConstantValue UId="143">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="144" />
+      <NewLine Num="1" UId="145" />
+      <Blank Num="6" UId="146" />
+      <Parameter Name="DATA_ADDR" UId="147">
+        <Blank Num="1" UId="148" />
+        <Token Text=":=" UId="149" />
+        <Blank Num="1" UId="150" />
+        <Access Scope="LiteralConstant" UId="151">
+          <Constant UId="152">
+            <ConstantValue UId="154">40015</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="155" />
+      <NewLine Num="1" UId="156" />
+      <Blank Num="6" UId="157" />
+      <Parameter Name="DATA_LEN" UId="158">
+        <Blank Num="1" UId="159" />
+        <Token Text=":=" UId="160" />
+        <Blank Num="1" UId="161" />
+        <Access Scope="LiteralConstant" UId="162">
+          <Constant UId="163">
+            <ConstantValue UId="165">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="166" />
+      <NewLine Num="1" UId="167" />
+      <Blank Num="6" UId="168" />
+      <Parameter Name="DATA_PTR" UId="169">
+        <Blank Num="1" UId="170" />
+        <Token Text=":=" UId="171" />
+        <Blank Num="1" UId="172" />
+        <Access Scope="LocalVariable" UId="173">
+          <Symbol UId="174">
+            <Component Name="Doser1Productivity" UId="175" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="176" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="177" />
+  <NewLine Num="3" UId="178" />
+  <Access Scope="GlobalVariable" UId="179">
+    <Symbol UId="180">
+      <Component Name="MB" UId="181">
+        <BooleanAttribute Name="HasQuotes" UId="182">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="183" />
+      <Component Name="Table" UId="184" />
+      <Token Text="." UId="185" />
+      <Component Name="ClO2" UId="186" />
+      <Token Text="." UId="187" />
+      <Component Name="Doser1Productivity" UId="188" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="189" />
+  <Token Text=":=" UId="190" />
+  <Blank Num="1" UId="191" />
+  <Access Scope="LocalVariable" UId="192">
+    <Symbol UId="193">
+      <Component Name="Doser1Productivity" UId="194" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="195" />
+  <Token Text="/" UId="196" />
+  <Blank Num="1" UId="197" />
+  <Access Scope="LiteralConstant" UId="198">
+    <Constant UId="199">
+      <ConstantValue UId="201">100</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="202" />
+  <NewLine Num="2" UId="203" />
+  <Access Scope="GlobalVariable" UId="204">
+    <Symbol UId="205">
+      <Component Name="ModbusMaster" UId="206">
+        <BooleanAttribute Name="HasQuotes" UId="207">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="208">
+    <Instruction UId="209">
+      <Token Text="(" UId="210" />
+      <Parameter Name="REQ" UId="211">
+        <Blank Num="1" UId="212" />
+        <Token Text=":=" UId="213" />
+        <Blank Num="1" UId="214" />
+        <Access Scope="GlobalVariable" UId="215">
+          <Symbol UId="216">
+            <Component Name="ModbusLoad" UId="217">
+              <BooleanAttribute Name="HasQuotes" UId="218">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="219" />
+            <Component Name="DONE" UId="220" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="221" />
+      <NewLine Num="1" UId="222" />
+      <Blank Num="14" UId="223" />
+      <Parameter Name="MB_ADDR" UId="224">
+        <Blank Num="1" UId="225" />
+        <Token Text=":=" UId="226" />
+        <Blank Num="1" UId="227" />
+        <Access Scope="LiteralConstant" UId="228">
+          <Constant UId="229">
+            <ConstantValue UId="231">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="232" />
+      <NewLine Num="1" UId="233" />
+      <Blank Num="14" UId="234" />
+      <Parameter Name="MODE" UId="235">
+        <Blank Num="1" UId="236" />
+        <Token Text=":=" UId="237" />
+        <Blank Num="1" UId="238" />
+        <Access Scope="LiteralConstant" UId="239">
+          <Constant UId="240">
+            <ConstantValue UId="242">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="243" />
+      <NewLine Num="1" UId="244" />
+      <Blank Num="14" UId="245" />
+      <Parameter Name="DATA_ADDR" UId="246">
+        <Blank Num="1" UId="247" />
+        <Token Text=":=" UId="248" />
+        <Blank Num="1" UId="249" />
+        <Access Scope="LiteralConstant" UId="250">
+          <Constant UId="251">
+            <ConstantValue UId="253">40016</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="254" />
+      <NewLine Num="1" UId="255" />
+      <Blank Num="14" UId="256" />
+      <Parameter Name="DATA_LEN" UId="257">
+        <Blank Num="1" UId="258" />
+        <Token Text=":=" UId="259" />
+        <Blank Num="1" UId="260" />
+        <Access Scope="LiteralConstant" UId="261">
+          <Constant UId="262">
+            <ConstantValue UId="264">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="265" />
+      <NewLine Num="1" UId="266" />
+      <Blank Num="14" UId="267" />
+      <Parameter Name="DATA_PTR" UId="268">
+        <Blank Num="1" UId="269" />
+        <Token Text=":=" UId="270" />
+        <Blank Num="1" UId="271" />
+        <Access Scope="LocalVariable" UId="272">
+          <Symbol UId="273">
+            <Component Name="Doser2Productivity" UId="274" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="275" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="276" />
+  <NewLine Num="2" UId="277" />
+  <Access Scope="GlobalVariable" UId="278">
+    <Symbol UId="279">
+      <Component Name="MB" UId="280">
+        <BooleanAttribute Name="HasQuotes" UId="281">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="282" />
+      <Component Name="Table" UId="283" />
+      <Token Text="." UId="284" />
+      <Component Name="ClO2" UId="285" />
+      <Token Text="." UId="286" />
+      <Component Name="Doser2Productivity" UId="287" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="288" />
+  <Token Text=":=" UId="289" />
+  <Blank Num="1" UId="290" />
+  <Access Scope="LocalVariable" UId="291">
+    <Symbol UId="292">
+      <Component Name="Doser2Productivity" UId="293" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="294" />
+  <Token Text="/" UId="295" />
+  <Blank Num="1" UId="296" />
+  <Access Scope="LiteralConstant" UId="297">
+    <Constant UId="298">
+      <ConstantValue UId="300">100</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="301" />
+  <NewLine Num="2" UId="302" />
+  <Access Scope="GlobalVariable" UId="303">
+    <Symbol UId="304">
+      <Component Name="ModbusMaster" UId="305">
+        <BooleanAttribute Name="HasQuotes" UId="306">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="307">
+    <Instruction UId="308">
+      <Token Text="(" UId="309" />
+      <Parameter Name="REQ" UId="310">
+        <Blank Num="1" UId="311" />
+        <Token Text=":=" UId="312" />
+        <Blank Num="1" UId="313" />
+        <Access Scope="GlobalVariable" UId="314">
+          <Symbol UId="315">
+            <Component Name="ModbusLoad" UId="316">
+              <BooleanAttribute Name="HasQuotes" UId="317">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="318" />
+            <Component Name="DONE" UId="319" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="320" />
+      <NewLine Num="1" UId="321" />
+      <Blank Num="14" UId="322" />
+      <Parameter Name="MB_ADDR" UId="323">
+        <Blank Num="1" UId="324" />
+        <Token Text=":=" UId="325" />
+        <Blank Num="1" UId="326" />
+        <Access Scope="LiteralConstant" UId="327">
+          <Constant UId="328">
+            <ConstantValue UId="330">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="331" />
+      <NewLine Num="1" UId="332" />
+      <Blank Num="14" UId="333" />
+      <Parameter Name="MODE" UId="334">
+        <Blank Num="1" UId="335" />
+        <Token Text=":=" UId="336" />
+        <Blank Num="1" UId="337" />
+        <Access Scope="LiteralConstant" UId="338">
+          <Constant UId="339">
+            <ConstantValue UId="341">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="342" />
+      <NewLine Num="1" UId="343" />
+      <Blank Num="14" UId="344" />
+      <Parameter Name="DATA_ADDR" UId="345">
+        <Blank Num="1" UId="346" />
+        <Token Text=":=" UId="347" />
+        <Blank Num="1" UId="348" />
+        <Access Scope="LiteralConstant" UId="349">
+          <Constant UId="350">
+            <ConstantValue UId="352">40020</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="353" />
+      <NewLine Num="1" UId="354" />
+      <Blank Num="14" UId="355" />
+      <Parameter Name="DATA_LEN" UId="356">
+        <Blank Num="1" UId="357" />
+        <Token Text=":=" UId="358" />
+        <Blank Num="1" UId="359" />
+        <Access Scope="LiteralConstant" UId="360">
+          <Constant UId="361">
+            <ConstantValue UId="363">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="364" />
+      <NewLine Num="1" UId="365" />
+      <Blank Num="14" UId="366" />
+      <Parameter Name="DATA_PTR" UId="367">
+        <Blank Num="1" UId="368" />
+        <Token Text=":=" UId="369" />
+        <Blank Num="1" UId="370" />
+        <Access Scope="LocalVariable" UId="371">
+          <Symbol UId="372">
+            <Component Name="Pressure" UId="373" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="374" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="375" />
+  <NewLine Num="3" UId="376" />
+  <Access Scope="GlobalVariable" UId="377">
+    <Symbol UId="378">
+      <Component Name="MB" UId="379">
+        <BooleanAttribute Name="HasQuotes" UId="380">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="381" />
+      <Component Name="Table" UId="382" />
+      <Token Text="." UId="383" />
+      <Component Name="ClO2" UId="384" />
+      <Token Text="." UId="385" />
+      <Component Name="Pressure" UId="386" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="387" />
+  <Token Text=":=" UId="388" />
+  <Blank Num="1" UId="389" />
+  <Access Scope="LocalVariable" UId="390">
+    <Symbol UId="391">
+      <Component Name="Pressure" UId="392" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="393" />
+  <Token Text="/" UId="394" />
+  <Blank Num="1" UId="395" />
+  <Access Scope="LiteralConstant" UId="396">
+    <Constant UId="397">
+      <ConstantValue UId="399">100</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="400" />
+  <NewLine Num="2" UId="401" />
+  <Access Scope="GlobalVariable" UId="402">
+    <Symbol UId="403">
+      <Component Name="ModbusMaster" UId="404">
+        <BooleanAttribute Name="HasQuotes" UId="405">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="406">
+    <Instruction UId="407">
+      <Token Text="(" UId="408" />
+      <Parameter Name="REQ" UId="409">
+        <Blank Num="1" UId="410" />
+        <Token Text=":=" UId="411" />
+        <Blank Num="1" UId="412" />
+        <Access Scope="GlobalVariable" UId="413">
+          <Symbol UId="414">
+            <Component Name="ModbusLoad" UId="415">
+              <BooleanAttribute Name="HasQuotes" UId="416">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="417" />
+            <Component Name="DONE" UId="418" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="419" />
+      <NewLine Num="1" UId="420" />
+      <Blank Num="14" UId="421" />
+      <Parameter Name="MB_ADDR" UId="422">
+        <Blank Num="1" UId="423" />
+        <Token Text=":=" UId="424" />
+        <Blank Num="1" UId="425" />
+        <Access Scope="LiteralConstant" UId="426">
+          <Constant UId="427">
+            <ConstantValue UId="429">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="430" />
+      <NewLine Num="1" UId="431" />
+      <Blank Num="14" UId="432" />
+      <Parameter Name="MODE" UId="433">
+        <Blank Num="1" UId="434" />
+        <Token Text=":=" UId="435" />
+        <Blank Num="1" UId="436" />
+        <Access Scope="LiteralConstant" UId="437">
+          <Constant UId="438">
+            <ConstantValue UId="440">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="441" />
+      <NewLine Num="1" UId="442" />
+      <Blank Num="14" UId="443" />
+      <Parameter Name="DATA_ADDR" UId="444">
+        <Blank Num="1" UId="445" />
+        <Token Text=":=" UId="446" />
+        <Blank Num="1" UId="447" />
+        <Access Scope="LiteralConstant" UId="448">
+          <Constant UId="449">
+            <ConstantValue UId="451">40025</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="452" />
+      <NewLine Num="1" UId="453" />
+      <Blank Num="14" UId="454" />
+      <Parameter Name="DATA_LEN" UId="455">
+        <Blank Num="1" UId="456" />
+        <Token Text=":=" UId="457" />
+        <Blank Num="1" UId="458" />
+        <Access Scope="LiteralConstant" UId="459">
+          <Constant UId="460">
+            <ConstantValue UId="462">2</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="463" />
+      <NewLine Num="1" UId="464" />
+      <Blank Num="14" UId="465" />
+      <Parameter Name="DATA_PTR" UId="466">
+        <Blank Num="1" UId="467" />
+        <Token Text=":=" UId="468" />
+        <Blank Num="1" UId="469" />
+        <Access Scope="LocalVariable" UId="470">
+          <Symbol UId="471">
+            <Component Name="SystemProductivity" UId="472" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="473" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="474" />
+  <NewLine Num="2" UId="475" />
+  <Access Scope="GlobalVariable" UId="476">
+    <Symbol UId="477">
+      <Component Name="MB" UId="478">
+        <BooleanAttribute Name="HasQuotes" UId="479">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="480" />
+      <Component Name="Table" UId="481" />
+      <Token Text="." UId="482" />
+      <Component Name="ClO2" UId="483" />
+      <Token Text="." UId="484" />
+      <Component Name="SystemProductivity" UId="485" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="486" />
+  <Token Text=":=" UId="487" />
+  <Blank Num="1" UId="488" />
+  <Access Scope="Call" UId="489">
+    <Instruction Name="DWORD_TO_REAL" UId="490">
+      <Token Text="(" UId="491" />
+      <NamelessParameter UId="492">
+        <Access Scope="Call" UId="493">
+          <Instruction Name="ROL" UId="494">
+            <Token Text="(" UId="495" />
+            <Parameter Name="IN" UId="496">
+              <Blank Num="1" UId="497" />
+              <Token Text=":=" UId="498" />
+              <Blank Num="1" UId="499" />
+              <Access Scope="LocalVariable" UId="500">
+                <Symbol UId="501">
+                  <Component Name="SystemProductivity" UId="502" />
+                </Symbol>
+              </Access>
+            </Parameter>
+            <Token Text="," UId="503" />
+            <Blank Num="1" UId="504" />
+            <Parameter Name="N" UId="505">
+              <Blank Num="1" UId="506" />
+              <Token Text=":=" UId="507" />
+              <Blank Num="1" UId="508" />
+              <Access Scope="LiteralConstant" UId="509">
+                <Constant UId="510">
+                  <ConstantValue UId="512">16</ConstantValue>
+                </Constant>
+              </Access>
+            </Parameter>
+            <Token Text=")" UId="514" />
+          </Instruction>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="516" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="517" />
+  <NewLine Num="2" UId="518" />
+  <Access Scope="GlobalVariable" UId="519">
+    <Symbol UId="520">
+      <Component Name="ModbusMaster" UId="521">
+        <BooleanAttribute Name="HasQuotes" UId="522">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="523">
+    <Instruction UId="524">
+      <Token Text="(" UId="525" />
+      <Parameter Name="REQ" UId="526">
+        <Blank Num="1" UId="527" />
+        <Token Text=":=" UId="528" />
+        <Blank Num="1" UId="529" />
+        <Access Scope="GlobalVariable" UId="530">
+          <Symbol UId="531">
+            <Component Name="ModbusLoad" UId="532">
+              <BooleanAttribute Name="HasQuotes" UId="533">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="534" />
+            <Component Name="DONE" UId="535" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="536" />
+      <NewLine Num="1" UId="537" />
+      <Blank Num="14" UId="538" />
+      <Parameter Name="MB_ADDR" UId="539">
+        <Blank Num="1" UId="540" />
+        <Token Text=":=" UId="541" />
+        <Blank Num="1" UId="542" />
+        <Access Scope="LiteralConstant" UId="543">
+          <Constant UId="544">
+            <ConstantValue UId="546">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="547" />
+      <NewLine Num="1" UId="548" />
+      <Blank Num="14" UId="549" />
+      <Parameter Name="MODE" UId="550">
+        <Blank Num="1" UId="551" />
+        <Token Text=":=" UId="552" />
+        <Blank Num="1" UId="553" />
+        <Access Scope="LiteralConstant" UId="554">
+          <Constant UId="555">
+            <ConstantValue UId="557">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="558" />
+      <NewLine Num="1" UId="559" />
+      <Blank Num="14" UId="560" />
+      <Parameter Name="DATA_ADDR" UId="561">
+        <Blank Num="1" UId="562" />
+        <Token Text=":=" UId="563" />
+        <Blank Num="1" UId="564" />
+        <Access Scope="LiteralConstant" UId="565">
+          <Constant UId="566">
+            <ConstantValue UId="568">40010</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="569" />
+      <NewLine Num="1" UId="570" />
+      <Blank Num="14" UId="571" />
+      <Parameter Name="DATA_LEN" UId="572">
+        <Blank Num="1" UId="573" />
+        <Token Text=":=" UId="574" />
+        <Blank Num="1" UId="575" />
+        <Access Scope="LiteralConstant" UId="576">
+          <Constant UId="577">
+            <ConstantValue UId="579">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="580" />
+      <NewLine Num="1" UId="581" />
+      <Blank Num="14" UId="582" />
+      <Parameter Name="DATA_PTR" UId="583">
+        <Blank Num="1" UId="584" />
+        <Token Text=":=" UId="585" />
+        <Blank Num="1" UId="586" />
+        <Access Scope="GlobalVariable" UId="587">
+          <Symbol UId="588">
+            <Component Name="MB" UId="589">
+              <BooleanAttribute Name="HasQuotes" UId="590">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="591" />
+            <Component Name="Table" UId="592" />
+            <Token Text="." UId="593" />
+            <Component Name="ClO2" UId="594" />
+            <Token Text="." UId="595" />
+            <Component Name="ChooseDosing" UId="596" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="597" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="598" />
+  <Blank Num="1" UId="599" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="600">
+    <Text UId="601">OK</Text>
+  </LineComment>
+  <NewLine Num="2" UId="602" />
+  <Access Scope="GlobalVariable" UId="603">
+    <Symbol UId="604">
+      <Component Name="ModbusMaster" UId="605">
+        <BooleanAttribute Name="HasQuotes" UId="606">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="607">
+    <Instruction UId="608">
+      <Token Text="(" UId="609" />
+      <Parameter Name="REQ" UId="610">
+        <Blank Num="1" UId="611" />
+        <Token Text=":=" UId="612" />
+        <Blank Num="1" UId="613" />
+        <Access Scope="GlobalVariable" UId="614">
+          <Symbol UId="615">
+            <Component Name="ModbusLoad" UId="616">
+              <BooleanAttribute Name="HasQuotes" UId="617">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="618" />
+            <Component Name="DONE" UId="619" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="620" />
+      <NewLine Num="1" UId="621" />
+      <Blank Num="14" UId="622" />
+      <Parameter Name="MB_ADDR" UId="623">
+        <Blank Num="1" UId="624" />
+        <Token Text=":=" UId="625" />
+        <Blank Num="1" UId="626" />
+        <Access Scope="LiteralConstant" UId="627">
+          <Constant UId="628">
+            <ConstantValue UId="630">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="631" />
+      <NewLine Num="1" UId="632" />
+      <Blank Num="14" UId="633" />
+      <Parameter Name="MODE" UId="634">
+        <Blank Num="1" UId="635" />
+        <Token Text=":=" UId="636" />
+        <Blank Num="1" UId="637" />
+        <Access Scope="LiteralConstant" UId="638">
+          <Constant UId="639">
+            <ConstantValue UId="641">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="642" />
+      <NewLine Num="1" UId="643" />
+      <Blank Num="14" UId="644" />
+      <Parameter Name="DATA_ADDR" UId="645">
+        <Blank Num="1" UId="646" />
+        <Token Text=":=" UId="647" />
+        <Blank Num="1" UId="648" />
+        <Access Scope="LiteralConstant" UId="649">
+          <Constant UId="650">
+            <ConstantValue UId="652">40012</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="653" />
+      <NewLine Num="1" UId="654" />
+      <Blank Num="14" UId="655" />
+      <Parameter Name="DATA_LEN" UId="656">
+        <Blank Num="1" UId="657" />
+        <Token Text=":=" UId="658" />
+        <Blank Num="1" UId="659" />
+        <Access Scope="LiteralConstant" UId="660">
+          <Constant UId="661">
+            <ConstantValue UId="663">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="664" />
+      <NewLine Num="1" UId="665" />
+      <Blank Num="14" UId="666" />
+      <Parameter Name="DATA_PTR" UId="667">
+        <Blank Num="1" UId="668" />
+        <Token Text=":=" UId="669" />
+        <Blank Num="1" UId="670" />
+        <Access Scope="GlobalVariable" UId="671">
+          <Symbol UId="672">
+            <Component Name="MB" UId="673">
+              <BooleanAttribute Name="HasQuotes" UId="674">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="675" />
+            <Component Name="Table" UId="676" />
+            <Token Text="." UId="677" />
+            <Component Name="ClO2" UId="678" />
+            <Token Text="." UId="679" />
+            <Component Name="DosersActive" UId="680" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="681" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="682" />
+  <Blank Num="1" UId="683" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="684">
+    <Text UId="685">OK</Text>
+  </LineComment>
+  <NewLine Num="2" UId="686" />
+  <Access Scope="GlobalVariable" UId="687">
+    <Symbol UId="688">
+      <Component Name="ModbusMaster" UId="689">
+        <BooleanAttribute Name="HasQuotes" UId="690">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="691">
+    <Instruction UId="692">
+      <Token Text="(" UId="693" />
+      <Parameter Name="REQ" UId="694">
+        <Blank Num="1" UId="695" />
+        <Token Text=":=" UId="696" />
+        <Blank Num="1" UId="697" />
+        <Access Scope="GlobalVariable" UId="698">
+          <Symbol UId="699">
+            <Component Name="ModbusLoad" UId="700">
+              <BooleanAttribute Name="HasQuotes" UId="701">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="702" />
+            <Component Name="DONE" UId="703" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="704" />
+      <NewLine Num="1" UId="705" />
+      <Blank Num="14" UId="706" />
+      <Parameter Name="MB_ADDR" UId="707">
+        <Blank Num="1" UId="708" />
+        <Token Text=":=" UId="709" />
+        <Blank Num="1" UId="710" />
+        <Access Scope="LiteralConstant" UId="711">
+          <Constant UId="712">
+            <ConstantValue UId="714">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="715" />
+      <NewLine Num="1" UId="716" />
+      <Blank Num="14" UId="717" />
+      <Parameter Name="MODE" UId="718">
+        <Blank Num="1" UId="719" />
+        <Token Text=":=" UId="720" />
+        <Blank Num="1" UId="721" />
+        <Access Scope="LiteralConstant" UId="722">
+          <Constant UId="723">
+            <ConstantValue UId="725">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="726" />
+      <NewLine Num="1" UId="727" />
+      <Blank Num="14" UId="728" />
+      <Parameter Name="DATA_ADDR" UId="729">
+        <Blank Num="1" UId="730" />
+        <Token Text=":=" UId="731" />
+        <Blank Num="1" UId="732" />
+        <Access Scope="LiteralConstant" UId="733">
+          <Constant UId="734">
+            <ConstantValue UId="736">40051</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="737" />
+      <NewLine Num="1" UId="738" />
+      <Blank Num="14" UId="739" />
+      <Parameter Name="DATA_LEN" UId="740">
+        <Blank Num="1" UId="741" />
+        <Token Text=":=" UId="742" />
+        <Blank Num="1" UId="743" />
+        <Access Scope="LiteralConstant" UId="744">
+          <Constant UId="745">
+            <ConstantValue UId="747">2</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="748" />
+      <NewLine Num="1" UId="749" />
+      <Blank Num="14" UId="750" />
+      <Parameter Name="DATA_PTR" UId="751">
+        <Blank Num="1" UId="752" />
+        <Token Text=":=" UId="753" />
+        <Blank Num="1" UId="754" />
+        <Access Scope="LocalVariable" UId="755">
+          <Symbol UId="756">
+            <Component Name="AbsoluteDosing" UId="757" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="758" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="759" />
+  <NewLine Num="2" UId="760" />
+  <Access Scope="GlobalVariable" UId="761">
+    <Symbol UId="762">
+      <Component Name="MB" UId="763">
+        <BooleanAttribute Name="HasQuotes" UId="764">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="765" />
+      <Component Name="Table" UId="766" />
+      <Token Text="." UId="767" />
+      <Component Name="ClO2" UId="768" />
+      <Token Text="." UId="769" />
+      <Component Name="AbsoluteDosing" UId="770" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="771" />
+  <Token Text=":=" UId="772" />
+  <Blank Num="1" UId="773" />
+  <Access Scope="Call" UId="774">
+    <Instruction Name="DWORD_TO_REAL" UId="775">
+      <Token Text="(" UId="776" />
+      <NamelessParameter UId="777">
+        <Access Scope="Call" UId="778">
+          <Instruction Name="ROL" UId="779">
+            <Token Text="(" UId="780" />
+            <Parameter Name="IN" UId="781">
+              <Blank Num="1" UId="782" />
+              <Token Text=":=" UId="783" />
+              <Blank Num="1" UId="784" />
+              <Access Scope="LocalVariable" UId="785">
+                <Symbol UId="786">
+                  <Component Name="AbsoluteDosing" UId="787" />
+                </Symbol>
+              </Access>
+            </Parameter>
+            <Token Text="," UId="788" />
+            <Blank Num="1" UId="789" />
+            <Parameter Name="N" UId="790">
+              <Blank Num="1" UId="791" />
+              <Token Text=":=" UId="792" />
+              <Blank Num="1" UId="793" />
+              <Access Scope="LiteralConstant" UId="794">
+                <Constant UId="795">
+                  <ConstantValue UId="797">16</ConstantValue>
+                </Constant>
+              </Access>
+            </Parameter>
+            <Token Text=")" UId="799" />
+          </Instruction>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="801" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="802" />
+  <NewLine Num="2" UId="803" />
+  <Access Scope="GlobalVariable" UId="804">
+    <Symbol UId="805">
+      <Component Name="ModbusMaster" UId="806">
+        <BooleanAttribute Name="HasQuotes" UId="807">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="808">
+    <Instruction UId="809">
+      <Token Text="(" UId="810" />
+      <Parameter Name="REQ" UId="811">
+        <Blank Num="1" UId="812" />
+        <Token Text=":=" UId="813" />
+        <Blank Num="1" UId="814" />
+        <Access Scope="GlobalVariable" UId="815">
+          <Symbol UId="816">
+            <Component Name="ModbusLoad" UId="817">
+              <BooleanAttribute Name="HasQuotes" UId="818">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="819" />
+            <Component Name="DONE" UId="820" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="821" />
+      <NewLine Num="1" UId="822" />
+      <Blank Num="14" UId="823" />
+      <Parameter Name="MB_ADDR" UId="824">
+        <Blank Num="1" UId="825" />
+        <Token Text=":=" UId="826" />
+        <Blank Num="1" UId="827" />
+        <Access Scope="LiteralConstant" UId="828">
+          <Constant UId="829">
+            <ConstantValue UId="831">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="832" />
+      <NewLine Num="1" UId="833" />
+      <Blank Num="14" UId="834" />
+      <Parameter Name="MODE" UId="835">
+        <Blank Num="1" UId="836" />
+        <Token Text=":=" UId="837" />
+        <Blank Num="1" UId="838" />
+        <Access Scope="LiteralConstant" UId="839">
+          <Constant UId="840">
+            <ConstantValue UId="842">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="843" />
+      <NewLine Num="1" UId="844" />
+      <Blank Num="14" UId="845" />
+      <Parameter Name="DATA_ADDR" UId="846">
+        <Blank Num="1" UId="847" />
+        <Token Text=":=" UId="848" />
+        <Blank Num="1" UId="849" />
+        <Access Scope="LiteralConstant" UId="850">
+          <Constant UId="851">
+            <ConstantValue UId="853">40055</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="854" />
+      <NewLine Num="1" UId="855" />
+      <Blank Num="14" UId="856" />
+      <Parameter Name="DATA_LEN" UId="857">
+        <Blank Num="1" UId="858" />
+        <Token Text=":=" UId="859" />
+        <Blank Num="1" UId="860" />
+        <Access Scope="LiteralConstant" UId="861">
+          <Constant UId="862">
+            <ConstantValue UId="864">2</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="865" />
+      <NewLine Num="1" UId="866" />
+      <Blank Num="14" UId="867" />
+      <Parameter Name="DATA_PTR" UId="868">
+        <Blank Num="1" UId="869" />
+        <Token Text=":=" UId="870" />
+        <Blank Num="1" UId="871" />
+        <Access Scope="LocalVariable" UId="872">
+          <Symbol UId="873">
+            <Component Name="ProportionalDosingExternal" UId="874" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="875" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="876" />
+  <NewLine Num="2" UId="877" />
+  <Access Scope="GlobalVariable" UId="878">
+    <Symbol UId="879">
+      <Component Name="MB" UId="880">
+        <BooleanAttribute Name="HasQuotes" UId="881">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="882" />
+      <Component Name="Table" UId="883" />
+      <Token Text="." UId="884" />
+      <Component Name="ClO2" UId="885" />
+      <Token Text="." UId="886" />
+      <Component Name="ProportionalDosingExternal" UId="887" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="888" />
+  <Token Text=":=" UId="889" />
+  <Blank Num="1" UId="890" />
+  <Access Scope="Call" UId="891">
+    <Instruction Name="DWORD_TO_REAL" UId="892">
+      <Token Text="(" UId="893" />
+      <NamelessParameter UId="894">
+        <Access Scope="Call" UId="895">
+          <Instruction Name="ROL" UId="896">
+            <Token Text="(" UId="897" />
+            <Parameter Name="IN" UId="898">
+              <Blank Num="1" UId="899" />
+              <Token Text=":=" UId="900" />
+              <Blank Num="1" UId="901" />
+              <Access Scope="LocalVariable" UId="902">
+                <Symbol UId="903">
+                  <Component Name="ProportionalDosingExternal" UId="904" />
+                </Symbol>
+              </Access>
+            </Parameter>
+            <Token Text="," UId="905" />
+            <Blank Num="1" UId="906" />
+            <Parameter Name="N" UId="907">
+              <Blank Num="1" UId="908" />
+              <Token Text=":=" UId="909" />
+              <Blank Num="1" UId="910" />
+              <Access Scope="LiteralConstant" UId="911">
+                <Constant UId="912">
+                  <ConstantValue UId="914">16</ConstantValue>
+                </Constant>
+              </Access>
+            </Parameter>
+            <Token Text=")" UId="916" />
+          </Instruction>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="918" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="919" />
+  <NewLine Num="3" UId="920" />
+  <Access Scope="GlobalVariable" UId="921">
+    <Symbol UId="922">
+      <Component Name="ModbusMaster" UId="923">
+        <BooleanAttribute Name="HasQuotes" UId="924">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="925">
+    <Instruction UId="926">
+      <Token Text="(" UId="927" />
+      <Parameter Name="REQ" UId="928">
+        <Blank Num="1" UId="929" />
+        <Token Text=":=" UId="930" />
+        <Blank Num="1" UId="931" />
+        <Access Scope="GlobalVariable" UId="932">
+          <Symbol UId="933">
+            <Component Name="ModbusLoad" UId="934">
+              <BooleanAttribute Name="HasQuotes" UId="935">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="936" />
+            <Component Name="DONE" UId="937" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="938" />
+      <NewLine Num="1" UId="939" />
+      <Blank Num="14" UId="940" />
+      <Parameter Name="MB_ADDR" UId="941">
+        <Blank Num="1" UId="942" />
+        <Token Text=":=" UId="943" />
+        <Blank Num="1" UId="944" />
+        <Access Scope="LiteralConstant" UId="945">
+          <Constant UId="946">
+            <ConstantValue UId="948">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="949" />
+      <NewLine Num="1" UId="950" />
+      <Blank Num="14" UId="951" />
+      <Parameter Name="MODE" UId="952">
+        <Blank Num="1" UId="953" />
+        <Token Text=":=" UId="954" />
+        <Blank Num="1" UId="955" />
+        <Access Scope="LiteralConstant" UId="956">
+          <Constant UId="957">
+            <ConstantValue UId="959">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="960" />
+      <NewLine Num="1" UId="961" />
+      <Blank Num="14" UId="962" />
+      <Parameter Name="DATA_ADDR" UId="963">
+        <Blank Num="1" UId="964" />
+        <Token Text=":=" UId="965" />
+        <Blank Num="1" UId="966" />
+        <Access Scope="LiteralConstant" UId="967">
+          <Constant UId="968">
+            <ConstantValue UId="970">40011</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="971" />
+      <NewLine Num="1" UId="972" />
+      <Blank Num="14" UId="973" />
+      <Parameter Name="DATA_LEN" UId="974">
+        <Blank Num="1" UId="975" />
+        <Token Text=":=" UId="976" />
+        <Blank Num="1" UId="977" />
+        <Access Scope="LiteralConstant" UId="978">
+          <Constant UId="979">
+            <ConstantValue UId="981">1</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="982" />
+      <NewLine Num="1" UId="983" />
+      <Blank Num="14" UId="984" />
+      <Parameter Name="DATA_PTR" UId="985">
+        <Blank Num="1" UId="986" />
+        <Token Text=":=" UId="987" />
+        <Blank Num="1" UId="988" />
+        <Access Scope="GlobalVariable" UId="989">
+          <Symbol UId="990">
+            <Component Name="MB" UId="991">
+              <BooleanAttribute Name="HasQuotes" UId="992">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="993" />
+            <Component Name="Table" UId="994" />
+            <Token Text="." UId="995" />
+            <Component Name="ClO2" UId="996" />
+            <Token Text="." UId="997" />
+            <Component Name="Alarms" UId="998" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="999" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="1000" />
+  <Blank Num="1" UId="1001" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="1002">
+    <Text UId="1003">OK</Text>
+  </LineComment>
+  <NewLine Num="3" UId="1004" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

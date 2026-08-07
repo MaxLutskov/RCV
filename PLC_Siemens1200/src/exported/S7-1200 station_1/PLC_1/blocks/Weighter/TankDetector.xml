@@ -1,0 +1,1089 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:34.1374805Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="WeightValue" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="WeightDelay" Datatype="Time" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <StartValue>T#30s</StartValue>
+    </Member>
+    <Member Name="WeightError" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="DeadZone" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <StartValue>0.1</StartValue>
+    </Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="IsWeightMeasured" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="IsFeedLoaded" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="IsFeedConsumed" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="MeasuredWeight" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="InOut">
+    <Member Name="Ref_ConsumedFeed" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Ref_LoadedFeed" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Ref_PreviousWeight" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="PreviousWeight1" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="PreviousWeight2" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="TON1" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TON2" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>TankDetector</Name>
+      <Namespace />
+      <Number>23</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Token Text="IF" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Access Scope="LocalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="WeightError" UId="25" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="26" />
+  <Token Text="THEN" UId="27" />
+  <NewLine Num="1" UId="28" />
+  <Blank Num="4" UId="29" />
+  <Access Scope="LocalVariable" UId="30">
+    <Symbol UId="31">
+      <Component Name="IsWeightMeasured" UId="32" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="33" />
+  <Token Text=":=" UId="34" />
+  <Blank Num="1" UId="35" />
+  <Access Scope="LiteralConstant" UId="36">
+    <Constant UId="37">
+      <ConstantValue UId="39">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="40" />
+  <NewLine Num="1" UId="41" />
+  <Blank Num="4" UId="42" />
+  <Access Scope="LocalVariable" UId="43">
+    <Symbol UId="44">
+      <Component Name="MeasuredWeight" UId="45" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="46" />
+  <Token Text=":=" UId="47" />
+  <Blank Num="1" UId="48" />
+  <Access Scope="LiteralConstant" UId="49">
+    <Constant UId="50">
+      <ConstantValue UId="52">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="53" />
+  <NewLine Num="1" UId="54" />
+  <Blank Num="4" UId="55" />
+  <Access Scope="Call" UId="56">
+    <Instruction Name="RESET_TIMER" UId="57">
+      <Token Text="(" UId="58" />
+      <NamelessParameter UId="59">
+        <Access Scope="LocalVariable" UId="60">
+          <Symbol UId="61">
+            <Component Name="TON1" UId="62" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="63" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="64" />
+  <NewLine Num="1" UId="65" />
+  <Blank Num="4" UId="66" />
+  <Access Scope="Call" UId="67">
+    <Instruction Name="RESET_TIMER" UId="68">
+      <Token Text="(" UId="69" />
+      <NamelessParameter UId="70">
+        <Access Scope="LocalVariable" UId="71">
+          <Symbol UId="72">
+            <Component Name="TON2" UId="73" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="74" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="75" />
+  <NewLine Num="1" UId="76" />
+  <Blank Num="4" UId="77" />
+  <Token Text="RETURN" UId="78" />
+  <Token Text=";" UId="79" />
+  <NewLine Num="1" UId="80" />
+  <Token Text="END_IF" UId="81" />
+  <Token Text=";" UId="82" />
+  <NewLine Num="2" UId="83" />
+  <Access Scope="LocalVariable" UId="84">
+    <Symbol UId="85">
+      <Component Name="IsWeightMeasured" UId="86" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="87" />
+  <Token Text=":=" UId="88" />
+  <Blank Num="1" UId="89" />
+  <Access Scope="LiteralConstant" UId="90">
+    <Constant UId="91">
+      <ConstantValue UId="93">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="94" />
+  <NewLine Num="1" UId="95" />
+  <Access Scope="LocalVariable" UId="96">
+    <Symbol UId="97">
+      <Component Name="IsFeedLoaded" UId="98" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="99" />
+  <Token Text=":=" UId="100" />
+  <Blank Num="1" UId="101" />
+  <Access Scope="LiteralConstant" UId="102">
+    <Constant UId="103">
+      <ConstantValue UId="105">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="106" />
+  <NewLine Num="1" UId="107" />
+  <Access Scope="LocalVariable" UId="108">
+    <Symbol UId="109">
+      <Component Name="IsFeedConsumed" UId="110" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="111" />
+  <Token Text=":=" UId="112" />
+  <Blank Num="1" UId="113" />
+  <Access Scope="LiteralConstant" UId="114">
+    <Constant UId="115">
+      <ConstantValue UId="117">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="118" />
+  <NewLine Num="2" UId="119" />
+  <Token Text="IF" UId="120" />
+  <Blank Num="1" UId="121" />
+  <Access Scope="Call" UId="122">
+    <Instruction Name="ABS" UId="123">
+      <Token Text="(" UId="124" />
+      <NamelessParameter UId="125">
+        <Access Scope="LocalVariable" UId="126">
+          <Symbol UId="127">
+            <Component Name="WeightValue" UId="128" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="129" />
+        <Token Text="-" UId="130" />
+        <Blank Num="1" UId="131" />
+        <Access Scope="LocalVariable" UId="132">
+          <Symbol UId="133">
+            <Component Name="Ref_PreviousWeight" UId="134" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="136" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="137" />
+  <Token Text="&gt;" UId="138" />
+  <Blank Num="1" UId="139" />
+  <Access Scope="LocalVariable" UId="140">
+    <Symbol UId="141">
+      <Component Name="DeadZone" UId="142" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="143" />
+  <Token Text="THEN" UId="144" />
+  <NewLine Num="1" UId="145" />
+  <Blank Num="4" UId="146" />
+  <Token Text="IF" UId="147" />
+  <Blank Num="1" UId="148" />
+  <Access Scope="LocalVariable" UId="149">
+    <Symbol UId="150">
+      <Component Name="WeightValue" UId="151" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="152" />
+  <Token Text="&gt;" UId="153" />
+  <Blank Num="1" UId="154" />
+  <Access Scope="LocalVariable" UId="155">
+    <Symbol UId="156">
+      <Component Name="Ref_PreviousWeight" UId="157" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="158" />
+  <Token Text="THEN" UId="159" />
+  <NewLine Num="1" UId="160" />
+  <Blank Num="8" UId="161" />
+  <Access Scope="LocalVariable" UId="162">
+    <Symbol UId="163">
+      <Component Name="TON2" UId="164" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="165">
+    <Instruction UId="166">
+      <Token Text="(" UId="167" />
+      <Parameter Name="IN" UId="168">
+        <Blank Num="1" UId="169" />
+        <Token Text=":=" UId="170" />
+        <Blank Num="1" UId="171" />
+        <Access Scope="LiteralConstant" UId="172">
+          <Constant UId="173">
+            <ConstantValue UId="175">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="176" />
+      <NewLine Num="1" UId="177" />
+      <Blank Num="14" UId="178" />
+      <Parameter Name="PT" UId="179">
+        <Blank Num="1" UId="180" />
+        <Token Text=":=" UId="181" />
+        <Blank Num="1" UId="182" />
+        <Access Scope="LocalVariable" UId="183">
+          <Symbol UId="184">
+            <Component Name="WeightDelay" UId="185" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="186" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="187" />
+  <NewLine Num="1" UId="188" />
+  <Blank Num="8" UId="189" />
+  <Token Text="IF" UId="190" />
+  <Blank Num="1" UId="191" />
+  <Access Scope="LocalVariable" UId="192">
+    <Symbol UId="193">
+      <Component Name="TON2" UId="194" />
+      <Token Text="." UId="195" />
+      <Component Name="Q" UId="196" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="197" />
+  <Token Text="THEN" UId="198" />
+  <NewLine Num="1" UId="199" />
+  <Blank Num="12" UId="200" />
+  <Access Scope="LocalVariable" UId="201">
+    <Symbol UId="202">
+      <Component Name="IsWeightMeasured" UId="203" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="204" />
+  <Token Text=":=" UId="205" />
+  <Blank Num="1" UId="206" />
+  <Access Scope="LiteralConstant" UId="207">
+    <Constant UId="208">
+      <ConstantValue UId="210">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="211" />
+  <NewLine Num="1" UId="212" />
+  <Blank Num="12" UId="213" />
+  <Access Scope="LocalVariable" UId="214">
+    <Symbol UId="215">
+      <Component Name="IsFeedLoaded" UId="216" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="217" />
+  <Token Text=":=" UId="218" />
+  <Blank Num="1" UId="219" />
+  <Access Scope="LiteralConstant" UId="220">
+    <Constant UId="221">
+      <ConstantValue UId="223">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="224" />
+  <NewLine Num="1" UId="225" />
+  <Blank Num="12" UId="226" />
+  <Access Scope="LocalVariable" UId="227">
+    <Symbol UId="228">
+      <Component Name="MeasuredWeight" UId="229" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="230" />
+  <Token Text=":=" UId="231" />
+  <Blank Num="1" UId="232" />
+  <Access Scope="LocalVariable" UId="233">
+    <Symbol UId="234">
+      <Component Name="WeightValue" UId="235" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="236" />
+  <Token Text="-" UId="237" />
+  <Blank Num="1" UId="238" />
+  <Access Scope="LocalVariable" UId="239">
+    <Symbol UId="240">
+      <Component Name="Ref_PreviousWeight" UId="241" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="242" />
+  <NewLine Num="1" UId="243" />
+  <Blank Num="12" UId="244" />
+  <Access Scope="LocalVariable" UId="245">
+    <Symbol UId="246">
+      <Component Name="Ref_LoadedFeed" UId="247" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="248" />
+  <Token Text=":=" UId="249" />
+  <Blank Num="1" UId="250" />
+  <Access Scope="LocalVariable" UId="251">
+    <Symbol UId="252">
+      <Component Name="Ref_LoadedFeed" UId="253" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="254" />
+  <Token Text="+" UId="255" />
+  <Blank Num="1" UId="256" />
+  <Token Text="(" UId="257" />
+  <Access Scope="LocalVariable" UId="258">
+    <Symbol UId="259">
+      <Component Name="WeightValue" UId="260" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="261" />
+  <Token Text="-" UId="262" />
+  <Blank Num="1" UId="263" />
+  <Access Scope="LocalVariable" UId="264">
+    <Symbol UId="265">
+      <Component Name="Ref_PreviousWeight" UId="266" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="267" />
+  <Token Text=";" UId="268" />
+  <NewLine Num="1" UId="269" />
+  <Blank Num="12" UId="270" />
+  <Access Scope="LocalVariable" UId="271">
+    <Symbol UId="272">
+      <Component Name="Ref_PreviousWeight" UId="273" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="274" />
+  <Token Text=":=" UId="275" />
+  <Blank Num="1" UId="276" />
+  <Access Scope="LocalVariable" UId="277">
+    <Symbol UId="278">
+      <Component Name="WeightValue" UId="279" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="280" />
+  <NewLine Num="1" UId="281" />
+  <Blank Num="12" UId="282" />
+  <Access Scope="Call" UId="283">
+    <Instruction Name="RESET_TIMER" UId="284">
+      <Token Text="(" UId="285" />
+      <NamelessParameter UId="286">
+        <Access Scope="LocalVariable" UId="287">
+          <Symbol UId="288">
+            <Component Name="TON2" UId="289" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="290" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="291" />
+  <NewLine Num="1" UId="292" />
+  <Blank Num="8" UId="293" />
+  <Token Text="END_IF" UId="294" />
+  <Token Text=";" UId="295" />
+  <NewLine Num="1" UId="296" />
+  <Blank Num="8" UId="297" />
+  <NewLine Num="1" UId="298" />
+  <Blank Num="8" UId="299" />
+  <Token Text="IF" UId="300" />
+  <Blank Num="1" UId="301" />
+  <Access Scope="Call" UId="302">
+    <Instruction Name="ABS" UId="303">
+      <Token Text="(" UId="304" />
+      <NamelessParameter UId="305">
+        <Access Scope="LocalVariable" UId="306">
+          <Symbol UId="307">
+            <Component Name="WeightValue" UId="308" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="309" />
+        <Token Text="-" UId="310" />
+        <Blank Num="1" UId="311" />
+        <Access Scope="LocalVariable" UId="312">
+          <Symbol UId="313">
+            <Component Name="PreviousWeight2" UId="314" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="316" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="317" />
+  <Token Text="&gt;" UId="318" />
+  <Blank Num="1" UId="319" />
+  <Access Scope="LocalVariable" UId="320">
+    <Symbol UId="321">
+      <Component Name="DeadZone" UId="322" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="323" />
+  <Token Text="THEN" UId="324" />
+  <NewLine Num="1" UId="325" />
+  <Blank Num="12" UId="326" />
+  <Access Scope="Call" UId="327">
+    <Instruction Name="RESET_TIMER" UId="328">
+      <Token Text="(" UId="329" />
+      <NamelessParameter UId="330">
+        <Access Scope="LocalVariable" UId="331">
+          <Symbol UId="332">
+            <Component Name="TON2" UId="333" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="334" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="335" />
+  <NewLine Num="1" UId="336" />
+  <Blank Num="12" UId="337" />
+  <Access Scope="LocalVariable" UId="338">
+    <Symbol UId="339">
+      <Component Name="PreviousWeight2" UId="340" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="341" />
+  <Token Text=":=" UId="342" />
+  <Blank Num="1" UId="343" />
+  <Access Scope="LocalVariable" UId="344">
+    <Symbol UId="345">
+      <Component Name="WeightValue" UId="346" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="347" />
+  <NewLine Num="1" UId="348" />
+  <Blank Num="8" UId="349" />
+  <Token Text="END_IF" UId="350" />
+  <Token Text=";" UId="351" />
+  <NewLine Num="1" UId="352" />
+  <Blank Num="8" UId="353" />
+  <NewLine Num="1" UId="354" />
+  <Blank Num="8" UId="355" />
+  <Access Scope="Call" UId="356">
+    <Instruction Name="RESET_TIMER" UId="357">
+      <Token Text="(" UId="358" />
+      <NamelessParameter UId="359">
+        <Access Scope="LocalVariable" UId="360">
+          <Symbol UId="361">
+            <Component Name="TON1" UId="362" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="363" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="364" />
+  <NewLine Num="1" UId="365" />
+  <Blank Num="8" UId="366" />
+  <Access Scope="LocalVariable" UId="367">
+    <Symbol UId="368">
+      <Component Name="PreviousWeight1" UId="369" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="370" />
+  <Token Text=":=" UId="371" />
+  <Blank Num="1" UId="372" />
+  <Access Scope="LiteralConstant" UId="373">
+    <Constant UId="374">
+      <ConstantValue UId="376">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="377" />
+  <NewLine Num="1" UId="378" />
+  <Blank Num="8" UId="379" />
+  <NewLine Num="1" UId="380" />
+  <Blank Num="4" UId="381" />
+  <Token Text="ELSIF" UId="382" />
+  <Blank Num="1" UId="383" />
+  <Access Scope="LocalVariable" UId="384">
+    <Symbol UId="385">
+      <Component Name="WeightValue" UId="386" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="387" />
+  <Token Text="&lt;" UId="388" />
+  <Blank Num="1" UId="389" />
+  <Access Scope="LocalVariable" UId="390">
+    <Symbol UId="391">
+      <Component Name="Ref_PreviousWeight" UId="392" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="393" />
+  <Token Text="THEN" UId="394" />
+  <NewLine Num="1" UId="395" />
+  <Blank Num="8" UId="396" />
+  <Access Scope="LocalVariable" UId="397">
+    <Symbol UId="398">
+      <Component Name="TON1" UId="399" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="400">
+    <Instruction UId="401">
+      <Token Text="(" UId="402" />
+      <Parameter Name="IN" UId="403">
+        <Blank Num="1" UId="404" />
+        <Token Text=":=" UId="405" />
+        <Blank Num="1" UId="406" />
+        <Access Scope="LiteralConstant" UId="407">
+          <Constant UId="408">
+            <ConstantValue UId="410">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="411" />
+      <NewLine Num="1" UId="412" />
+      <Blank Num="14" UId="413" />
+      <Parameter Name="PT" UId="414">
+        <Blank Num="1" UId="415" />
+        <Token Text=":=" UId="416" />
+        <Blank Num="1" UId="417" />
+        <Access Scope="LocalVariable" UId="418">
+          <Symbol UId="419">
+            <Component Name="WeightDelay" UId="420" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="421" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="422" />
+  <NewLine Num="1" UId="423" />
+  <Blank Num="8" UId="424" />
+  <Token Text="IF" UId="425" />
+  <Blank Num="1" UId="426" />
+  <Access Scope="LocalVariable" UId="427">
+    <Symbol UId="428">
+      <Component Name="TON1" UId="429" />
+      <Token Text="." UId="430" />
+      <Component Name="Q" UId="431" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="432" />
+  <Token Text="THEN" UId="433" />
+  <NewLine Num="1" UId="434" />
+  <Blank Num="12" UId="435" />
+  <Access Scope="LocalVariable" UId="436">
+    <Symbol UId="437">
+      <Component Name="IsWeightMeasured" UId="438" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="439" />
+  <Token Text=":=" UId="440" />
+  <Blank Num="1" UId="441" />
+  <Access Scope="LiteralConstant" UId="442">
+    <Constant UId="443">
+      <ConstantValue UId="445">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="446" />
+  <NewLine Num="1" UId="447" />
+  <Blank Num="12" UId="448" />
+  <Access Scope="LocalVariable" UId="449">
+    <Symbol UId="450">
+      <Component Name="IsFeedConsumed" UId="451" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="452" />
+  <Token Text=":=" UId="453" />
+  <Blank Num="1" UId="454" />
+  <Access Scope="LiteralConstant" UId="455">
+    <Constant UId="456">
+      <ConstantValue UId="458">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="459" />
+  <NewLine Num="1" UId="460" />
+  <Blank Num="12" UId="461" />
+  <Access Scope="LocalVariable" UId="462">
+    <Symbol UId="463">
+      <Component Name="MeasuredWeight" UId="464" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="465" />
+  <Token Text=":=" UId="466" />
+  <Blank Num="1" UId="467" />
+  <Access Scope="LocalVariable" UId="468">
+    <Symbol UId="469">
+      <Component Name="WeightValue" UId="470" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="471" />
+  <Token Text="-" UId="472" />
+  <Blank Num="1" UId="473" />
+  <Access Scope="LocalVariable" UId="474">
+    <Symbol UId="475">
+      <Component Name="Ref_PreviousWeight" UId="476" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="477" />
+  <NewLine Num="1" UId="478" />
+  <Blank Num="12" UId="479" />
+  <Access Scope="LocalVariable" UId="480">
+    <Symbol UId="481">
+      <Component Name="Ref_ConsumedFeed" UId="482" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="483" />
+  <Token Text=":=" UId="484" />
+  <Blank Num="1" UId="485" />
+  <Access Scope="LocalVariable" UId="486">
+    <Symbol UId="487">
+      <Component Name="Ref_ConsumedFeed" UId="488" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="489" />
+  <Token Text="+" UId="490" />
+  <Blank Num="1" UId="491" />
+  <Token Text="(" UId="492" />
+  <Access Scope="LocalVariable" UId="493">
+    <Symbol UId="494">
+      <Component Name="Ref_PreviousWeight" UId="495" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="496" />
+  <Token Text="-" UId="497" />
+  <Blank Num="1" UId="498" />
+  <Access Scope="LocalVariable" UId="499">
+    <Symbol UId="500">
+      <Component Name="WeightValue" UId="501" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="502" />
+  <Token Text=";" UId="503" />
+  <NewLine Num="1" UId="504" />
+  <Blank Num="12" UId="505" />
+  <Access Scope="LocalVariable" UId="506">
+    <Symbol UId="507">
+      <Component Name="Ref_PreviousWeight" UId="508" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="509" />
+  <Token Text=":=" UId="510" />
+  <Blank Num="1" UId="511" />
+  <Access Scope="LocalVariable" UId="512">
+    <Symbol UId="513">
+      <Component Name="WeightValue" UId="514" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="515" />
+  <NewLine Num="1" UId="516" />
+  <Blank Num="12" UId="517" />
+  <Access Scope="Call" UId="518">
+    <Instruction Name="RESET_TIMER" UId="519">
+      <Token Text="(" UId="520" />
+      <NamelessParameter UId="521">
+        <Access Scope="LocalVariable" UId="522">
+          <Symbol UId="523">
+            <Component Name="TON1" UId="524" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="525" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="526" />
+  <NewLine Num="1" UId="527" />
+  <Blank Num="8" UId="528" />
+  <Token Text="END_IF" UId="529" />
+  <Token Text=";" UId="530" />
+  <NewLine Num="1" UId="531" />
+  <Blank Num="8" UId="532" />
+  <NewLine Num="1" UId="533" />
+  <Blank Num="8" UId="534" />
+  <Token Text="IF" UId="535" />
+  <Blank Num="1" UId="536" />
+  <Access Scope="Call" UId="537">
+    <Instruction Name="ABS" UId="538">
+      <Token Text="(" UId="539" />
+      <NamelessParameter UId="540">
+        <Access Scope="LocalVariable" UId="541">
+          <Symbol UId="542">
+            <Component Name="WeightValue" UId="543" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="544" />
+        <Token Text="-" UId="545" />
+        <Blank Num="1" UId="546" />
+        <Access Scope="LocalVariable" UId="547">
+          <Symbol UId="548">
+            <Component Name="PreviousWeight1" UId="549" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="551" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="552" />
+  <Token Text="&gt;" UId="553" />
+  <Blank Num="1" UId="554" />
+  <Access Scope="LocalVariable" UId="555">
+    <Symbol UId="556">
+      <Component Name="DeadZone" UId="557" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="558" />
+  <Token Text="THEN" UId="559" />
+  <NewLine Num="1" UId="560" />
+  <Blank Num="12" UId="561" />
+  <Access Scope="Call" UId="562">
+    <Instruction Name="RESET_TIMER" UId="563">
+      <Token Text="(" UId="564" />
+      <NamelessParameter UId="565">
+        <Access Scope="LocalVariable" UId="566">
+          <Symbol UId="567">
+            <Component Name="TON1" UId="568" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="569" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="570" />
+  <NewLine Num="1" UId="571" />
+  <Blank Num="12" UId="572" />
+  <Access Scope="LocalVariable" UId="573">
+    <Symbol UId="574">
+      <Component Name="PreviousWeight1" UId="575" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="576" />
+  <Token Text=":=" UId="577" />
+  <Blank Num="1" UId="578" />
+  <Access Scope="LocalVariable" UId="579">
+    <Symbol UId="580">
+      <Component Name="WeightValue" UId="581" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="582" />
+  <NewLine Num="1" UId="583" />
+  <Blank Num="8" UId="584" />
+  <Token Text="END_IF" UId="585" />
+  <Token Text=";" UId="586" />
+  <NewLine Num="1" UId="587" />
+  <Blank Num="8" UId="588" />
+  <NewLine Num="1" UId="589" />
+  <Blank Num="8" UId="590" />
+  <Access Scope="Call" UId="591">
+    <Instruction Name="RESET_TIMER" UId="592">
+      <Token Text="(" UId="593" />
+      <NamelessParameter UId="594">
+        <Access Scope="LocalVariable" UId="595">
+          <Symbol UId="596">
+            <Component Name="TON2" UId="597" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="598" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="599" />
+  <NewLine Num="1" UId="600" />
+  <Blank Num="8" UId="601" />
+  <Access Scope="LocalVariable" UId="602">
+    <Symbol UId="603">
+      <Component Name="PreviousWeight2" UId="604" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="605" />
+  <Token Text=":=" UId="606" />
+  <Blank Num="1" UId="607" />
+  <Access Scope="LiteralConstant" UId="608">
+    <Constant UId="609">
+      <ConstantValue UId="611">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="612" />
+  <NewLine Num="1" UId="613" />
+  <Blank Num="4" UId="614" />
+  <Token Text="END_IF" UId="615" />
+  <Token Text=";" UId="616" />
+  <NewLine Num="1" UId="617" />
+  <Blank Num="4" UId="618" />
+  <NewLine Num="1" UId="619" />
+  <Token Text="ELSE" UId="620" />
+  <NewLine Num="1" UId="621" />
+  <Blank Num="4" UId="622" />
+  <Access Scope="Call" UId="623">
+    <Instruction Name="RESET_TIMER" UId="624">
+      <Token Text="(" UId="625" />
+      <NamelessParameter UId="626">
+        <Access Scope="LocalVariable" UId="627">
+          <Symbol UId="628">
+            <Component Name="TON1" UId="629" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="630" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="631" />
+  <NewLine Num="1" UId="632" />
+  <Blank Num="4" UId="633" />
+  <Access Scope="Call" UId="634">
+    <Instruction Name="RESET_TIMER" UId="635">
+      <Token Text="(" UId="636" />
+      <NamelessParameter UId="637">
+        <Access Scope="LocalVariable" UId="638">
+          <Symbol UId="639">
+            <Component Name="TON2" UId="640" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="641" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="642" />
+  <NewLine Num="1" UId="643" />
+  <Blank Num="4" UId="644" />
+  <Access Scope="LocalVariable" UId="645">
+    <Symbol UId="646">
+      <Component Name="PreviousWeight1" UId="647" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="648" />
+  <Token Text=":=" UId="649" />
+  <Blank Num="1" UId="650" />
+  <Access Scope="LiteralConstant" UId="651">
+    <Constant UId="652">
+      <ConstantValue UId="654">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="655" />
+  <NewLine Num="1" UId="656" />
+  <Blank Num="4" UId="657" />
+  <Access Scope="LocalVariable" UId="658">
+    <Symbol UId="659">
+      <Component Name="PreviousWeight2" UId="660" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="661" />
+  <Token Text=":=" UId="662" />
+  <Blank Num="1" UId="663" />
+  <Access Scope="LiteralConstant" UId="664">
+    <Constant UId="665">
+      <ConstantValue UId="667">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="668" />
+  <NewLine Num="1" UId="669" />
+  <Token Text="END_IF" UId="670" />
+  <Token Text=";" UId="671" />
+  <NewLine Num="3" UId="672" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

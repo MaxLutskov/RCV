@@ -1,0 +1,3 @@
+Hardware identifier
+Event class
+Fault identifier

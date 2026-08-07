@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:25.281741Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="WaterOutMaxTON" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="WaterOutMinTON" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="WaterInMaxTON" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="WaterInMinTON" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="step" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ChlorAlarm" Datatype="&quot;ChlorConsumptionAlarm&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input" />
+        <Section Name="Output">
+          <Member Name="HighAlarm" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut" />
+        <Section Name="Static">
+          <Member Name="step" Datatype="Int" />
+          <Member Name="maxConsamption" Datatype="Real" />
+          <Member Name="monitorTime" Datatype="Real" />
+          <Member Name="weightNow" Datatype="Real" />
+          <Member Name="weightLast" Datatype="Real" />
+          <Member Name="TON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="weightDelta" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Alarms</Name>
+      <Namespace />
+      <Number>17</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="LocalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="step" UId="23" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="24" />
+  <Token Text=":=" UId="25" />
+  <Blank Num="1" UId="26" />
+  <Access Scope="LiteralConstant" UId="27">
+    <Constant UId="28">
+      <ConstantValue UId="30">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="31" />
+  <NewLine Num="1" UId="32" />
+  <Access Scope="GlobalVariable" UId="33">
+    <Symbol UId="34">
+      <Component Name="MB" UId="35">
+        <BooleanAttribute Name="HasQuotes" UId="36">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="37" />
+      <Component Name="Table" UId="38" />
+      <Token Text="." UId="39" />
+      <Component Name="Alarms_Open1" UId="40" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="41" />
+  <Access Scope="GlobalVariable" UId="42">
+    <Symbol UId="43">
+      <Component Name="AlarmOpen1" UId="44">
+        <BooleanAttribute Name="HasQuotes" UId="45">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="46" />
+  <NewLine Num="1" UId="47" />
+  <Access Scope="GlobalVariable" UId="48">
+    <Symbol UId="49">
+      <Component Name="MB" UId="50">
+        <BooleanAttribute Name="HasQuotes" UId="51">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="52" />
+      <Component Name="Table" UId="53" />
+      <Token Text="." UId="54" />
+      <Component Name="Alarms_Open2" UId="55" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="56" />
+  <Access Scope="GlobalVariable" UId="57">
+    <Symbol UId="58">
+      <Component Name="AlarmOpen2" UId="59">
+        <BooleanAttribute Name="HasQuotes" UId="60">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="61" />
+  <NewLine Num="2" UId="62" />
+  <Access Scope="GlobalVariable" UId="63">
+    <Symbol UId="64">
+      <Component Name="MB" UId="65">
+        <BooleanAttribute Name="HasQuotes" UId="66">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="67" />
+      <Component Name="Table" UId="68" />
+      <Token Text="." UId="69" />
+      <Component Name="Alarms_RCV1Max" UId="70" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="71" />
+  <Access Scope="GlobalVariable" UId="72">
+    <Symbol UId="73">
+      <Component Name="MB" UId="74">
+        <BooleanAttribute Name="HasQuotes" UId="75">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="76" />
+      <Component Name="Table" UId="77" />
+      <Token Text="." UId="78" />
+      <Component Name="RCV1LevelValue" UId="79" />
+    </Symbol>
+  </Access>
+  <Token Text="&gt;=" UId="80" />
+  <Access Scope="GlobalVariable" UId="81">
+    <Symbol UId="82">
+      <Component Name="MB" UId="83">
+        <BooleanAttribute Name="HasQuotes" UId="84">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="85" />
+      <Component Name="Table" UId="86" />
+      <Token Text="." UId="87" />
+      <Component Name="LevelRCV1AlarmMax" UId="88" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="89" />
+  <NewLine Num="1" UId="90" />
+  <Access Scope="GlobalVariable" UId="91">
+    <Symbol UId="92">
+      <Component Name="MB" UId="93">
+        <BooleanAttribute Name="HasQuotes" UId="94">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="95" />
+      <Component Name="Table" UId="96" />
+      <Token Text="." UId="97" />
+      <Component Name="Alarms_RCV1Min" UId="98" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="99" />
+  <Access Scope="GlobalVariable" UId="100">
+    <Symbol UId="101">
+      <Component Name="MB" UId="102">
+        <BooleanAttribute Name="HasQuotes" UId="103">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="104" />
+      <Component Name="Table" UId="105" />
+      <Token Text="." UId="106" />
+      <Component Name="RCV1LevelValue" UId="107" />
+    </Symbol>
+  </Access>
+  <Token Text="&lt;=" UId="108" />
+  <Access Scope="GlobalVariable" UId="109">
+    <Symbol UId="110">
+      <Component Name="MB" UId="111">
+        <BooleanAttribute Name="HasQuotes" UId="112">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="113" />
+      <Component Name="Table" UId="114" />
+      <Token Text="." UId="115" />
+      <Component Name="LevelRCV1AlarmMin" UId="116" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="117" />
+  <NewLine Num="1" UId="118" />
+  <Access Scope="GlobalVariable" UId="119">
+    <Symbol UId="120">
+      <Component Name="MB" UId="121">
+        <BooleanAttribute Name="HasQuotes" UId="122">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="123" />
+      <Component Name="Table" UId="124" />
+      <Token Text="." UId="125" />
+      <Component Name="Alarms_RCV2Max" UId="126" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="127" />
+  <Access Scope="GlobalVariable" UId="128">
+    <Symbol UId="129">
+      <Component Name="MB" UId="130">
+        <BooleanAttribute Name="HasQuotes" UId="131">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="132" />
+      <Component Name="Table" UId="133" />
+      <Token Text="." UId="134" />
+      <Component Name="RCV2LevelValue" UId="135" />
+    </Symbol>
+  </Access>
+  <Token Text="&gt;=" UId="136" />
+  <Access Scope="GlobalVariable" UId="137">
+    <Symbol UId="138">
+      <Component Name="MB" UId="139">
+        <BooleanAttribute Name="HasQuotes" UId="140">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="141" />
+      <Component Name="Table" UId="142" />
+      <Token Text="." UId="143" />
+      <Component Name="LevelRCV2AlarmMax" UId="144" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="145" />
+  <NewLine Num="1" UId="146" />
+  <Access Scope="GlobalVariable" UId="147">
+    <Symbol UId="148">
+      <Component Name="MB" UId="149">
+        <BooleanAttribute Name="HasQuotes" UId="150">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="151" />
+      <Component Name="Table" UId="152" />
+      <Token Text="." UId="153" />
+      <Component Name="Alarms_RCV2Min" UId="154" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="155" />
+  <Access Scope="GlobalVariable" UId="156">
+    <Symbol UId="157">
+      <Component Name="MB" UId="158">
+        <BooleanAttribute Name="HasQuotes" UId="159">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="160" />
+      <Component Name="Table" UId="161" />
+      <Token Text="." UId="162" />
+      <Component Name="RCV2LevelValue" UId="163" />
+    </Symbol>
+  </Access>
+  <Token Text="&lt;=" UId="164" />
+  <Access Scope="GlobalVariable" UId="165">
+    <Symbol UId="166">
+      <Component Name="MB" UId="167">
+        <BooleanAttribute Name="HasQuotes" UId="168">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="169" />
+      <Component Name="Table" UId="170" />
+      <Token Text="." UId="171" />
+      <Component Name="LevelRCV2AlarmMin" UId="172" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="173" />
+  <NewLine Num="2" UId="174" />
+  <Access Scope="GlobalVariable" UId="175">
+    <Symbol UId="176">
+      <Component Name="MB" UId="177">
+        <BooleanAttribute Name="HasQuotes" UId="178">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="179" />
+      <Component Name="Table" UId="180" />
+      <Token Text="." UId="181" />
+      <Component Name="Alarms_RCV1Error" UId="182" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="183" />
+  <Access Scope="GlobalVariable" UId="184">
+    <Symbol UId="185">
+      <Component Name="Inputs_DB" UId="186">
+        <BooleanAttribute Name="HasQuotes" UId="187">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="188" />
+      <Component Name="ErrorRCV1" UId="189" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="190" />
+  <NewLine Num="1" UId="191" />
+  <Access Scope="GlobalVariable" UId="192">
+    <Symbol UId="193">
+      <Component Name="MB" UId="194">
+        <BooleanAttribute Name="HasQuotes" UId="195">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="196" />
+      <Component Name="Table" UId="197" />
+      <Token Text="." UId="198" />
+      <Component Name="Alarms_RCV2Error" UId="199" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="200" />
+  <Access Scope="GlobalVariable" UId="201">
+    <Symbol UId="202">
+      <Component Name="Inputs_DB" UId="203">
+        <BooleanAttribute Name="HasQuotes" UId="204">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="205" />
+      <Component Name="ErrorRCV2" UId="206" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="207" />
+  <NewLine Num="2" UId="208" />
+  <Access Scope="GlobalVariable" UId="209">
+    <Symbol UId="210">
+      <Component Name="MB" UId="211">
+        <BooleanAttribute Name="HasQuotes" UId="212">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="213" />
+      <Component Name="Table" UId="214" />
+      <Token Text="." UId="215" />
+      <Component Name="Alarms_ChlorMax" UId="216" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="217" />
+  <Access Scope="GlobalVariable" UId="218">
+    <Symbol UId="219">
+      <Component Name="MB" UId="220">
+        <BooleanAttribute Name="HasQuotes" UId="221">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="222" />
+      <Component Name="Table" UId="223" />
+      <Token Text="." UId="224" />
+      <Component Name="ChlorValue" UId="225" />
+    </Symbol>
+  </Access>
+  <Token Text="&gt;=" UId="226" />
+  <Access Scope="GlobalVariable" UId="227">
+    <Symbol UId="228">
+      <Component Name="MB" UId="229">
+        <BooleanAttribute Name="HasQuotes" UId="230">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="231" />
+      <Component Name="Table" UId="232" />
+      <Token Text="." UId="233" />
+      <Component Name="Chlor_ConcentAlarm" UId="234" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="235" />
+  <NewLine Num="2" UId="236" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="237">
+    <Text UId="238">"MB".Table.Alarms_NoFlow:= NOT("FlowSensor");</Text>
+  </LineComment>
+  <NewLine Num="2" UId="239" />
+  <Access Scope="GlobalVariable" UId="240">
+    <Symbol UId="241">
+      <Component Name="MB" UId="242">
+        <BooleanAttribute Name="HasQuotes" UId="243">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="244" />
+      <Component Name="Table" UId="245" />
+      <Token Text="." UId="246" />
+      <Component Name="Alarms_NoPowerSupply" UId="247" />
+    </Symbol>
+  </Access>
+  <Token Text=":=" UId="248" />
+  <Blank Num="1" UId="249" />
+  <Token Text="NOT" UId="250" />
+  <Blank Num="1" UId="251" />
+  <Token Text="(" UId="252" />
+  <Access Scope="GlobalVariable" UId="253">
+    <Symbol UId="254">
+      <Component Name="PowerSupply" UId="255">
+        <BooleanAttribute Name="HasQuotes" UId="256">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="257" />
+  <Token Text=";" UId="258" />
+  <NewLine Num="2" UId="259" />
+  <Access Scope="LocalVariable" UId="260">
+    <Symbol UId="261">
+      <Component Name="WaterOutMaxTON" UId="262" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="263">
+    <Instruction UId="264">
+      <Token Text="(" UId="265" />
+      <Parameter Name="IN" UId="266">
+        <Blank Num="1" UId="267" />
+        <Token Text=":=" UId="268" />
+        <Blank Num="1" UId="269" />
+        <Access Scope="GlobalVariable" UId="270">
+          <Symbol UId="271">
+            <Component Name="MB" UId="272">
+              <BooleanAttribute Name="HasQuotes" UId="273">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="274" />
+            <Component Name="Table" UId="275" />
+            <Token Text="." UId="276" />
+            <Component Name="WaterOutPressureValue" UId="277" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="278" />
+        <Token Text="&gt;=" UId="279" />
+        <Blank Num="1" UId="280" />
+        <Access Scope="GlobalVariable" UId="281">
+          <Symbol UId="282">
+            <Component Name="MB" UId="283">
+              <BooleanAttribute Name="HasQuotes" UId="284">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="285" />
+            <Component Name="Table" UId="286" />
+            <Token Text="." UId="287" />
+            <Component Name="WaterOutMaxValue" UId="288" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="289" />
+      <NewLine Num="1" UId="290" />
+      <Blank Num="16" UId="291" />
+      <Parameter Name="PT" UId="292">
+        <Blank Num="1" UId="293" />
+        <Token Text=":=" UId="294" />
+        <Blank Num="1" UId="295" />
+        <Access Scope="GlobalVariable" UId="296">
+          <Symbol UId="297">
+            <Component Name="MB" UId="298">
+              <BooleanAttribute Name="HasQuotes" UId="299">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="300" />
+            <Component Name="Table" UId="301" />
+            <Token Text="." UId="302" />
+            <Component Name="WaterOutAlarmTime" UId="303" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="304" />
+        <Token Text="*" UId="305" />
+        <Blank Num="1" UId="306" />
+        <Access Scope="LiteralConstant" UId="307">
+          <Constant UId="308">
+            <ConstantValue UId="310">1000</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="311" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="312" />
+  <NewLine Num="1" UId="313" />
+  <Access Scope="GlobalVariable" UId="314">
+    <Symbol UId="315">
+      <Component Name="MB" UId="316">
+        <BooleanAttribute Name="HasQuotes" UId="317">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="318" />
+      <Component Name="Table" UId="319" />
+      <Token Text="." UId="320" />
+      <Component Name="Alarms_WaterOutMax" UId="321" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="322" />
+  <Token Text=":=" UId="323" />
+  <Blank Num="1" UId="324" />
+  <Access Scope="LocalVariable" UId="325">
+    <Symbol UId="326">
+      <Component Name="WaterOutMaxTON" UId="327" />
+      <Token Text="." UId="328" />
+      <Component Name="Q" UId="329" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="330" />
+  <NewLine Num="2" UId="331" />
+  <Access Scope="LocalVariable" UId="332">
+    <Symbol UId="333">
+      <Component Name="WaterOutMinTON" UId="334" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="335">
+    <Instruction UId="336">
+      <Token Text="(" UId="337" />
+      <Parameter Name="IN" UId="338">
+        <Token Text=":=" UId="339" />
+        <Access Scope="GlobalVariable" UId="340">
+          <Symbol UId="341">
+            <Component Name="MB" UId="342">
+              <BooleanAttribute Name="HasQuotes" UId="343">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="344" />
+            <Component Name="Table" UId="345" />
+            <Token Text="." UId="346" />
+            <Component Name="WaterOutPressureValue" UId="347" />
+          </Symbol>
+        </Access>
+        <Token Text="&lt;=" UId="348" />
+        <Access Scope="GlobalVariable" UId="349">
+          <Symbol UId="350">
+            <Component Name="MB" UId="351">
+              <BooleanAttribute Name="HasQuotes" UId="352">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="353" />
+            <Component Name="Table" UId="354" />
+            <Token Text="." UId="355" />
+            <Component Name="WaterOutMinValue" UId="356" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="357" />
+      <NewLine Num="1" UId="358" />
+      <Blank Num="16" UId="359" />
+      <Parameter Name="PT" UId="360">
+        <Token Text=":=" UId="361" />
+        <Access Scope="GlobalVariable" UId="362">
+          <Symbol UId="363">
+            <Component Name="MB" UId="364">
+              <BooleanAttribute Name="HasQuotes" UId="365">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="366" />
+            <Component Name="Table" UId="367" />
+            <Token Text="." UId="368" />
+            <Component Name="WaterOutAlarmTime" UId="369" />
+          </Symbol>
+        </Access>
+        <Token Text="*" UId="370" />
+        <Access Scope="LiteralConstant" UId="371">
+          <Constant UId="372">
+            <ConstantValue UId="374">1000</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="375" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="376" />
+  <NewLine Num="1" UId="377" />
+  <Access Scope="GlobalVariable" UId="378">
+    <Symbol UId="379">
+      <Component Name="MB" UId="380">
+        <BooleanAttribute Name="HasQuotes" UId="381">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="382" />
+      <Component Name="Table" UId="383" />
+      <Token Text="." UId="384" />
+      <Component Name="Alarms_WaterOutMin" UId="385" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="386" />
+  <Token Text=":=" UId="387" />
+  <Blank Num="1" UId="388" />
+  <Access Scope="LocalVariable" UId="389">
+    <Symbol UId="390">
+      <Component Name="WaterOutMinTON" UId="391" />
+      <Token Text="." UId="392" />
+      <Component Name="Q" UId="393" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="394" />
+  <NewLine Num="2" UId="395" />
+  <Access Scope="LocalVariable" UId="396">
+    <Symbol UId="397">
+      <Component Name="WaterInMaxTON" UId="398" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="399">
+    <Instruction UId="400">
+      <Token Text="(" UId="401" />
+      <Parameter Name="IN" UId="402">
+        <Token Text=":=" UId="403" />
+        <Access Scope="GlobalVariable" UId="404">
+          <Symbol UId="405">
+            <Component Name="MB" UId="406">
+              <BooleanAttribute Name="HasQuotes" UId="407">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="408" />
+            <Component Name="Table" UId="409" />
+            <Token Text="." UId="410" />
+            <Component Name="WaterInPressureValue" UId="411" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="412" />
+        <Token Text="&gt;=" UId="413" />
+        <Blank Num="1" UId="414" />
+        <Access Scope="GlobalVariable" UId="415">
+          <Symbol UId="416">
+            <Component Name="MB" UId="417">
+              <BooleanAttribute Name="HasQuotes" UId="418">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="419" />
+            <Component Name="Table" UId="420" />
+            <Token Text="." UId="421" />
+            <Component Name="WaterInPresMaxValue" UId="422" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="423" />
+      <NewLine Num="1" UId="424" />
+      <Blank Num="15" UId="425" />
+      <Parameter Name="PT" UId="426">
+        <Token Text=":=" UId="427" />
+        <Access Scope="GlobalVariable" UId="428">
+          <Symbol UId="429">
+            <Component Name="MB" UId="430">
+              <BooleanAttribute Name="HasQuotes" UId="431">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="432" />
+            <Component Name="Table" UId="433" />
+            <Token Text="." UId="434" />
+            <Component Name="WaterInPresAlarmTime" UId="435" />
+          </Symbol>
+        </Access>
+        <Token Text="*" UId="436" />
+        <Access Scope="LiteralConstant" UId="437">
+          <Constant UId="438">
+            <ConstantValue UId="440">1000</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="441" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="442" />
+  <NewLine Num="1" UId="443" />
+  <Access Scope="GlobalVariable" UId="444">
+    <Symbol UId="445">
+      <Component Name="MB" UId="446">
+        <BooleanAttribute Name="HasQuotes" UId="447">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="448" />
+      <Component Name="Table" UId="449" />
+      <Token Text="." UId="450" />
+      <Component Name="Alarms_WaterInMax" UId="451" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="452" />
+  <Token Text=":=" UId="453" />
+  <Blank Num="1" UId="454" />
+  <Access Scope="LocalVariable" UId="455">
+    <Symbol UId="456">
+      <Component Name="WaterInMaxTON" UId="457" />
+      <Token Text="." UId="458" />
+      <Component Name="Q" UId="459" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="460" />
+  <NewLine Num="2" UId="461" />
+  <Access Scope="LocalVariable" UId="462">
+    <Symbol UId="463">
+      <Component Name="WaterInMinTON" UId="464" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="465">
+    <Instruction UId="466">
+      <Token Text="(" UId="467" />
+      <Parameter Name="IN" UId="468">
+        <Token Text=":=" UId="469" />
+        <Access Scope="GlobalVariable" UId="470">
+          <Symbol UId="471">
+            <Component Name="MB" UId="472">
+              <BooleanAttribute Name="HasQuotes" UId="473">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="474" />
+            <Component Name="Table" UId="475" />
+            <Token Text="." UId="476" />
+            <Component Name="WaterInPressureValue" UId="477" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="478" />
+        <Token Text="&lt;=" UId="479" />
+        <Blank Num="1" UId="480" />
+        <Access Scope="GlobalVariable" UId="481">
+          <Symbol UId="482">
+            <Component Name="MB" UId="483">
+              <BooleanAttribute Name="HasQuotes" UId="484">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="485" />
+            <Component Name="Table" UId="486" />
+            <Token Text="." UId="487" />
+            <Component Name="WaterInPresMinValue" UId="488" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="489" />
+      <NewLine Num="1" UId="490" />
+      <Blank Num="15" UId="491" />
+      <Parameter Name="PT" UId="492">
+        <Token Text=":=" UId="493" />
+        <Access Scope="GlobalVariable" UId="494">
+          <Symbol UId="495">
+            <Component Name="MB" UId="496">
+              <BooleanAttribute Name="HasQuotes" UId="497">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="498" />
+            <Component Name="Table" UId="499" />
+            <Token Text="." UId="500" />
+            <Component Name="WaterInPresAlarmTime" UId="501" />
+          </Symbol>
+        </Access>
+        <Token Text="*" UId="502" />
+        <Access Scope="LiteralConstant" UId="503">
+          <Constant UId="504">
+            <ConstantValue UId="506">1000</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="507" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="508" />
+  <NewLine Num="2" UId="509" />
+  <Access Scope="Call" UId="510">
+    <CallInfo UId="511" BlockType="FB" Name="ChlorConsumptionAlarm">
+      <Instance Scope="LocalVariable" UId="512">
+        <Component Name="ChlorAlarm" UId="513" />
+      </Instance>
+      <Token Text="(" UId="514" />
+      <Parameter Name="HighAlarm" UId="515">
+        <Token Text="=&gt;" UId="516" />
+        <Access Scope="GlobalVariable" UId="517">
+          <Symbol UId="518">
+            <Component Name="MB" UId="519">
+              <BooleanAttribute Name="HasQuotes" UId="520">true</BooleanAttribute>
+            </Component>
+            <Blank Num="2" UId="521" />
+            <Token Text="." UId="522" />
+            <Component Name="Table" UId="523" />
+            <Token Text="." UId="524" />
+            <Component Name="Alarms_ChlorLargeConsumption" UId="525" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="526" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="527" />
+  <NewLine Num="3" UId="528" />
+  <Access Scope="GlobalVariable" UId="529">
+    <Symbol UId="530">
+      <Component Name="MB" UId="531">
+        <BooleanAttribute Name="HasQuotes" UId="532">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="533" />
+      <Component Name="Table" UId="534" />
+      <Token Text="." UId="535" />
+      <Component Name="Alarms_WaterInMin" UId="536" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="537" />
+  <Token Text=":=" UId="538" />
+  <Blank Num="1" UId="539" />
+  <Access Scope="LocalVariable" UId="540">
+    <Symbol UId="541">
+      <Component Name="WaterOutMinTON" UId="542" />
+      <Token Text="." UId="543" />
+      <Component Name="Q" UId="544" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="545" />
+  <NewLine Num="2" UId="546" />
+  <Access Scope="GlobalVariable" UId="547">
+    <Symbol UId="548">
+      <Component Name="SirenOut" UId="549">
+        <BooleanAttribute Name="HasQuotes" UId="550">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="551" />
+  <Token Text=":=" UId="552" />
+  <Blank Num="1" UId="553" />
+  <Access Scope="Address" UId="554">
+    <Symbol UId="555">
+      <Address Area="DB" Type="MB" BlockNumber="1" UId="556" />
+      <Token Text="." UId="557" />
+      <Address Area="DB" Type="Word" BitOffset="3328" UId="558" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="559" />
+  <Token Text="&gt;" UId="560" />
+  <Blank Num="1" UId="561" />
+  <Access Scope="LiteralConstant" UId="562">
+    <Constant UId="563">
+      <ConstantValue UId="565">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="566" />
+  <Token Text="AND" UId="567" />
+  <Blank Num="1" UId="568" />
+  <Token Text="NOT" UId="569" />
+  <Blank Num="1" UId="570" />
+  <Access Scope="GlobalVariable" UId="571">
+    <Symbol UId="572">
+      <Component Name="MB" UId="573">
+        <BooleanAttribute Name="HasQuotes" UId="574">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="575" />
+      <Component Name="Table" UId="576" />
+      <Token Text="." UId="577" />
+      <Component Name="HMI_SoundOff" UId="578" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="579" />
+  <NewLine Num="6" UId="580" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

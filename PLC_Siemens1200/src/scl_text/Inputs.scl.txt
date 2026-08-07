@@ -1,0 +1,9 @@
+ #AIHandlers[4](
+                Value := "AI4AV",
+                ValueMin := 5320,
+                ValueMax := 27648,
+                ValueOffset := "MB".Table.AIOffsetCH4,
+                OutputMin := "MB".Table.AIValueMinCH4,
+                OutputMax := "MB".Table.AIValueMaxCH4,
+                TimeBase := "MB".Table.AITimeBaseCH4,
+                Output => );

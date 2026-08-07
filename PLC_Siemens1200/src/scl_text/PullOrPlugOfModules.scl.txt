@@ -1,0 +1,3 @@
+Hardware identifier
+16#38/39: module inserted, removed
+Fault identifier

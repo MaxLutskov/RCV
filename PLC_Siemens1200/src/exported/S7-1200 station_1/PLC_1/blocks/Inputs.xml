@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:23.3722674Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="AIHandlers" Datatype="Array[0..5] of &quot;AIHandler&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="Value" Datatype="Real" />
+          <Member Name="ValueMin" Datatype="Real" />
+          <Member Name="ValueMax" Datatype="Real" />
+          <Member Name="ValueOffset" Datatype="Real" />
+          <Member Name="OutputMin" Datatype="Real" />
+          <Member Name="OutputMax" Datatype="Real" />
+          <Member Name="TimeBase" Datatype="Time" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="Output" Datatype="Real" />
+          <Member Name="Error" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut" />
+        <Section Name="Static">
+          <Member Name="ConvertedValue" Datatype="Real" />
+          <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="DelayTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="FilterArray" Datatype="Array[0..199] of Real" />
+          <Member Name="FilterTime" Datatype="Time" />
+          <Member Name="i" Datatype="Int" />
+          <Member Name="sum" Datatype="Real" />
+          <Member Name="FilteredValue" Datatype="Real" />
+          <Member Name="one" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="WeightHandlers" Datatype="Array[0..1] of &quot;WeightHandler&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="ValueMin" Datatype="Real" />
+          <Member Name="ValueMax" Datatype="Real" />
+          <Member Name="OutputMin" Datatype="Real" />
+          <Member Name="OutputMax" Datatype="Real" />
+          <Member Name="ValueOffset" Datatype="Real" />
+          <Member Name="Value" Datatype="Real" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="Output" Datatype="Real" />
+          <Member Name="Error" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut" />
+        <Section Name="Static">
+          <Member Name="ConvertedValue" Datatype="Real" />
+          <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="ErrorRCV1" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ErrorRCV2" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Inputs</Name>
+      <Namespace />
+      <Number>4</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="Call" UId="21">
+    <CallInfo UId="22" BlockType="FB" Name="AIHandler">
+      <Instance Scope="LocalVariable" UId="23">
+        <Component Name="AIHandlers" UId="24">
+          <Token Text="[" UId="25" />
+          <Access Scope="LiteralConstant" UId="26">
+            <Constant UId="27">
+              <ConstantValue UId="29">0</ConstantValue>
+            </Constant>
+          </Access>
+          <Token Text="]" UId="30" />
+        </Component>
+      </Instance>
+      <Token Text="(" UId="31" />
+      <NewLine Num="1" UId="32" />
+      <Blank Num="15" UId="33" />
+      <Parameter Name="Value" UId="34">
+        <Blank Num="1" UId="35" />
+        <Token Text=":=" UId="36" />
+        <Blank Num="1" UId="37" />
+        <Access Scope="GlobalVariable" UId="38">
+          <Symbol UId="39">
+            <Component Name="AI0AV" UId="40">
+              <BooleanAttribute Name="HasQuotes" UId="41">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="42" />
+      <NewLine Num="1" UId="43" />
+      <Blank Num="15" UId="44" />
+      <Parameter Name="ValueMin" UId="45">
+        <Blank Num="1" UId="46" />
+        <Token Text=":=" UId="47" />
+        <Blank Num="1" UId="48" />
+        <Access Scope="LiteralConstant" UId="49">
+          <Constant UId="50">
+            <ConstantValue UId="52">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="53" />
+      <NewLine Num="1" UId="54" />
+      <Blank Num="15" UId="55" />
+      <Parameter Name="ValueMax" UId="56">
+        <Blank Num="1" UId="57" />
+        <Token Text=":=" UId="58" />
+        <Blank Num="1" UId="59" />
+        <Access Scope="LiteralConstant" UId="60">
+          <Constant UId="61">
+            <ConstantValue UId="63">27648</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="64" />
+      <NewLine Num="1" UId="65" />
+      <Blank Num="15" UId="66" />
+      <Parameter Name="ValueOffset" UId="67">
+        <Blank Num="1" UId="68" />
+        <Token Text=":=" UId="69" />
+        <Blank Num="1" UId="70" />
+        <Access Scope="GlobalVariable" UId="71">
+          <Symbol UId="72">
+            <Component Name="MB" UId="73">
+              <BooleanAttribute Name="HasQuotes" UId="74">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="75" />
+            <Component Name="Table" UId="76" />
+            <Token Text="." UId="77" />
+            <Component Name="AIOffsetCH0" UId="78" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="79" />
+      <NewLine Num="1" UId="80" />
+      <Blank Num="15" UId="81" />
+      <Parameter Name="OutputMin" UId="82">
+        <Blank Num="1" UId="83" />
+        <Token Text=":=" UId="84" />
+        <Blank Num="1" UId="85" />
+        <Access Scope="GlobalVariable" UId="86">
+          <Symbol UId="87">
+            <Component Name="MB" UId="88">
+              <BooleanAttribute Name="HasQuotes" UId="89">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="90" />
+            <Component Name="Table" UId="91" />
+            <Token Text="." UId="92" />
+            <Component Name="AIValueMinCH0" UId="93" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="94" />
+      <NewLine Num="1" UId="95" />
+      <Blank Num="15" UId="96" />
+      <Parameter Name="OutputMax" UId="97">
+        <Blank Num="1" UId="98" />
+        <Token Text=":=" UId="99" />
+        <Blank Num="1" UId="100" />
+        <Access Scope="GlobalVariable" UId="101">
+          <Symbol UId="102">
+            <Component Name="MB" UId="103">
+              <BooleanAttribute Name="HasQuotes" UId="104">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="105" />
+            <Component Name="Table" UId="106" />
+            <Token Text="." UId="107" />
+            <Component Name="AIValueMaxCH0" UId="108" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="109" />
+      <NewLine Num="1" UId="110" />
+      <Blank Num="15" UId="111" />
+      <Parameter Name="TimeBase" UId="112">
+        <Blank Num="1" UId="113" />
+        <Token Text=":=" UId="114" />
+        <Blank Num="1" UId="115" />
+        <Access Scope="GlobalVariable" UId="116">
+          <Symbol UId="117">
+            <Component Name="MB" UId="118">
+              <BooleanAttribute Name="HasQuotes" UId="119">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="120" />
+            <Component Name="Table" UId="121" />
+            <Token Text="." UId="122" />
+            <Component Name="AITimeBaseCH0" UId="123" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="124" />
+      <NewLine Num="1" UId="125" />
+      <Blank Num="15" UId="126" />
+      <Parameter Name="Output" UId="127">
+        <Blank Num="1" UId="128" />
+        <Token Text="=&gt;" UId="129" />
+        <Blank Num="1" UId="130" />
+        <Access Scope="GlobalVariable" UId="131">
+          <Symbol UId="132">
+            <Component Name="MB" UId="133">
+              <BooleanAttribute Name="HasQuotes" UId="134">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="135" />
+            <Component Name="Table" UId="136" />
+            <Token Text="." UId="137" />
+            <Component Name="WaterInPressureValue" UId="138" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="140" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="141" />
+  <NewLine Num="1" UId="142" />
+  <Access Scope="Call" UId="143">
+    <CallInfo UId="144" BlockType="FB" Name="AIHandler">
+      <Instance Scope="LocalVariable" UId="145">
+        <Component Name="AIHandlers" UId="146">
+          <Token Text="[" UId="147" />
+          <Access Scope="LiteralConstant" UId="148">
+            <Constant UId="149">
+              <ConstantValue UId="151">1</ConstantValue>
+            </Constant>
+          </Access>
+          <Token Text="]" UId="152" />
+        </Component>
+      </Instance>
+      <Token Text="(" UId="153" />
+      <NewLine Num="1" UId="154" />
+      <Blank Num="15" UId="155" />
+      <Parameter Name="Value" UId="156">
+        <Blank Num="1" UId="157" />
+        <Token Text=":=" UId="158" />
+        <Blank Num="1" UId="159" />
+        <Access Scope="GlobalVariable" UId="160">
+          <Symbol UId="161">
+            <Component Name="AI1AV" UId="162">
+              <BooleanAttribute Name="HasQuotes" UId="163">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="164" />
+      <NewLine Num="1" UId="165" />
+      <Blank Num="15" UId="166" />
+      <Parameter Name="ValueMin" UId="167">
+        <Blank Num="1" UId="168" />
+        <Token Text=":=" UId="169" />
+        <Blank Num="1" UId="170" />
+        <Access Scope="LiteralConstant" UId="171">
+          <Constant UId="172">
+            <ConstantValue UId="174">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="175" />
+      <NewLine Num="1" UId="176" />
+      <Blank Num="15" UId="177" />
+      <Parameter Name="ValueMax" UId="178">
+        <Blank Num="1" UId="179" />
+        <Token Text=":=" UId="180" />
+        <Blank Num="1" UId="181" />
+        <Access Scope="LiteralConstant" UId="182">
+          <Constant UId="183">
+            <ConstantValue UId="185">27648</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="186" />
+      <NewLine Num="1" UId="187" />
+      <Blank Num="15" UId="188" />
+      <Parameter Name="ValueOffset" UId="189">
+        <Blank Num="1" UId="190" />
+        <Token Text=":=" UId="191" />
+        <Blank Num="1" UId="192" />
+        <Access Scope="GlobalVariable" UId="193">
+          <Symbol UId="194">
+            <Component Name="MB" UId="195">
+              <BooleanAttribute Name="HasQuotes" UId="196">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="197" />
+            <Component Name="Table" UId="198" />
+            <Token Text="." UId="199" />
+            <Component Name="AIOffsetCH1" UId="200" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="201" />
+      <NewLine Num="1" UId="202" />
+      <Blank Num="15" UId="203" />
+      <Parameter Name="OutputMin" UId="204">
+        <Blank Num="1" UId="205" />
+        <Token Text=":=" UId="206" />
+        <Blank Num="1" UId="207" />
+        <Access Scope="GlobalVariable" UId="208">
+          <Symbol UId="209">
+            <Component Name="MB" UId="210">
+              <BooleanAttribute Name="HasQuotes" UId="211">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="212" />
+            <Component Name="Table" UId="213" />
+            <Token Text="." UId="214" />
+            <Component Name="AIValueMinCH1" UId="215" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="216" />
+      <NewLine Num="1" UId="217" />
+      <Blank Num="15" UId="218" />
+      <Parameter Name="OutputMax" UId="219">
+        <Blank Num="1" UId="220" />
+        <Token Text=":=" UId="221" />
+        <Blank Num="1" UId="222" />
+        <Access Scope="GlobalVariable" UId="223">
+          <Symbol UId="224">
+            <Component Name="MB" UId="225">
+              <BooleanAttribute Name="HasQuotes" UId="226">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="227" />
+            <Component Name="Table" UId="228" />
+            <Token Text="." UId="229" />
+            <Component Name="AIValueMaxCH1" UId="230" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="231" />
+      <NewLine Num="1" UId="232" />
+      <Blank Num="15" UId="233" />
+      <Parameter Name="TimeBase" UId="234">
+        <Blank Num="1" UId="235" />
+        <Token Text=":=" UId="236" />
+        <Blank Num="1" UId="237" />
+        <Access Scope="GlobalVariable" UId="238">
+          <Symbol UId="239">
+            <Component Name="MB" UId="240">
+              <BooleanAttribute Name="HasQuotes" UId="241">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="242" />
+            <Component Name="Table" UId="243" />
+            <Token Text="." UId="244" />
+            <Component Name="AITimeBaseCH1" UId="245" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="246" />
+      <NewLine Num="1" UId="247" />
+      <Blank Num="15" UId="248" />
+      <Parameter Name="Output" UId="249">
+        <Blank Num="1" UId="250" />
+        <Token Text="=&gt;" UId="251" />
+        <Blank Num="1" UId="252" />
+        <Access Scope="GlobalVariable" UId="253">
+          <Symbol UId="254">
+            <Component Name="MB" UId="255">
+              <BooleanAttribute Name="HasQuotes" UId="256">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="257" />
+            <Component Name="Table" UId="258" />
+            <Token Text="." UId="259" />
+            <Component Name="RCV1LevelValue" UId="260" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="262" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="263" />
+  <NewLine Num="1" UId="264" />
+  <Access Scope="Call" UId="265">
+    <CallInfo UId="266" BlockType="FB" Name="AIHandler">
+      <Instance Scope="LocalVariable" UId="267">
+        <Component Name="AIHandlers" UId="268">
+          <Token Text="[" UId="269" />
+          <Access Scope="LiteralConstant" UId="270">
+            <Constant UId="271">
+              <ConstantValue UId="273">2</ConstantValue>
+            </Constant>
+          </Access>
+          <Token Text="]" UId="274" />
+        </Component>
+      </Instance>
+      <Token Text="(" UId="275" />
+      <NewLine Num="1" UId="276" />
+      <Blank Num="15" UId="277" />
+      <Parameter Name="Value" UId="278">
+        <Blank Num="1" UId="279" />
+        <Token Text=":=" UId="280" />
+        <Blank Num="1" UId="281" />
+        <Access Scope="GlobalVariable" UId="282">
+          <Symbol UId="283">
+            <Component Name="AI2AV" UId="284">
+              <BooleanAttribute Name="HasQuotes" UId="285">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="286" />
+      <NewLine Num="1" UId="287" />
+      <Blank Num="15" UId="288" />
+      <Parameter Name="ValueMin" UId="289">
+        <Blank Num="1" UId="290" />
+        <Token Text=":=" UId="291" />
+        <Blank Num="1" UId="292" />
+        <Access Scope="LiteralConstant" UId="293">
+          <Constant UId="294">
+            <ConstantValue UId="296">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="297" />
+      <NewLine Num="1" UId="298" />
+      <Blank Num="15" UId="299" />
+      <Parameter Name="ValueMax" UId="300">
+        <Blank Num="1" UId="301" />
+        <Token Text=":=" UId="302" />
+        <Blank Num="1" UId="303" />
+        <Access Scope="LiteralConstant" UId="304">
+          <Constant UId="305">
+            <ConstantValue UId="307">27648</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="308" />
+      <NewLine Num="1" UId="309" />
+      <Blank Num="15" UId="310" />
+      <Parameter Name="ValueOffset" UId="311">
+        <Blank Num="1" UId="312" />
+        <Token Text=":=" UId="313" />
+        <Blank Num="1" UId="314" />
+        <Access Scope="GlobalVariable" UId="315">
+          <Symbol UId="316">
+            <Component Name="MB" UId="317">
+              <BooleanAttribute Name="HasQuotes" UId="318">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="319" />
+            <Component Name="Table" UId="320" />
+            <Token Text="." UId="321" />
+            <Component Name="AIOffsetCH2" UId="322" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="323" />
+      <NewLine Num="1" UId="324" />
+      <Blank Num="15" UId="325" />
+      <Parameter Name="OutputMin" UId="326">
+        <Blank Num="1" UId="327" />
+        <Token Text=":=" UId="328" />
+        <Blank Num="1" UId="329" />
+        <Access Scope="GlobalVariable" UId="330">
+          <Symbol UId="331">
+            <Component Name="MB" UId="332">
+              <BooleanAttribute Name="HasQuotes" UId="333">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="334" />
+            <Component Name="Table" UId="335" />
+            <Token Text="." UId="336" />
+            <Component Name="AIValueMinCH2" UId="337" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="338" />
+      <NewLine Num="1" UId="339" />
+      <Blank Num="15" UId="340" />
+      <Parameter Name="OutputMax" UId="341">
+        <Blank Num="1" UId="342" />
+        <Token Text=":=" UId="343" />
+        <Blank Num="1" UId="344" />
+        <Access Scope="GlobalVariable" UId="345">
+          <Symbol UId="346">
+            <Component Name="MB" UId="347">
+              <BooleanAttribute Name="HasQuotes" UId="348">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="349" />
+            <Component Name="Table" UId="350" />
+            <Token Text="." UId="351" />
+            <Component Name="AIValueMaxCH2" UId="352" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="353" />
+      <NewLine Num="1" UId="354" />
+      <Blank Num="15" UId="355" />
+      <Parameter Name="TimeBase" UId="356">
+        <Blank Num="1" UId="357" />
+        <Token Text=":=" UId="358" />
+        <Blank Num="1" UId="359" />
+        <Access Scope="GlobalVariable" UId="360">
+          <Symbol UId="361">
+            <Component Name="MB" UId="362">
+              <BooleanAttribute Name="HasQuotes" UId="363">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="364" />
+            <Component Name="Table" UId="365" />
+            <Token Text="." UId="366" />
+            <Component Name="AITimeBaseCH2" UId="367" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="368" />
+      <NewLine Num="1" UId="369" />
+      <Blank Num="15" UId="370" />
+      <Parameter Name="Output" UId="371">
+        <Blank Num="1" UId="372" />
+        <Token Text="=&gt;" UId="373" />
+        <Blank Num="1" UId="374" />
+        <Access Scope="GlobalVariable" UId="375">
+          <Symbol UId="376">
+            <Component Name="MB" UId="377">
+              <BooleanAttribute Name="HasQuotes" UId="378">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="379" />
+            <Component Name="Table" UId="380" />
+            <Token Text="." UId="381" />
+            <Component Name="RCV2LevelValue" UId="382" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="384" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="385" />
+  <NewLine Num="1" UId="386" />
+  <Access Scope="Call" UId="387">
+    <CallInfo UId="388" BlockType="FB" Name="AIHandler">
+      <Instance Scope="LocalVariable" UId="389">
+        <Component Name="AIHandlers" UId="390">
+          <Token Text="[" UId="391" />
+          <Access Scope="LiteralConstant" UId="392">
+            <Constant UId="393">
+              <ConstantValue UId="395">3</ConstantValue>
+            </Constant>
+          </Access>
+          <Token Text="]" UId="396" />
+        </Component>
+      </Instance>
+      <Token Text="(" UId="397" />
+      <NewLine Num="1" UId="398" />
+      <Blank Num="15" UId="399" />
+      <Parameter Name="Value" UId="400">
+        <Blank Num="1" UId="401" />
+        <Token Text=":=" UId="402" />
+        <Blank Num="1" UId="403" />
+        <Access Scope="GlobalVariable" UId="404">
+          <Symbol UId="405">
+            <Component Name="AI3AV" UId="406">
+              <BooleanAttribute Name="HasQuotes" UId="407">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="408" />
+      <NewLine Num="1" UId="409" />
+      <Blank Num="15" UId="410" />
+      <Parameter Name="ValueMin" UId="411">
+        <Blank Num="1" UId="412" />
+        <Token Text=":=" UId="413" />
+        <Blank Num="1" UId="414" />
+        <Access Scope="LiteralConstant" UId="415">
+          <Constant UId="416">
+            <ConstantValue UId="418">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="419" />
+      <NewLine Num="1" UId="420" />
+      <Blank Num="15" UId="421" />
+      <Parameter Name="ValueMax" UId="422">
+        <Blank Num="1" UId="423" />
+        <Token Text=":=" UId="424" />
+        <Blank Num="1" UId="425" />
+        <Access Scope="LiteralConstant" UId="426">
+          <Constant UId="427">
+            <ConstantValue UId="429">27648</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="430" />
+      <NewLine Num="1" UId="431" />
+      <Blank Num="15" UId="432" />
+      <Parameter Name="ValueOffset" UId="433">
+        <Blank Num="1" UId="434" />
+        <Token Text=":=" UId="435" />
+        <Blank Num="1" UId="436" />
+        <Access Scope="GlobalVariable" UId="437">
+          <Symbol UId="438">
+            <Component Name="MB" UId="439">
+              <BooleanAttribute Name="HasQuotes" UId="440">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="441" />
+            <Component Name="Table" UId="442" />
+            <Token Text="." UId="443" />
+            <Component Name="AIOffsetCH3" UId="444" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="445" />
+      <NewLine Num="1" UId="446" />
+      <Blank Num="15" UId="447" />
+      <Parameter Name="OutputMin" UId="448">
+        <Blank Num="1" UId="449" />
+        <Token Text=":=" UId="450" />
+        <Blank Num="1" UId="451" />
+        <Access Scope="GlobalVariable" UId="452">
+          <Symbol UId="453">
+            <Component Name="MB" UId="454">
+              <BooleanAttribute Name="HasQuotes" UId="455">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="456" />
+            <Component Name="Table" UId="457" />
+            <Token Text="." UId="458" />
+            <Component Name="AIValueMinCH3" UId="459" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="460" />
+      <NewLine Num="1" UId="461" />
+      <Blank Num="15" UId="462" />
+      <Parameter Name="OutputMax" UId="463">
+        <Blank Num="1" UId="464" />
+        <Token Text=":=" UId="465" />
+        <Blank Num="1" UId="466" />
+        <Access Scope="GlobalVariable" UId="467">
+          <Symbol UId="468">
+            <Component Name="MB" UId="469">
+              <BooleanAttribute Name="HasQuotes" UId="470">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="471" />
+            <Component Name="Table" UId="472" />
+            <Token Text="." UId="473" />
+            <Component Name="AIValueMaxCH3" UId="474" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="475" />
+      <NewLine Num="1" UId="476" />
+      <Blank Num="15" UId="477" />
+      <Parameter Name="TimeBase" UId="478">
+        <Blank Num="1" UId="479" />
+        <Token Text=":=" UId="480" />
+        <Blank Num="1" UId="481" />
+        <Access Scope="GlobalVariable" UId="482">
+          <Symbol UId="483">
+            <Component Name="MB" UId="484">
+              <BooleanAttribute Name="HasQuotes" UId="485">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="486" />
+            <Component Name="Table" UId="487" />
+            <Token Text="." UId="488" />
+            <Component Name="AITimeBaseCH3" UId="489" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="490" />
+      <NewLine Num="1" UId="491" />
+      <Blank Num="15" UId="492" />
+      <Parameter Name="Output" UId="493">
+        <Blank Num="1" UId="494" />
+        <Token Text="=&gt;" UId="495" />
+        <Blank Num="1" UId="496" />
+        <Access Scope="GlobalVariable" UId="497">
+          <Symbol UId="498">
+            <Component Name="MB" UId="499">
+              <BooleanAttribute Name="HasQuotes" UId="500">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="501" />
+            <Component Name="Table" UId="502" />
+            <Token Text="." UId="503" />
+            <Component Name="WaterOutPressureValue" UId="504" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="506" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="507" />
+  <NewLine Num="1" UId="508" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="509">
+    <Text UId="510"> #AIHandlers[4](</Text>
+  </LineComment>
+  <NewLine Num="1" UId="511" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="512">
+    <Text UId="513">                Value := "AI4AV",</Text>
+  </LineComment>
+  <NewLine Num="1" UId="514" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="515">
+    <Text UId="516">                ValueMin := 5320,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="517" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="518">
+    <Text UId="519">                ValueMax := 27648,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="520" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="521">
+    <Text UId="522">                ValueOffset := "MB".Table.AIOffsetCH4,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="523" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="524">
+    <Text UId="525">                OutputMin := "MB".Table.AIValueMinCH4,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="526" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="527">
+    <Text UId="528">                OutputMax := "MB".Table.AIValueMaxCH4,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="529" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="530">
+    <Text UId="531">                TimeBase := "MB".Table.AITimeBaseCH4,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="532" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="533">
+    <Text UId="534">                Output =&gt; );</Text>
+  </LineComment>
+  <NewLine Num="2" UId="535" />
+  <Access Scope="LocalVariable" UId="536">
+    <Symbol UId="537">
+      <Component Name="ErrorRCV1" UId="538" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="539" />
+  <Token Text=":=" UId="540" />
+  <Blank Num="1" UId="541" />
+  <Access Scope="LocalVariable" UId="542">
+    <Symbol UId="543">
+      <Component Name="AIHandlers" UId="544">
+        <Token Text="[" UId="545" />
+        <Access Scope="LiteralConstant" UId="546">
+          <Constant UId="547">
+            <ConstantValue UId="549">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="550" />
+      </Component>
+      <Token Text="." UId="551" />
+      <Component Name="Error" UId="552" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="553" />
+  <NewLine Num="1" UId="554" />
+  <Access Scope="LocalVariable" UId="555">
+    <Symbol UId="556">
+      <Component Name="ErrorRCV2" UId="557" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="558" />
+  <Token Text=":=" UId="559" />
+  <Blank Num="1" UId="560" />
+  <Access Scope="LocalVariable" UId="561">
+    <Symbol UId="562">
+      <Component Name="AIHandlers" UId="563">
+        <Token Text="[" UId="564" />
+        <Access Scope="LiteralConstant" UId="565">
+          <Constant UId="566">
+            <ConstantValue UId="568">2</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="569" />
+      </Component>
+      <Token Text="." UId="570" />
+      <Component Name="Error" UId="571" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="572" />
+  <NewLine Num="3" UId="573" />
+  <Token Text="CASE" UId="574" />
+  <Blank Num="1" UId="575" />
+  <Access Scope="GlobalVariable" UId="576">
+    <Symbol UId="577">
+      <Component Name="MB" UId="578">
+        <BooleanAttribute Name="HasQuotes" UId="579">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="580" />
+      <Component Name="Table" UId="581" />
+      <Token Text="." UId="582" />
+      <Component Name="DampersSyncMode" UId="583" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="584" />
+  <Token Text="OF" UId="585" />
+  <NewLine Num="1" UId="586" />
+  <Blank Num="4" UId="587" />
+  <Access Scope="LiteralConstant" UId="588">
+    <Constant UId="589">
+      <ConstantValue UId="591">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="592" />
+  <NewLine Num="1" UId="593" />
+  <Blank Num="8" UId="594" />
+  <Access Scope="GlobalVariable" UId="595">
+    <Symbol UId="596">
+      <Component Name="MB" UId="597">
+        <BooleanAttribute Name="HasQuotes" UId="598">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="599" />
+      <Component Name="Table" UId="600" />
+      <Token Text="." UId="601" />
+      <Component Name="RCV1LevelValue" UId="602" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="603" />
+  <Token Text=":=" UId="604" />
+  <Blank Num="1" UId="605" />
+  <Access Scope="GlobalVariable" UId="606">
+    <Symbol UId="607">
+      <Component Name="MB" UId="608">
+        <BooleanAttribute Name="HasQuotes" UId="609">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="610" />
+      <Component Name="Table" UId="611" />
+      <Token Text="." UId="612" />
+      <Component Name="RCV1LevelValue" UId="613" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="614" />
+  <NewLine Num="1" UId="615" />
+  <Blank Num="8" UId="616" />
+  <Access Scope="GlobalVariable" UId="617">
+    <Symbol UId="618">
+      <Component Name="MB" UId="619">
+        <BooleanAttribute Name="HasQuotes" UId="620">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="621" />
+      <Component Name="Table" UId="622" />
+      <Token Text="." UId="623" />
+      <Component Name="RCV2LevelValue" UId="624" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="625" />
+  <Token Text=":=" UId="626" />
+  <Blank Num="1" UId="627" />
+  <Access Scope="GlobalVariable" UId="628">
+    <Symbol UId="629">
+      <Component Name="MB" UId="630">
+        <BooleanAttribute Name="HasQuotes" UId="631">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="632" />
+      <Component Name="Table" UId="633" />
+      <Token Text="." UId="634" />
+      <Component Name="RCV1LevelValue" UId="635" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="636" />
+  <NewLine Num="1" UId="637" />
+  <Blank Num="8" UId="638" />
+  <Access Scope="LocalVariable" UId="639">
+    <Symbol UId="640">
+      <Component Name="ErrorRCV2" UId="641" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="642" />
+  <Token Text=":=" UId="643" />
+  <Blank Num="1" UId="644" />
+  <Access Scope="LocalVariable" UId="645">
+    <Symbol UId="646">
+      <Component Name="ErrorRCV1" UId="647" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="648" />
+  <NewLine Num="1" UId="649" />
+  <Blank Num="4" UId="650" />
+  <Access Scope="LiteralConstant" UId="651">
+    <Constant UId="652">
+      <ConstantValue UId="654">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="655" />
+  <NewLine Num="1" UId="656" />
+  <Blank Num="8" UId="657" />
+  <Access Scope="GlobalVariable" UId="658">
+    <Symbol UId="659">
+      <Component Name="MB" UId="660">
+        <BooleanAttribute Name="HasQuotes" UId="661">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="662" />
+      <Component Name="Table" UId="663" />
+      <Token Text="." UId="664" />
+      <Component Name="RCV1LevelValue" UId="665" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="666" />
+  <Token Text=":=" UId="667" />
+  <Blank Num="1" UId="668" />
+  <Access Scope="GlobalVariable" UId="669">
+    <Symbol UId="670">
+      <Component Name="MB" UId="671">
+        <BooleanAttribute Name="HasQuotes" UId="672">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="673" />
+      <Component Name="Table" UId="674" />
+      <Token Text="." UId="675" />
+      <Component Name="RCV2LevelValue" UId="676" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="677" />
+  <NewLine Num="1" UId="678" />
+  <Blank Num="8" UId="679" />
+  <Access Scope="GlobalVariable" UId="680">
+    <Symbol UId="681">
+      <Component Name="MB" UId="682">
+        <BooleanAttribute Name="HasQuotes" UId="683">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="684" />
+      <Component Name="Table" UId="685" />
+      <Token Text="." UId="686" />
+      <Component Name="RCV2LevelValue" UId="687" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="688" />
+  <Token Text=":=" UId="689" />
+  <Blank Num="1" UId="690" />
+  <Access Scope="GlobalVariable" UId="691">
+    <Symbol UId="692">
+      <Component Name="MB" UId="693">
+        <BooleanAttribute Name="HasQuotes" UId="694">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="695" />
+      <Component Name="Table" UId="696" />
+      <Token Text="." UId="697" />
+      <Component Name="RCV2LevelValue" UId="698" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="699" />
+  <NewLine Num="1" UId="700" />
+  <Blank Num="8" UId="701" />
+  <Access Scope="LocalVariable" UId="702">
+    <Symbol UId="703">
+      <Component Name="ErrorRCV1" UId="704" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="705" />
+  <Token Text=":=" UId="706" />
+  <Blank Num="1" UId="707" />
+  <Access Scope="LocalVariable" UId="708">
+    <Symbol UId="709">
+      <Component Name="ErrorRCV2" UId="710" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="711" />
+  <NewLine Num="1" UId="712" />
+  <Token Text="END_CASE" UId="713" />
+  <Token Text=";" UId="714" />
+  <NewLine Num="2" UId="715" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

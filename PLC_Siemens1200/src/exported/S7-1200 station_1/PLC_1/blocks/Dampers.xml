@@ -1,0 +1,3290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:24.0943625Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="DamperController1" Datatype="&quot;DamperController&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="ManualMode" Datatype="Bool" />
+          <Member Name="ManaulOpen" Datatype="Bool" />
+          <Member Name="ManualClose" Datatype="Bool" />
+          <Member Name="TankLevel" Datatype="Real" />
+          <Member Name="TankLevelSetpoint" Datatype="Real" />
+          <Member Name="TankLevelMin" Datatype="Real" />
+          <Member Name="TankLevelMax" Datatype="Real" />
+          <Member Name="UsePID" Datatype="Bool" />
+          <Member Name="PID_DeadZone" Datatype="Real" />
+          <Member Name="PID_KP" Datatype="Real" />
+          <Member Name="PID_KI" Datatype="Real" />
+          <Member Name="PID_KD" Datatype="Real" />
+          <Member Name="PID_TI" Datatype="Real" />
+          <Member Name="LimitSwitch0" Datatype="Bool" />
+          <Member Name="LimitSwitch100" Datatype="Bool" />
+          <Member Name="PouseMove" Datatype="UInt" />
+          <Member Name="PositionDeadzone" Datatype="Real" />
+          <Member Name="StartAjustment" Datatype="Bool" />
+          <Member Name="CancelAjustment" Datatype="Bool" />
+          <Member Name="ResetPosition" Datatype="Bool" />
+          <Member Name="SwitchAutoMode" Datatype="Bool" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="Open" Datatype="Bool" />
+          <Member Name="Close" Datatype="Bool" />
+          <Member Name="CurrentPosition" Datatype="Real" />
+          <Member Name="PositionError" Datatype="Bool" />
+          <Member Name="PositionSetPoint" Datatype="Real" />
+          <Member Name="AdjustBusy" Datatype="Bool" />
+          <Member Name="AdjustError" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut">
+          <Member Name="FullMovingTime" Datatype="Real" />
+        </Section>
+        <Section Name="Static">
+          <Member Name="MoveToLimitSwitch" Datatype="Bool" />
+          <Member Name="AdjustmentDone" Datatype="Word" />
+          <Member Name="LappedSetpoint" Datatype="Real" />
+          <Member Name="isMoving" Datatype="Bool" />
+          <Member Name="isAutoMode" Datatype="Bool" />
+          <Member Name="isReady" Datatype="Bool" />
+          <Member Name="EnablePIDTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PIDRegulator" Datatype="&quot;PIDRegulator&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Tanklevel" Datatype="Real" />
+                <Member Name="TankLevelSetpoint" Datatype="Real" />
+                <Member Name="KP" Datatype="Real" />
+                <Member Name="KI" Datatype="Real" />
+                <Member Name="KD" Datatype="Real" />
+                <Member Name="TI" Datatype="Time" />
+                <Member Name="LimitMin" Datatype="Real" />
+                <Member Name="LimitMax" Datatype="Real" />
+                <Member Name="DeadZone" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="DamperPosition" Datatype="Real" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="e" Datatype="Real" />
+                <Member Name="PValue" Datatype="Real" />
+                <Member Name="IValue" Datatype="Real" />
+                <Member Name="DValue" Datatype="Real" />
+                <Member Name="init" Datatype="Bool" />
+                <Member Name="TopLevelSetPoint" Datatype="Real" />
+                <Member Name="BottomlevelSetPoint" Datatype="Real" />
+                <Member Name="PrevValue" Datatype="Real" />
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HystRegulator" Datatype="&quot;HystRegulator&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="TankLevel" Datatype="Real" />
+                <Member Name="TankLevelMin" Datatype="Real" />
+                <Member Name="TankLevelMax" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+                <Member Name="PositionSetpoint" Datatype="Real" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static" />
+            </Sections>
+          </Member>
+          <Member Name="RepositionRTrig" Datatype="R_TRIG" Version="1.0">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CLK" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Stat_Bit" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorPositionNoFeedback" Datatype="&quot;MotorPositionNoFeedback&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+                <Member Name="Invalidate" Datatype="Bool" />
+                <Member Name="FullMovingTime" Datatype="Real" />
+                <Member Name="LappingZone" Datatype="Real" />
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+                <Member Name="SwitchAutoMode" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="CurrentPosition" Datatype="Real" />
+                <Member Name="Error" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="PreviousPosition" Datatype="Real" />
+                <Member Name="OnePercentImpulse" Datatype="Real" />
+                <Member Name="MovingTimer1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTimer2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorController" Datatype="&quot;MotorControllerSimple&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="CurrentPosition" Datatype="Real" />
+                <Member Name="SetpointPosition" Datatype="Real" />
+                <Member Name="PositionDeadzone" Datatype="Real" />
+                <Member Name="MinimalPulse" Datatype="Time" />
+                <Member Name="PauseMode" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="MoveNow" Datatype="Bool" />
+                <Member Name="MinReversPause" Datatype="Time" />
+                <Member Name="PositionError" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Opening" Datatype="Bool" />
+                <Member Name="Closing" Datatype="Bool" />
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="OpeningTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="ClosingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="RepositionTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorMoverToSwitch" Datatype="&quot;MotorMoverToSwitch&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Go" Datatype="Bool" />
+                <Member Name="TargetSwitch100" Datatype="Bool" />
+                <Member Name="MovePause" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="GoTo0" Datatype="Bool" />
+                <Member Name="GoTo100" Datatype="Bool" />
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorAdjustmentNoFeedback" Datatype="&quot;MotorAdjustmentNoFeedback&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Start" Datatype="Bool" />
+                <Member Name="Cancel" Datatype="Bool" />
+                <Member Name="AbortTime" Datatype="Time" />
+                <Member Name="MovePause" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Busy" Datatype="Bool" />
+                <Member Name="Error" Datatype="Bool" />
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut">
+                <Member Name="Done" Datatype="Word" />
+                <Member Name="FullMovingTime" Datatype="Real" />
+              </Section>
+              <Section Name="Static">
+                <Member Name="step" Datatype="Word" />
+                <Member Name="StartRTrig" Datatype="R_TRIG" Version="1.0">
+                  <Sections>
+                    <Section Name="Input">
+                      <Member Name="CLK" Datatype="Bool" />
+                    </Section>
+                    <Section Name="Output">
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                    <Section Name="InOut" />
+                    <Section Name="Static">
+                      <Member Name="Stat_Bit" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="CancelRTrig" Datatype="R_TRIG" Version="1.0">
+                  <Sections>
+                    <Section Name="Input">
+                      <Member Name="CLK" Datatype="Bool" />
+                    </Section>
+                    <Section Name="Output">
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                    <Section Name="InOut" />
+                    <Section Name="Static">
+                      <Member Name="Stat_Bit" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTON" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="PauseTON" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DamperController2" Datatype="&quot;DamperController&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="ManualMode" Datatype="Bool" />
+          <Member Name="ManaulOpen" Datatype="Bool" />
+          <Member Name="ManualClose" Datatype="Bool" />
+          <Member Name="TankLevel" Datatype="Real" />
+          <Member Name="TankLevelSetpoint" Datatype="Real" />
+          <Member Name="TankLevelMin" Datatype="Real" />
+          <Member Name="TankLevelMax" Datatype="Real" />
+          <Member Name="UsePID" Datatype="Bool" />
+          <Member Name="PID_DeadZone" Datatype="Real" />
+          <Member Name="PID_KP" Datatype="Real" />
+          <Member Name="PID_KI" Datatype="Real" />
+          <Member Name="PID_KD" Datatype="Real" />
+          <Member Name="PID_TI" Datatype="Real" />
+          <Member Name="LimitSwitch0" Datatype="Bool" />
+          <Member Name="LimitSwitch100" Datatype="Bool" />
+          <Member Name="PouseMove" Datatype="UInt" />
+          <Member Name="PositionDeadzone" Datatype="Real" />
+          <Member Name="StartAjustment" Datatype="Bool" />
+          <Member Name="CancelAjustment" Datatype="Bool" />
+          <Member Name="ResetPosition" Datatype="Bool" />
+          <Member Name="SwitchAutoMode" Datatype="Bool" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="Open" Datatype="Bool" />
+          <Member Name="Close" Datatype="Bool" />
+          <Member Name="CurrentPosition" Datatype="Real" />
+          <Member Name="PositionError" Datatype="Bool" />
+          <Member Name="PositionSetPoint" Datatype="Real" />
+          <Member Name="AdjustBusy" Datatype="Bool" />
+          <Member Name="AdjustError" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut">
+          <Member Name="FullMovingTime" Datatype="Real" />
+        </Section>
+        <Section Name="Static">
+          <Member Name="MoveToLimitSwitch" Datatype="Bool" />
+          <Member Name="AdjustmentDone" Datatype="Word" />
+          <Member Name="LappedSetpoint" Datatype="Real" />
+          <Member Name="isMoving" Datatype="Bool" />
+          <Member Name="isAutoMode" Datatype="Bool" />
+          <Member Name="isReady" Datatype="Bool" />
+          <Member Name="EnablePIDTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PIDRegulator" Datatype="&quot;PIDRegulator&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Tanklevel" Datatype="Real" />
+                <Member Name="TankLevelSetpoint" Datatype="Real" />
+                <Member Name="KP" Datatype="Real" />
+                <Member Name="KI" Datatype="Real" />
+                <Member Name="KD" Datatype="Real" />
+                <Member Name="TI" Datatype="Time" />
+                <Member Name="LimitMin" Datatype="Real" />
+                <Member Name="LimitMax" Datatype="Real" />
+                <Member Name="DeadZone" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="DamperPosition" Datatype="Real" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="e" Datatype="Real" />
+                <Member Name="PValue" Datatype="Real" />
+                <Member Name="IValue" Datatype="Real" />
+                <Member Name="DValue" Datatype="Real" />
+                <Member Name="init" Datatype="Bool" />
+                <Member Name="TopLevelSetPoint" Datatype="Real" />
+                <Member Name="BottomlevelSetPoint" Datatype="Real" />
+                <Member Name="PrevValue" Datatype="Real" />
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HystRegulator" Datatype="&quot;HystRegulator&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="TankLevel" Datatype="Real" />
+                <Member Name="TankLevelMin" Datatype="Real" />
+                <Member Name="TankLevelMax" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+                <Member Name="PositionSetpoint" Datatype="Real" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static" />
+            </Sections>
+          </Member>
+          <Member Name="RepositionRTrig" Datatype="R_TRIG" Version="1.0">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CLK" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Stat_Bit" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorPositionNoFeedback" Datatype="&quot;MotorPositionNoFeedback&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+                <Member Name="Invalidate" Datatype="Bool" />
+                <Member Name="FullMovingTime" Datatype="Real" />
+                <Member Name="LappingZone" Datatype="Real" />
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+                <Member Name="SwitchAutoMode" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="CurrentPosition" Datatype="Real" />
+                <Member Name="Error" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="PreviousPosition" Datatype="Real" />
+                <Member Name="OnePercentImpulse" Datatype="Real" />
+                <Member Name="MovingTimer1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTimer2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorController" Datatype="&quot;MotorControllerSimple&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="CurrentPosition" Datatype="Real" />
+                <Member Name="SetpointPosition" Datatype="Real" />
+                <Member Name="PositionDeadzone" Datatype="Real" />
+                <Member Name="MinimalPulse" Datatype="Time" />
+                <Member Name="PauseMode" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="MoveNow" Datatype="Bool" />
+                <Member Name="MinReversPause" Datatype="Time" />
+                <Member Name="PositionError" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Opening" Datatype="Bool" />
+                <Member Name="Closing" Datatype="Bool" />
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="OpeningTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="ClosingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="RepositionTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorMoverToSwitch" Datatype="&quot;MotorMoverToSwitch&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Go" Datatype="Bool" />
+                <Member Name="TargetSwitch100" Datatype="Bool" />
+                <Member Name="MovePause" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="GoTo0" Datatype="Bool" />
+                <Member Name="GoTo100" Datatype="Bool" />
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorAdjustmentNoFeedback" Datatype="&quot;MotorAdjustmentNoFeedback&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Start" Datatype="Bool" />
+                <Member Name="Cancel" Datatype="Bool" />
+                <Member Name="AbortTime" Datatype="Time" />
+                <Member Name="MovePause" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Busy" Datatype="Bool" />
+                <Member Name="Error" Datatype="Bool" />
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut">
+                <Member Name="Done" Datatype="Word" />
+                <Member Name="FullMovingTime" Datatype="Real" />
+              </Section>
+              <Section Name="Static">
+                <Member Name="step" Datatype="Word" />
+                <Member Name="StartRTrig" Datatype="R_TRIG" Version="1.0">
+                  <Sections>
+                    <Section Name="Input">
+                      <Member Name="CLK" Datatype="Bool" />
+                    </Section>
+                    <Section Name="Output">
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                    <Section Name="InOut" />
+                    <Section Name="Static">
+                      <Member Name="Stat_Bit" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="CancelRTrig" Datatype="R_TRIG" Version="1.0">
+                  <Sections>
+                    <Section Name="Input">
+                      <Member Name="CLK" Datatype="Bool" />
+                    </Section>
+                    <Section Name="Output">
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                    <Section Name="InOut" />
+                    <Section Name="Static">
+                      <Member Name="Stat_Bit" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTON" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="PauseTON" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DamperController3" Datatype="&quot;DamperController&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="ManualMode" Datatype="Bool" />
+          <Member Name="ManaulOpen" Datatype="Bool" />
+          <Member Name="ManualClose" Datatype="Bool" />
+          <Member Name="TankLevel" Datatype="Real" />
+          <Member Name="TankLevelSetpoint" Datatype="Real" />
+          <Member Name="TankLevelMin" Datatype="Real" />
+          <Member Name="TankLevelMax" Datatype="Real" />
+          <Member Name="UsePID" Datatype="Bool" />
+          <Member Name="PID_DeadZone" Datatype="Real" />
+          <Member Name="PID_KP" Datatype="Real" />
+          <Member Name="PID_KI" Datatype="Real" />
+          <Member Name="PID_KD" Datatype="Real" />
+          <Member Name="PID_TI" Datatype="Real" />
+          <Member Name="LimitSwitch0" Datatype="Bool" />
+          <Member Name="LimitSwitch100" Datatype="Bool" />
+          <Member Name="PouseMove" Datatype="UInt" />
+          <Member Name="PositionDeadzone" Datatype="Real" />
+          <Member Name="StartAjustment" Datatype="Bool" />
+          <Member Name="CancelAjustment" Datatype="Bool" />
+          <Member Name="ResetPosition" Datatype="Bool" />
+          <Member Name="SwitchAutoMode" Datatype="Bool" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="Open" Datatype="Bool" />
+          <Member Name="Close" Datatype="Bool" />
+          <Member Name="CurrentPosition" Datatype="Real" />
+          <Member Name="PositionError" Datatype="Bool" />
+          <Member Name="PositionSetPoint" Datatype="Real" />
+          <Member Name="AdjustBusy" Datatype="Bool" />
+          <Member Name="AdjustError" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut">
+          <Member Name="FullMovingTime" Datatype="Real" />
+        </Section>
+        <Section Name="Static">
+          <Member Name="MoveToLimitSwitch" Datatype="Bool" />
+          <Member Name="AdjustmentDone" Datatype="Word" />
+          <Member Name="LappedSetpoint" Datatype="Real" />
+          <Member Name="isMoving" Datatype="Bool" />
+          <Member Name="isAutoMode" Datatype="Bool" />
+          <Member Name="isReady" Datatype="Bool" />
+          <Member Name="EnablePIDTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PIDRegulator" Datatype="&quot;PIDRegulator&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Tanklevel" Datatype="Real" />
+                <Member Name="TankLevelSetpoint" Datatype="Real" />
+                <Member Name="KP" Datatype="Real" />
+                <Member Name="KI" Datatype="Real" />
+                <Member Name="KD" Datatype="Real" />
+                <Member Name="TI" Datatype="Time" />
+                <Member Name="LimitMin" Datatype="Real" />
+                <Member Name="LimitMax" Datatype="Real" />
+                <Member Name="DeadZone" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="DamperPosition" Datatype="Real" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="e" Datatype="Real" />
+                <Member Name="PValue" Datatype="Real" />
+                <Member Name="IValue" Datatype="Real" />
+                <Member Name="DValue" Datatype="Real" />
+                <Member Name="init" Datatype="Bool" />
+                <Member Name="TopLevelSetPoint" Datatype="Real" />
+                <Member Name="BottomlevelSetPoint" Datatype="Real" />
+                <Member Name="PrevValue" Datatype="Real" />
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HystRegulator" Datatype="&quot;HystRegulator&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="TankLevel" Datatype="Real" />
+                <Member Name="TankLevelMin" Datatype="Real" />
+                <Member Name="TankLevelMax" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+                <Member Name="PositionSetpoint" Datatype="Real" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static" />
+            </Sections>
+          </Member>
+          <Member Name="RepositionRTrig" Datatype="R_TRIG" Version="1.0">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CLK" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Stat_Bit" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorPositionNoFeedback" Datatype="&quot;MotorPositionNoFeedback&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+                <Member Name="Invalidate" Datatype="Bool" />
+                <Member Name="FullMovingTime" Datatype="Real" />
+                <Member Name="LappingZone" Datatype="Real" />
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+                <Member Name="SwitchAutoMode" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="CurrentPosition" Datatype="Real" />
+                <Member Name="Error" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="PreviousPosition" Datatype="Real" />
+                <Member Name="OnePercentImpulse" Datatype="Real" />
+                <Member Name="MovingTimer1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTimer2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorController" Datatype="&quot;MotorControllerSimple&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="CurrentPosition" Datatype="Real" />
+                <Member Name="SetpointPosition" Datatype="Real" />
+                <Member Name="PositionDeadzone" Datatype="Real" />
+                <Member Name="MinimalPulse" Datatype="Time" />
+                <Member Name="PauseMode" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="MoveNow" Datatype="Bool" />
+                <Member Name="MinReversPause" Datatype="Time" />
+                <Member Name="PositionError" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="Opening" Datatype="Bool" />
+                <Member Name="Closing" Datatype="Bool" />
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="OpeningTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="ClosingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="RepositionTON" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorMoverToSwitch" Datatype="&quot;MotorMoverToSwitch&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Go" Datatype="Bool" />
+                <Member Name="TargetSwitch100" Datatype="Bool" />
+                <Member Name="MovePause" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut" />
+              <Section Name="Static">
+                <Member Name="GoTo0" Datatype="Bool" />
+                <Member Name="GoTo100" Datatype="Bool" />
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MotorAdjustmentNoFeedback" Datatype="&quot;MotorAdjustmentNoFeedback&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="Enable" Datatype="Bool" />
+                <Member Name="Start" Datatype="Bool" />
+                <Member Name="Cancel" Datatype="Bool" />
+                <Member Name="AbortTime" Datatype="Time" />
+                <Member Name="MovePause" Datatype="Time" />
+                <Member Name="isMoving" Datatype="Bool" />
+                <Member Name="LimitSwitch0" Datatype="Bool" />
+                <Member Name="LimitSwitch100" Datatype="Bool" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="Busy" Datatype="Bool" />
+                <Member Name="Error" Datatype="Bool" />
+                <Member Name="Open" Datatype="Bool" />
+                <Member Name="Close" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut">
+                <Member Name="Done" Datatype="Word" />
+                <Member Name="FullMovingTime" Datatype="Real" />
+              </Section>
+              <Section Name="Static">
+                <Member Name="step" Datatype="Word" />
+                <Member Name="StartRTrig" Datatype="R_TRIG" Version="1.0">
+                  <Sections>
+                    <Section Name="Input">
+                      <Member Name="CLK" Datatype="Bool" />
+                    </Section>
+                    <Section Name="Output">
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                    <Section Name="InOut" />
+                    <Section Name="Static">
+                      <Member Name="Stat_Bit" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="CancelRTrig" Datatype="R_TRIG" Version="1.0">
+                  <Sections>
+                    <Section Name="Input">
+                      <Member Name="CLK" Datatype="Bool" />
+                    </Section>
+                    <Section Name="Output">
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                    <Section Name="InOut" />
+                    <Section Name="Static">
+                      <Member Name="Stat_Bit" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTOF" Datatype="TOF_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="MovingTON" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="PauseTON" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Dampers</Name>
+      <Namespace />
+      <Number>15</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Token Text="IF" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Access Scope="GlobalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="Inputs_DB" UId="25">
+        <BooleanAttribute Name="HasQuotes" UId="26">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="27" />
+      <Component Name="ErrorRCV1" UId="28" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="29" />
+  <Token Text="THEN" UId="30" />
+  <NewLine Num="1" UId="31" />
+  <Blank Num="4" UId="32" />
+  <Access Scope="LocalVariable" UId="33">
+    <Symbol UId="34">
+      <Component Name="DamperController1" UId="35" />
+      <Token Text="." UId="36" />
+      <Component Name="ManualMode" UId="37" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="38" />
+  <Token Text=":=" UId="39" />
+  <Blank Num="1" UId="40" />
+  <Access Scope="LiteralConstant" UId="41">
+    <Constant UId="42">
+      <ConstantValue UId="44">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="45" />
+  <NewLine Num="1" UId="46" />
+  <Blank Num="4" UId="47" />
+  <Access Scope="LocalVariable" UId="48">
+    <Symbol UId="49">
+      <Component Name="DamperController1" UId="50" />
+      <Token Text="." UId="51" />
+      <Component Name="ManaulOpen" UId="52" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="53" />
+  <Token Text=":=" UId="54" />
+  <Blank Num="1" UId="55" />
+  <Access Scope="LiteralConstant" UId="56">
+    <Constant UId="57">
+      <ConstantValue UId="59">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="60" />
+  <NewLine Num="1" UId="61" />
+  <Blank Num="4" UId="62" />
+  <Access Scope="LocalVariable" UId="63">
+    <Symbol UId="64">
+      <Component Name="DamperController1" UId="65" />
+      <Token Text="." UId="66" />
+      <Component Name="ManualClose" UId="67" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="68" />
+  <Token Text=":=" UId="69" />
+  <Blank Num="1" UId="70" />
+  <Access Scope="LiteralConstant" UId="71">
+    <Constant UId="72">
+      <ConstantValue UId="74">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="75" />
+  <NewLine Num="1" UId="76" />
+  <Token Text="ELSE" UId="77" />
+  <NewLine Num="1" UId="78" />
+  <Blank Num="4" UId="79" />
+  <Access Scope="LocalVariable" UId="80">
+    <Symbol UId="81">
+      <Component Name="DamperController1" UId="82" />
+      <Token Text="." UId="83" />
+      <Component Name="ManualMode" UId="84" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="85" />
+  <Token Text=":=" UId="86" />
+  <Blank Num="1" UId="87" />
+  <Access Scope="GlobalVariable" UId="88">
+    <Symbol UId="89">
+      <Component Name="MB" UId="90">
+        <BooleanAttribute Name="HasQuotes" UId="91">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="92" />
+      <Component Name="Table" UId="93" />
+      <Token Text="." UId="94" />
+      <Component Name="HMI_ManualModeOn" UId="95" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="96" />
+  <NewLine Num="1" UId="97" />
+  <Blank Num="4" UId="98" />
+  <Access Scope="LocalVariable" UId="99">
+    <Symbol UId="100">
+      <Component Name="DamperController1" UId="101" />
+      <Token Text="." UId="102" />
+      <Component Name="ManaulOpen" UId="103" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="104" />
+  <Token Text=":=" UId="105" />
+  <Blank Num="1" UId="106" />
+  <Access Scope="GlobalVariable" UId="107">
+    <Symbol UId="108">
+      <Component Name="MB" UId="109">
+        <BooleanAttribute Name="HasQuotes" UId="110">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="111" />
+      <Component Name="Table" UId="112" />
+      <Token Text="." UId="113" />
+      <Component Name="HMI_ManualOpenDamper1" UId="114" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="115" />
+  <NewLine Num="1" UId="116" />
+  <Blank Num="4" UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="DamperController1" UId="120" />
+      <Token Text="." UId="121" />
+      <Component Name="ManualClose" UId="122" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="123" />
+  <Token Text=":=" UId="124" />
+  <Blank Num="1" UId="125" />
+  <Token Text="NOT" UId="126" />
+  <Blank Num="1" UId="127" />
+  <Access Scope="GlobalVariable" UId="128">
+    <Symbol UId="129">
+      <Component Name="MB" UId="130">
+        <BooleanAttribute Name="HasQuotes" UId="131">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="132" />
+      <Component Name="Table" UId="133" />
+      <Token Text="." UId="134" />
+      <Component Name="HMI_ManualOpenDamper1" UId="135" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="136" />
+  <NewLine Num="1" UId="137" />
+  <Token Text="END_IF" UId="138" />
+  <Token Text=";" UId="139" />
+  <NewLine Num="2" UId="140" />
+  <Access Scope="Call" UId="141">
+    <CallInfo UId="142" BlockType="FB" Name="DamperController">
+      <Instance Scope="LocalVariable" UId="143">
+        <Component Name="DamperController1" UId="144" />
+      </Instance>
+      <Token Text="(" UId="145" />
+      <Parameter Name="TankLevel" UId="146">
+        <Token Text=":=" UId="147" />
+        <Access Scope="GlobalVariable" UId="148">
+          <Symbol UId="149">
+            <Component Name="MB" UId="150">
+              <BooleanAttribute Name="HasQuotes" UId="151">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="152" />
+            <Component Name="Table" UId="153" />
+            <Token Text="." UId="154" />
+            <Component Name="RCV1LevelValue" UId="155" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="156" />
+      <NewLine Num="1" UId="157" />
+      <Blank Num="19" UId="158" />
+      <Parameter Name="TankLevelSetpoint" UId="159">
+        <Token Text=":=" UId="160" />
+        <Token Text="(" UId="161" />
+        <Access Scope="GlobalVariable" UId="162">
+          <Symbol UId="163">
+            <Component Name="MB" UId="164">
+              <BooleanAttribute Name="HasQuotes" UId="165">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="166" />
+            <Component Name="Table" UId="167" />
+            <Token Text="." UId="168" />
+            <Component Name="LevelRCV1Min" UId="169" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="170" />
+        <Token Text="+" UId="171" />
+        <Blank Num="1" UId="172" />
+        <Token Text="(" UId="173" />
+        <Access Scope="GlobalVariable" UId="174">
+          <Symbol UId="175">
+            <Component Name="MB" UId="176">
+              <BooleanAttribute Name="HasQuotes" UId="177">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="178" />
+            <Component Name="Table" UId="179" />
+            <Token Text="." UId="180" />
+            <Component Name="LevelRCV1Max" UId="181" />
+          </Symbol>
+        </Access>
+        <Token Text="-" UId="182" />
+        <Access Scope="GlobalVariable" UId="183">
+          <Symbol UId="184">
+            <Component Name="MB" UId="185">
+              <BooleanAttribute Name="HasQuotes" UId="186">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="187" />
+            <Component Name="Table" UId="188" />
+            <Token Text="." UId="189" />
+            <Component Name="LevelRCV1Min" UId="190" />
+          </Symbol>
+        </Access>
+        <Token Text=")" UId="191" />
+        <Token Text="/" UId="192" />
+        <Access Scope="LiteralConstant" UId="193">
+          <Constant UId="194">
+            <ConstantValue UId="196">2</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text=")" UId="197" />
+      </Parameter>
+      <Token Text="," UId="198" />
+      <NewLine Num="1" UId="199" />
+      <Blank Num="19" UId="200" />
+      <Parameter Name="TankLevelMin" UId="201">
+        <Token Text=":=" UId="202" />
+        <Access Scope="GlobalVariable" UId="203">
+          <Symbol UId="204">
+            <Component Name="MB" UId="205">
+              <BooleanAttribute Name="HasQuotes" UId="206">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="207" />
+            <Component Name="Table" UId="208" />
+            <Token Text="." UId="209" />
+            <Component Name="LevelRCV1Min" UId="210" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="211" />
+      <NewLine Num="1" UId="212" />
+      <Blank Num="19" UId="213" />
+      <Parameter Name="TankLevelMax" UId="214">
+        <Token Text=":=" UId="215" />
+        <Access Scope="GlobalVariable" UId="216">
+          <Symbol UId="217">
+            <Component Name="MB" UId="218">
+              <BooleanAttribute Name="HasQuotes" UId="219">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="220" />
+            <Component Name="Table" UId="221" />
+            <Token Text="." UId="222" />
+            <Component Name="LevelRCV1Max" UId="223" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="224" />
+      <NewLine Num="1" UId="225" />
+      <Blank Num="19" UId="226" />
+      <Parameter Name="UsePID" UId="227">
+        <BooleanAttribute Name="HasQuotes" UId="228">true</BooleanAttribute>
+        <Token Text=":=" UId="229" />
+        <Access Scope="GlobalVariable" UId="230">
+          <Symbol UId="231">
+            <Component Name="MB" UId="232">
+              <BooleanAttribute Name="HasQuotes" UId="233">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="234" />
+            <Component Name="Table" UId="235" />
+            <Token Text="." UId="236" />
+            <Component Name="UsePID" UId="237" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="238" />
+      <NewLine Num="1" UId="239" />
+      <Blank Num="19" UId="240" />
+      <Parameter Name="PID_DeadZone" UId="241">
+        <Token Text=":=" UId="242" />
+        <Access Scope="GlobalVariable" UId="243">
+          <Symbol UId="244">
+            <Component Name="MB" UId="245">
+              <BooleanAttribute Name="HasQuotes" UId="246">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="247" />
+            <Component Name="Table" UId="248" />
+            <Token Text="." UId="249" />
+            <Component Name="Damper1_PID_SetpointDeadZone" UId="250" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="251" />
+      <NewLine Num="1" UId="252" />
+      <Blank Num="19" UId="253" />
+      <Parameter Name="PID_KP" UId="254">
+        <Token Text=":=" UId="255" />
+        <Access Scope="GlobalVariable" UId="256">
+          <Symbol UId="257">
+            <Component Name="MB" UId="258">
+              <BooleanAttribute Name="HasQuotes" UId="259">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="260" />
+            <Component Name="Table" UId="261" />
+            <Token Text="." UId="262" />
+            <Component Name="Damper1_PID_KP" UId="263" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="264" />
+      <NewLine Num="1" UId="265" />
+      <Blank Num="19" UId="266" />
+      <Parameter Name="PID_KI" UId="267">
+        <Token Text=":=" UId="268" />
+        <Access Scope="GlobalVariable" UId="269">
+          <Symbol UId="270">
+            <Component Name="MB" UId="271">
+              <BooleanAttribute Name="HasQuotes" UId="272">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="273" />
+            <Component Name="Table" UId="274" />
+            <Token Text="." UId="275" />
+            <Component Name="Damper1_PID_KI" UId="276" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="277" />
+      <NewLine Num="1" UId="278" />
+      <Blank Num="19" UId="279" />
+      <Parameter Name="PID_KD" UId="280">
+        <Token Text=":=" UId="281" />
+        <Access Scope="GlobalVariable" UId="282">
+          <Symbol UId="283">
+            <Component Name="MB" UId="284">
+              <BooleanAttribute Name="HasQuotes" UId="285">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="286" />
+            <Component Name="Table" UId="287" />
+            <Token Text="." UId="288" />
+            <Component Name="Damper1_PID_KD" UId="289" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="290" />
+      <NewLine Num="1" UId="291" />
+      <Blank Num="19" UId="292" />
+      <Parameter Name="PID_TI" UId="293">
+        <Token Text=":=" UId="294" />
+        <Access Scope="GlobalVariable" UId="295">
+          <Symbol UId="296">
+            <Component Name="MB" UId="297">
+              <BooleanAttribute Name="HasQuotes" UId="298">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="299" />
+            <Component Name="Table" UId="300" />
+            <Token Text="." UId="301" />
+            <Component Name="Damper1_PID_TI" UId="302" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="303" />
+      <NewLine Num="1" UId="304" />
+      <Blank Num="19" UId="305" />
+      <Parameter Name="LimitSwitch0" UId="306">
+        <Token Text=":=" UId="307" />
+        <Access Scope="GlobalVariable" UId="308">
+          <Symbol UId="309">
+            <Component Name="RunClose1" UId="310">
+              <BooleanAttribute Name="HasQuotes" UId="311">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="312" />
+      <NewLine Num="1" UId="313" />
+      <Blank Num="19" UId="314" />
+      <Parameter Name="LimitSwitch100" UId="315">
+        <Token Text=":=" UId="316" />
+        <Access Scope="GlobalVariable" UId="317">
+          <Symbol UId="318">
+            <Component Name="RunOpen1" UId="319">
+              <BooleanAttribute Name="HasQuotes" UId="320">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="321" />
+      <NewLine Num="1" UId="322" />
+      <Blank Num="19" UId="323" />
+      <Parameter Name="PouseMove" UId="324">
+        <Token Text=":=" UId="325" />
+        <Access Scope="LiteralConstant" UId="326">
+          <Constant UId="327">
+            <ConstantValue UId="329">5</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="330" />
+      <NewLine Num="1" UId="331" />
+      <Blank Num="19" UId="332" />
+      <Parameter Name="PositionDeadzone" UId="333">
+        <Token Text=":=" UId="334" />
+        <Access Scope="GlobalVariable" UId="335">
+          <Symbol UId="336">
+            <Component Name="MB" UId="337">
+              <BooleanAttribute Name="HasQuotes" UId="338">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="339" />
+            <Component Name="Table" UId="340" />
+            <Token Text="." UId="341" />
+            <Component Name="Damper1_PositionDeadZone" UId="342" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="343" />
+      <NewLine Num="1" UId="344" />
+      <Blank Num="19" UId="345" />
+      <Parameter Name="StartAjustment" UId="346">
+        <Token Text=":=" UId="347" />
+        <Access Scope="GlobalVariable" UId="348">
+          <Symbol UId="349">
+            <Component Name="Config" UId="350">
+              <BooleanAttribute Name="HasQuotes" UId="351">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="352" />
+            <Component Name="HMI_StartAdjustDamper1" UId="353" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="354" />
+      <NewLine Num="1" UId="355" />
+      <Blank Num="19" UId="356" />
+      <Parameter Name="CancelAjustment" UId="357">
+        <Token Text=":=" UId="358" />
+        <Access Scope="GlobalVariable" UId="359">
+          <Symbol UId="360">
+            <Component Name="Config" UId="361">
+              <BooleanAttribute Name="HasQuotes" UId="362">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="363" />
+            <Component Name="HMI_StopAdjustDamper1" UId="364" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="365" />
+      <NewLine Num="1" UId="366" />
+      <Blank Num="19" UId="367" />
+      <Parameter Name="ResetPosition" UId="368">
+        <Token Text=":=" UId="369" />
+        <Access Scope="GlobalVariable" UId="370">
+          <Symbol UId="371">
+            <Component Name="Config" UId="372">
+              <BooleanAttribute Name="HasQuotes" UId="373">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="374" />
+            <Component Name="HMI_ResetPositionDamper1" UId="375" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="376" />
+      <NewLine Num="1" UId="377" />
+      <Blank Num="19" UId="378" />
+      <Parameter Name="Open" UId="379">
+        <Token Text="=&gt;" UId="380" />
+        <Access Scope="GlobalVariable" UId="381">
+          <Symbol UId="382">
+            <Component Name="OutOpen1" UId="383">
+              <BooleanAttribute Name="HasQuotes" UId="384">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="385" />
+      <NewLine Num="1" UId="386" />
+      <Blank Num="19" UId="387" />
+      <Parameter Name="Close" UId="388">
+        <Token Text="=&gt;" UId="389" />
+        <Access Scope="GlobalVariable" UId="390">
+          <Symbol UId="391">
+            <Component Name="OutClose1" UId="392">
+              <BooleanAttribute Name="HasQuotes" UId="393">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="394" />
+      <NewLine Num="1" UId="395" />
+      <Blank Num="19" UId="396" />
+      <Parameter Name="FullMovingTime" UId="397">
+        <Token Text=":=" UId="398" />
+        <Access Scope="GlobalVariable" UId="399">
+          <Symbol UId="400">
+            <Component Name="MB" UId="401">
+              <BooleanAttribute Name="HasQuotes" UId="402">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="403" />
+            <Component Name="Table" UId="404" />
+            <Token Text="." UId="405" />
+            <Component Name="Damper1_FullMovingTime" UId="406" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="407" />
+      <NewLine Num="1" UId="408" />
+      <Blank Num="19" UId="409" />
+      <Parameter Name="SwitchAutoMode" UId="410">
+        <Blank Num="1" UId="411" />
+        <Token Text=":=" UId="412" />
+        <Blank Num="1" UId="413" />
+        <Access Scope="GlobalVariable" UId="414">
+          <Symbol UId="415">
+            <Component Name="Damper1_AutoMode" UId="416">
+              <BooleanAttribute Name="HasQuotes" UId="417">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="426" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="427" />
+  <NewLine Num="2" UId="428" />
+  <Access Scope="GlobalVariable" UId="429">
+    <Symbol UId="430">
+      <Component Name="MB" UId="431">
+        <BooleanAttribute Name="HasQuotes" UId="432">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="433" />
+      <Component Name="Table" UId="434" />
+      <Token Text="." UId="435" />
+      <Component Name="Damper1_Manual/Auto" UId="436" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="437" />
+  <Token Text=":=" UId="438" />
+  <Blank Num="1" UId="439" />
+  <Access Scope="GlobalVariable" UId="440">
+    <Symbol UId="441">
+      <Component Name="Damper1_AutoMode" UId="442">
+        <BooleanAttribute Name="HasQuotes" UId="443">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="444" />
+  <NewLine Num="2" UId="445" />
+  <Access Scope="GlobalVariable" UId="446">
+    <Symbol UId="447">
+      <Component Name="MB" UId="448">
+        <BooleanAttribute Name="HasQuotes" UId="449">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="450" />
+      <Component Name="Table" UId="451" />
+      <Token Text="." UId="452" />
+      <Component Name="Damper1_Position" UId="453" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="454" />
+  <Token Text=":=" UId="455" />
+  <Blank Num="1" UId="456" />
+  <Access Scope="LocalVariable" UId="457">
+    <Symbol UId="458">
+      <Component Name="DamperController1" UId="459" />
+      <Token Text="." UId="460" />
+      <Component Name="CurrentPosition" UId="461" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="462" />
+  <NewLine Num="1" UId="463" />
+  <Access Scope="GlobalVariable" UId="464">
+    <Symbol UId="465">
+      <Component Name="MB" UId="466">
+        <BooleanAttribute Name="HasQuotes" UId="467">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="468" />
+      <Component Name="Table" UId="469" />
+      <Token Text="." UId="470" />
+      <Component Name="Damper1_PositionSetpoint" UId="471" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="472" />
+  <Token Text=":=" UId="473" />
+  <Blank Num="1" UId="474" />
+  <Access Scope="LocalVariable" UId="475">
+    <Symbol UId="476">
+      <Component Name="DamperController1" UId="477" />
+      <Token Text="." UId="478" />
+      <Component Name="PositionSetPoint" UId="479" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="480" />
+  <NewLine Num="1" UId="481" />
+  <Access Scope="GlobalVariable" UId="482">
+    <Symbol UId="483">
+      <Component Name="MB" UId="484">
+        <BooleanAttribute Name="HasQuotes" UId="485">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="486" />
+      <Component Name="Table" UId="487" />
+      <Token Text="." UId="488" />
+      <Component Name="Damper1_PID_Setpoint" UId="489" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="490" />
+  <Token Text=":=" UId="491" />
+  <Blank Num="1" UId="492" />
+  <Access Scope="LocalVariable" UId="493">
+    <Symbol UId="494">
+      <Component Name="DamperController1" UId="495" />
+      <Token Text="." UId="496" />
+      <Component Name="TankLevelSetpoint" UId="497" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="498" />
+  <NewLine Num="1" UId="499" />
+  <Access Scope="GlobalVariable" UId="500">
+    <Symbol UId="501">
+      <Component Name="MB" UId="502">
+        <BooleanAttribute Name="HasQuotes" UId="503">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="504" />
+      <Component Name="Table" UId="505" />
+      <Token Text="." UId="506" />
+      <Component Name="Damper1_AdjustBusy" UId="507" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="508" />
+  <Token Text=":=" UId="509" />
+  <Blank Num="1" UId="510" />
+  <Access Scope="LocalVariable" UId="511">
+    <Symbol UId="512">
+      <Component Name="DamperController1" UId="513" />
+      <Token Text="." UId="514" />
+      <Component Name="AdjustBusy" UId="515" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="516" />
+  <NewLine Num="1" UId="517" />
+  <Access Scope="GlobalVariable" UId="518">
+    <Symbol UId="519">
+      <Component Name="MB" UId="520">
+        <BooleanAttribute Name="HasQuotes" UId="521">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="522" />
+      <Component Name="Table" UId="523" />
+      <Token Text="." UId="524" />
+      <Component Name="Damper1_AdjustError" UId="525" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="526" />
+  <Token Text=":=" UId="527" />
+  <Blank Num="1" UId="528" />
+  <Access Scope="LocalVariable" UId="529">
+    <Symbol UId="530">
+      <Component Name="DamperController1" UId="531" />
+      <Token Text="." UId="532" />
+      <Component Name="AdjustError" UId="533" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="534" />
+  <NewLine Num="1" UId="535" />
+  <Access Scope="GlobalVariable" UId="536">
+    <Symbol UId="537">
+      <Component Name="MB" UId="538">
+        <BooleanAttribute Name="HasQuotes" UId="539">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="540" />
+      <Component Name="Table" UId="541" />
+      <Token Text="." UId="542" />
+      <Component Name="Damper1_AdjustDone" UId="543" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="544" />
+  <Token Text=":=" UId="545" />
+  <Blank Num="1" UId="546" />
+  <Access Scope="Call" UId="547">
+    <Instruction Name="WORD_TO_BOOL" UId="548">
+      <Token Text="(" UId="549" />
+      <NamelessParameter UId="550">
+        <Access Scope="LocalVariable" UId="551">
+          <Symbol UId="552">
+            <Component Name="DamperController1" UId="553" />
+            <Token Text="." UId="554" />
+            <Component Name="AdjustmentDone" UId="555" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="557" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="558" />
+  <NewLine Num="2" UId="559" />
+  <Token Text="IF" UId="560" />
+  <Blank Num="1" UId="561" />
+  <Access Scope="GlobalVariable" UId="562">
+    <Symbol UId="563">
+      <Component Name="MB" UId="564">
+        <BooleanAttribute Name="HasQuotes" UId="565">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="566" />
+      <Component Name="Table" UId="567" />
+      <Token Text="." UId="568" />
+      <Component Name="Damper1_Position" UId="569" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="570" />
+  <Token Text="&gt;" UId="571" />
+  <Blank Num="1" UId="572" />
+  <Access Scope="LiteralConstant" UId="573">
+    <Constant UId="574">
+      <ConstantValue UId="576">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="577" />
+  <Token Text="THEN" UId="578" />
+  <NewLine Num="1" UId="579" />
+  <Blank Num="4" UId="580" />
+  <Access Scope="GlobalVariable" UId="581">
+    <Symbol UId="582">
+      <Component Name="MB" UId="583">
+        <BooleanAttribute Name="HasQuotes" UId="584">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="585" />
+      <Component Name="Table" UId="586" />
+      <Token Text="." UId="587" />
+      <Component Name="Damper1_Close/Open" UId="588" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="589" />
+  <Token Text=":=" UId="590" />
+  <Blank Num="1" UId="591" />
+  <Access Scope="LiteralConstant" UId="592">
+    <Constant UId="593">
+      <ConstantValue UId="595">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="596" />
+  <NewLine Num="1" UId="597" />
+  <Token Text="ELSE" UId="598" />
+  <NewLine Num="1" UId="599" />
+  <Blank Num="4" UId="600" />
+  <Access Scope="GlobalVariable" UId="601">
+    <Symbol UId="602">
+      <Component Name="MB" UId="603">
+        <BooleanAttribute Name="HasQuotes" UId="604">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="605" />
+      <Component Name="Table" UId="606" />
+      <Token Text="." UId="607" />
+      <Component Name="Damper1_Close/Open" UId="608" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="609" />
+  <Token Text=":=" UId="610" />
+  <Blank Num="1" UId="611" />
+  <Access Scope="LiteralConstant" UId="612">
+    <Constant UId="613">
+      <ConstantValue UId="615">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="616" />
+  <NewLine Num="1" UId="617" />
+  <Token Text="END_IF" UId="618" />
+  <Token Text=";" UId="619" />
+  <NewLine Num="2" UId="620" />
+  <Token Text="IF" UId="621" />
+  <Blank Num="1" UId="622" />
+  <Access Scope="GlobalVariable" UId="623">
+    <Symbol UId="624">
+      <Component Name="Inputs_DB" UId="625">
+        <BooleanAttribute Name="HasQuotes" UId="626">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="627" />
+      <Component Name="ErrorRCV2" UId="628" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="629" />
+  <Token Text="THEN" UId="630" />
+  <NewLine Num="1" UId="631" />
+  <Blank Num="4" UId="632" />
+  <Access Scope="LocalVariable" UId="633">
+    <Symbol UId="634">
+      <Component Name="DamperController2" UId="635" />
+      <Token Text="." UId="636" />
+      <Component Name="ManualMode" UId="637" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="638" />
+  <Token Text=":=" UId="639" />
+  <Blank Num="1" UId="640" />
+  <Access Scope="LiteralConstant" UId="641">
+    <Constant UId="642">
+      <ConstantValue UId="644">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="645" />
+  <NewLine Num="1" UId="646" />
+  <Blank Num="4" UId="647" />
+  <Access Scope="LocalVariable" UId="648">
+    <Symbol UId="649">
+      <Component Name="DamperController2" UId="650" />
+      <Token Text="." UId="651" />
+      <Component Name="ManaulOpen" UId="652" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="653" />
+  <Token Text=":=" UId="654" />
+  <Blank Num="1" UId="655" />
+  <Access Scope="LiteralConstant" UId="656">
+    <Constant UId="657">
+      <ConstantValue UId="659">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="660" />
+  <NewLine Num="1" UId="661" />
+  <Blank Num="4" UId="662" />
+  <Access Scope="LocalVariable" UId="663">
+    <Symbol UId="664">
+      <Component Name="DamperController2" UId="665" />
+      <Token Text="." UId="666" />
+      <Component Name="ManualClose" UId="667" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="668" />
+  <Token Text=":=" UId="669" />
+  <Blank Num="1" UId="670" />
+  <Access Scope="LiteralConstant" UId="671">
+    <Constant UId="672">
+      <ConstantValue UId="674">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="675" />
+  <NewLine Num="1" UId="676" />
+  <Token Text="ELSE" UId="677" />
+  <NewLine Num="1" UId="678" />
+  <Blank Num="4" UId="679" />
+  <Access Scope="LocalVariable" UId="680">
+    <Symbol UId="681">
+      <Component Name="DamperController2" UId="682" />
+      <Token Text="." UId="683" />
+      <Component Name="ManualMode" UId="684" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="685" />
+  <Token Text=":=" UId="686" />
+  <Blank Num="1" UId="687" />
+  <Access Scope="GlobalVariable" UId="688">
+    <Symbol UId="689">
+      <Component Name="MB" UId="690">
+        <BooleanAttribute Name="HasQuotes" UId="691">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="692" />
+      <Component Name="Table" UId="693" />
+      <Token Text="." UId="694" />
+      <Component Name="HMI_ManualModeOn" UId="695" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="696" />
+  <NewLine Num="1" UId="697" />
+  <Blank Num="4" UId="698" />
+  <Access Scope="LocalVariable" UId="699">
+    <Symbol UId="700">
+      <Component Name="DamperController2" UId="701" />
+      <Token Text="." UId="702" />
+      <Component Name="ManaulOpen" UId="703" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="704" />
+  <Token Text=":=" UId="705" />
+  <Blank Num="1" UId="706" />
+  <Access Scope="GlobalVariable" UId="707">
+    <Symbol UId="708">
+      <Component Name="MB" UId="709">
+        <BooleanAttribute Name="HasQuotes" UId="710">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="711" />
+      <Component Name="Table" UId="712" />
+      <Token Text="." UId="713" />
+      <Component Name="HMI_ManualOpenDamper2" UId="714" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="715" />
+  <NewLine Num="1" UId="716" />
+  <Blank Num="4" UId="717" />
+  <Access Scope="LocalVariable" UId="718">
+    <Symbol UId="719">
+      <Component Name="DamperController2" UId="720" />
+      <Token Text="." UId="721" />
+      <Component Name="ManualClose" UId="722" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="723" />
+  <Token Text=":=" UId="724" />
+  <Blank Num="1" UId="725" />
+  <Token Text="NOT" UId="726" />
+  <Blank Num="1" UId="727" />
+  <Access Scope="GlobalVariable" UId="728">
+    <Symbol UId="729">
+      <Component Name="MB" UId="730">
+        <BooleanAttribute Name="HasQuotes" UId="731">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="732" />
+      <Component Name="Table" UId="733" />
+      <Token Text="." UId="734" />
+      <Component Name="HMI_ManualOpenDamper2" UId="735" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="736" />
+  <NewLine Num="1" UId="737" />
+  <Token Text="END_IF" UId="738" />
+  <Token Text=";" UId="739" />
+  <NewLine Num="2" UId="740" />
+  <Access Scope="Call" UId="741">
+    <CallInfo UId="742" BlockType="FB" Name="DamperController">
+      <Instance Scope="LocalVariable" UId="743">
+        <Component Name="DamperController2" UId="744" />
+      </Instance>
+      <Token Text="(" UId="745" />
+      <Parameter Name="TankLevel" UId="746">
+        <Blank Num="1" UId="747" />
+        <Token Text=":=" UId="748" />
+        <Blank Num="1" UId="749" />
+        <Access Scope="GlobalVariable" UId="750">
+          <Symbol UId="751">
+            <Component Name="MB" UId="752">
+              <BooleanAttribute Name="HasQuotes" UId="753">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="754" />
+            <Component Name="Table" UId="755" />
+            <Token Text="." UId="756" />
+            <Component Name="RCV2LevelValue" UId="757" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="758" />
+      <NewLine Num="1" UId="759" />
+      <Blank Num="19" UId="760" />
+      <Parameter Name="TankLevelSetpoint" UId="761">
+        <Blank Num="1" UId="762" />
+        <Token Text=":=" UId="763" />
+        <Blank Num="1" UId="764" />
+        <Token Text="(" UId="765" />
+        <Access Scope="GlobalVariable" UId="766">
+          <Symbol UId="767">
+            <Component Name="MB" UId="768">
+              <BooleanAttribute Name="HasQuotes" UId="769">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="770" />
+            <Component Name="Table" UId="771" />
+            <Token Text="." UId="772" />
+            <Component Name="LevelRCV2Min" UId="773" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="774" />
+        <Token Text="+" UId="775" />
+        <Blank Num="1" UId="776" />
+        <Token Text="(" UId="777" />
+        <Access Scope="GlobalVariable" UId="778">
+          <Symbol UId="779">
+            <Component Name="MB" UId="780">
+              <BooleanAttribute Name="HasQuotes" UId="781">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="782" />
+            <Component Name="Table" UId="783" />
+            <Token Text="." UId="784" />
+            <Component Name="LevelRCV2Max" UId="785" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="786" />
+        <Token Text="-" UId="787" />
+        <Blank Num="1" UId="788" />
+        <Access Scope="GlobalVariable" UId="789">
+          <Symbol UId="790">
+            <Component Name="MB" UId="791">
+              <BooleanAttribute Name="HasQuotes" UId="792">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="793" />
+            <Component Name="Table" UId="794" />
+            <Token Text="." UId="795" />
+            <Component Name="LevelRCV2Min" UId="796" />
+          </Symbol>
+        </Access>
+        <Token Text=")" UId="797" />
+        <Blank Num="1" UId="798" />
+        <Token Text="/" UId="799" />
+        <Blank Num="1" UId="800" />
+        <Access Scope="LiteralConstant" UId="801">
+          <Constant UId="802">
+            <ConstantValue UId="804">2</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text=")" UId="805" />
+      </Parameter>
+      <Token Text="," UId="806" />
+      <NewLine Num="1" UId="807" />
+      <Blank Num="19" UId="808" />
+      <Parameter Name="TankLevelMin" UId="809">
+        <Blank Num="1" UId="810" />
+        <Token Text=":=" UId="811" />
+        <Blank Num="1" UId="812" />
+        <Access Scope="GlobalVariable" UId="813">
+          <Symbol UId="814">
+            <Component Name="MB" UId="815">
+              <BooleanAttribute Name="HasQuotes" UId="816">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="817" />
+            <Component Name="Table" UId="818" />
+            <Token Text="." UId="819" />
+            <Component Name="LevelRCV2Min" UId="820" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="821" />
+      <NewLine Num="1" UId="822" />
+      <Blank Num="19" UId="823" />
+      <Parameter Name="TankLevelMax" UId="824">
+        <Blank Num="1" UId="825" />
+        <Token Text=":=" UId="826" />
+        <Blank Num="1" UId="827" />
+        <Access Scope="GlobalVariable" UId="828">
+          <Symbol UId="829">
+            <Component Name="MB" UId="830">
+              <BooleanAttribute Name="HasQuotes" UId="831">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="832" />
+            <Component Name="Table" UId="833" />
+            <Token Text="." UId="834" />
+            <Component Name="LevelRCV2Max" UId="835" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="836" />
+      <NewLine Num="1" UId="837" />
+      <Blank Num="19" UId="838" />
+      <Parameter Name="UsePID" UId="839">
+        <BooleanAttribute Name="HasQuotes" UId="840">true</BooleanAttribute>
+        <Blank Num="1" UId="841" />
+        <Token Text=":=" UId="842" />
+        <Blank Num="1" UId="843" />
+        <Access Scope="GlobalVariable" UId="844">
+          <Symbol UId="845">
+            <Component Name="MB" UId="846">
+              <BooleanAttribute Name="HasQuotes" UId="847">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="848" />
+            <Component Name="Table" UId="849" />
+            <Token Text="." UId="850" />
+            <Component Name="UsePID" UId="851" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="852" />
+      <NewLine Num="1" UId="853" />
+      <Blank Num="19" UId="854" />
+      <Parameter Name="PID_DeadZone" UId="855">
+        <Blank Num="1" UId="856" />
+        <Token Text=":=" UId="857" />
+        <Blank Num="1" UId="858" />
+        <Access Scope="GlobalVariable" UId="859">
+          <Symbol UId="860">
+            <Component Name="MB" UId="861">
+              <BooleanAttribute Name="HasQuotes" UId="862">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="863" />
+            <Component Name="Table" UId="864" />
+            <Token Text="." UId="865" />
+            <Component Name="Damper2_PID_SetpointDeadZone" UId="866" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="867" />
+      <NewLine Num="1" UId="868" />
+      <Blank Num="19" UId="869" />
+      <Parameter Name="PID_KP" UId="870">
+        <Blank Num="1" UId="871" />
+        <Token Text=":=" UId="872" />
+        <Blank Num="1" UId="873" />
+        <Access Scope="GlobalVariable" UId="874">
+          <Symbol UId="875">
+            <Component Name="MB" UId="876">
+              <BooleanAttribute Name="HasQuotes" UId="877">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="878" />
+            <Component Name="Table" UId="879" />
+            <Token Text="." UId="880" />
+            <Component Name="Damper2_PID_KP" UId="881" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="882" />
+      <NewLine Num="1" UId="883" />
+      <Blank Num="19" UId="884" />
+      <Parameter Name="PID_KI" UId="885">
+        <Blank Num="1" UId="886" />
+        <Token Text=":=" UId="887" />
+        <Blank Num="1" UId="888" />
+        <Access Scope="GlobalVariable" UId="889">
+          <Symbol UId="890">
+            <Component Name="MB" UId="891">
+              <BooleanAttribute Name="HasQuotes" UId="892">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="893" />
+            <Component Name="Table" UId="894" />
+            <Token Text="." UId="895" />
+            <Component Name="Damper2_PID_KI" UId="896" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="897" />
+      <NewLine Num="1" UId="898" />
+      <Blank Num="19" UId="899" />
+      <Parameter Name="PID_KD" UId="900">
+        <Blank Num="1" UId="901" />
+        <Token Text=":=" UId="902" />
+        <Blank Num="1" UId="903" />
+        <Access Scope="GlobalVariable" UId="904">
+          <Symbol UId="905">
+            <Component Name="MB" UId="906">
+              <BooleanAttribute Name="HasQuotes" UId="907">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="908" />
+            <Component Name="Table" UId="909" />
+            <Token Text="." UId="910" />
+            <Component Name="Damper2_PID_KD" UId="911" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="912" />
+      <NewLine Num="1" UId="913" />
+      <Blank Num="19" UId="914" />
+      <Parameter Name="PID_TI" UId="915">
+        <Blank Num="1" UId="916" />
+        <Token Text=":=" UId="917" />
+        <Blank Num="1" UId="918" />
+        <Access Scope="GlobalVariable" UId="919">
+          <Symbol UId="920">
+            <Component Name="MB" UId="921">
+              <BooleanAttribute Name="HasQuotes" UId="922">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="923" />
+            <Component Name="Table" UId="924" />
+            <Token Text="." UId="925" />
+            <Component Name="Damper2_PID_TI" UId="926" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="927" />
+      <NewLine Num="1" UId="928" />
+      <Blank Num="19" UId="929" />
+      <Parameter Name="LimitSwitch0" UId="930">
+        <Blank Num="1" UId="931" />
+        <Token Text=":=" UId="932" />
+        <Blank Num="1" UId="933" />
+        <Access Scope="GlobalVariable" UId="934">
+          <Symbol UId="935">
+            <Component Name="RunClose2" UId="936">
+              <BooleanAttribute Name="HasQuotes" UId="937">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="938" />
+      <NewLine Num="1" UId="939" />
+      <Blank Num="19" UId="940" />
+      <Parameter Name="LimitSwitch100" UId="941">
+        <Blank Num="1" UId="942" />
+        <Token Text=":=" UId="943" />
+        <Blank Num="1" UId="944" />
+        <Access Scope="GlobalVariable" UId="945">
+          <Symbol UId="946">
+            <Component Name="RunOpen2" UId="947">
+              <BooleanAttribute Name="HasQuotes" UId="948">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="949" />
+      <NewLine Num="1" UId="950" />
+      <Blank Num="19" UId="951" />
+      <Parameter Name="PouseMove" UId="952">
+        <Blank Num="1" UId="953" />
+        <Token Text=":=" UId="954" />
+        <Blank Num="1" UId="955" />
+        <Access Scope="LiteralConstant" UId="956">
+          <Constant UId="957">
+            <ConstantValue UId="959">5</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="960" />
+      <NewLine Num="1" UId="961" />
+      <Blank Num="19" UId="962" />
+      <Parameter Name="PositionDeadzone" UId="963">
+        <Blank Num="1" UId="964" />
+        <Token Text=":=" UId="965" />
+        <Blank Num="1" UId="966" />
+        <Access Scope="GlobalVariable" UId="967">
+          <Symbol UId="968">
+            <Component Name="MB" UId="969">
+              <BooleanAttribute Name="HasQuotes" UId="970">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="971" />
+            <Component Name="Table" UId="972" />
+            <Token Text="." UId="973" />
+            <Component Name="Damper2_PositionDeadZone" UId="974" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="975" />
+      <NewLine Num="1" UId="976" />
+      <Blank Num="19" UId="977" />
+      <Parameter Name="StartAjustment" UId="978">
+        <Blank Num="1" UId="979" />
+        <Token Text=":=" UId="980" />
+        <Blank Num="1" UId="981" />
+        <Access Scope="GlobalVariable" UId="982">
+          <Symbol UId="983">
+            <Component Name="Config" UId="984">
+              <BooleanAttribute Name="HasQuotes" UId="985">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="986" />
+            <Component Name="HMI_StartAdjustDamper2" UId="987" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="988" />
+      <NewLine Num="1" UId="989" />
+      <Blank Num="19" UId="990" />
+      <Parameter Name="CancelAjustment" UId="991">
+        <Blank Num="1" UId="992" />
+        <Token Text=":=" UId="993" />
+        <Blank Num="1" UId="994" />
+        <Access Scope="GlobalVariable" UId="995">
+          <Symbol UId="996">
+            <Component Name="Config" UId="997">
+              <BooleanAttribute Name="HasQuotes" UId="998">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="999" />
+            <Component Name="HMI_StopAdjustDamper2" UId="1000" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1001" />
+      <NewLine Num="1" UId="1002" />
+      <Blank Num="19" UId="1003" />
+      <Parameter Name="ResetPosition" UId="1004">
+        <Blank Num="1" UId="1005" />
+        <Token Text=":=" UId="1006" />
+        <Blank Num="1" UId="1007" />
+        <Access Scope="GlobalVariable" UId="1008">
+          <Symbol UId="1009">
+            <Component Name="Config" UId="1010">
+              <BooleanAttribute Name="HasQuotes" UId="1011">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1012" />
+            <Component Name="HMI_ResetPositionDamper2" UId="1013" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1014" />
+      <NewLine Num="1" UId="1015" />
+      <Blank Num="19" UId="1016" />
+      <Parameter Name="Open" UId="1017">
+        <Blank Num="1" UId="1018" />
+        <Token Text="=&gt;" UId="1019" />
+        <Blank Num="1" UId="1020" />
+        <Access Scope="GlobalVariable" UId="1021">
+          <Symbol UId="1022">
+            <Component Name="OutOpen2" UId="1023">
+              <BooleanAttribute Name="HasQuotes" UId="1024">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1025" />
+      <NewLine Num="1" UId="1026" />
+      <Blank Num="19" UId="1027" />
+      <Parameter Name="Close" UId="1028">
+        <Blank Num="1" UId="1029" />
+        <Token Text="=&gt;" UId="1030" />
+        <Blank Num="1" UId="1031" />
+        <Access Scope="GlobalVariable" UId="1032">
+          <Symbol UId="1033">
+            <Component Name="OutClose2" UId="1034">
+              <BooleanAttribute Name="HasQuotes" UId="1035">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1036" />
+      <NewLine Num="1" UId="1037" />
+      <Blank Num="19" UId="1038" />
+      <Parameter Name="FullMovingTime" UId="1039">
+        <Blank Num="1" UId="1040" />
+        <Token Text=":=" UId="1041" />
+        <Blank Num="1" UId="1042" />
+        <Access Scope="GlobalVariable" UId="1043">
+          <Symbol UId="1044">
+            <Component Name="MB" UId="1045">
+              <BooleanAttribute Name="HasQuotes" UId="1046">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1047" />
+            <Component Name="Table" UId="1048" />
+            <Token Text="." UId="1049" />
+            <Component Name="Damper2_FullMovingTime" UId="1050" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1051" />
+      <NewLine Num="1" UId="1052" />
+      <Blank Num="19" UId="1053" />
+      <Parameter Name="SwitchAutoMode" UId="1054">
+        <Blank Num="1" UId="1055" />
+        <Token Text=":=" UId="1056" />
+        <Blank Num="1" UId="1057" />
+        <Access Scope="GlobalVariable" UId="1058">
+          <Symbol UId="1059">
+            <Component Name="Damper2_AutoMode" UId="1060">
+              <BooleanAttribute Name="HasQuotes" UId="1061">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="1070" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="1071" />
+  <NewLine Num="2" UId="1072" />
+  <Access Scope="GlobalVariable" UId="1073">
+    <Symbol UId="1074">
+      <Component Name="MB" UId="1075">
+        <BooleanAttribute Name="HasQuotes" UId="1076">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1077" />
+      <Component Name="Table" UId="1078" />
+      <Token Text="." UId="1079" />
+      <Component Name="Damper2_Position" UId="1080" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1081" />
+  <Token Text=":=" UId="1082" />
+  <Blank Num="1" UId="1083" />
+  <Access Scope="LocalVariable" UId="1084">
+    <Symbol UId="1085">
+      <Component Name="DamperController2" UId="1086" />
+      <Token Text="." UId="1087" />
+      <Component Name="CurrentPosition" UId="1088" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1089" />
+  <NewLine Num="1" UId="1090" />
+  <Access Scope="GlobalVariable" UId="1091">
+    <Symbol UId="1092">
+      <Component Name="MB" UId="1093">
+        <BooleanAttribute Name="HasQuotes" UId="1094">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1095" />
+      <Component Name="Table" UId="1096" />
+      <Token Text="." UId="1097" />
+      <Component Name="Damper2_PositionSetpoint" UId="1098" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1099" />
+  <Token Text=":=" UId="1100" />
+  <Blank Num="1" UId="1101" />
+  <Access Scope="LocalVariable" UId="1102">
+    <Symbol UId="1103">
+      <Component Name="DamperController2" UId="1104" />
+      <Token Text="." UId="1105" />
+      <Component Name="PositionSetPoint" UId="1106" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1107" />
+  <NewLine Num="1" UId="1108" />
+  <Access Scope="GlobalVariable" UId="1109">
+    <Symbol UId="1110">
+      <Component Name="MB" UId="1111">
+        <BooleanAttribute Name="HasQuotes" UId="1112">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1113" />
+      <Component Name="Table" UId="1114" />
+      <Token Text="." UId="1115" />
+      <Component Name="Damper2_PID_Setpoint" UId="1116" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1117" />
+  <Token Text=":=" UId="1118" />
+  <Blank Num="1" UId="1119" />
+  <Access Scope="LocalVariable" UId="1120">
+    <Symbol UId="1121">
+      <Component Name="DamperController2" UId="1122" />
+      <Token Text="." UId="1123" />
+      <Component Name="TankLevelSetpoint" UId="1124" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1125" />
+  <NewLine Num="1" UId="1126" />
+  <Access Scope="GlobalVariable" UId="1127">
+    <Symbol UId="1128">
+      <Component Name="MB" UId="1129">
+        <BooleanAttribute Name="HasQuotes" UId="1130">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1131" />
+      <Component Name="Table" UId="1132" />
+      <Token Text="." UId="1133" />
+      <Component Name="Damper2_AdjustBusy" UId="1134" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1135" />
+  <Token Text=":=" UId="1136" />
+  <Blank Num="1" UId="1137" />
+  <Access Scope="LocalVariable" UId="1138">
+    <Symbol UId="1139">
+      <Component Name="DamperController2" UId="1140" />
+      <Token Text="." UId="1141" />
+      <Component Name="AdjustBusy" UId="1142" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1143" />
+  <NewLine Num="1" UId="1144" />
+  <Access Scope="GlobalVariable" UId="1145">
+    <Symbol UId="1146">
+      <Component Name="MB" UId="1147">
+        <BooleanAttribute Name="HasQuotes" UId="1148">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1149" />
+      <Component Name="Table" UId="1150" />
+      <Token Text="." UId="1151" />
+      <Component Name="Damper2_AdjustError" UId="1152" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1153" />
+  <Token Text=":=" UId="1154" />
+  <Blank Num="1" UId="1155" />
+  <Access Scope="LocalVariable" UId="1156">
+    <Symbol UId="1157">
+      <Component Name="DamperController2" UId="1158" />
+      <Token Text="." UId="1159" />
+      <Component Name="AdjustError" UId="1160" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1161" />
+  <NewLine Num="1" UId="1162" />
+  <Access Scope="GlobalVariable" UId="1163">
+    <Symbol UId="1164">
+      <Component Name="MB" UId="1165">
+        <BooleanAttribute Name="HasQuotes" UId="1166">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1167" />
+      <Component Name="Table" UId="1168" />
+      <Token Text="." UId="1169" />
+      <Component Name="Damper2_AdjustDone" UId="1170" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1171" />
+  <Token Text=":=" UId="1172" />
+  <Blank Num="1" UId="1173" />
+  <Access Scope="Call" UId="1174">
+    <Instruction Name="WORD_TO_BOOL" UId="1175">
+      <Token Text="(" UId="1176" />
+      <NamelessParameter UId="1177">
+        <Access Scope="LocalVariable" UId="1178">
+          <Symbol UId="1179">
+            <Component Name="DamperController2" UId="1180" />
+            <Token Text="." UId="1181" />
+            <Component Name="AdjustmentDone" UId="1182" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="1184" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="1185" />
+  <NewLine Num="2" UId="1186" />
+  <Access Scope="GlobalVariable" UId="1187">
+    <Symbol UId="1188">
+      <Component Name="MB" UId="1189">
+        <BooleanAttribute Name="HasQuotes" UId="1190">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1191" />
+      <Component Name="Table" UId="1192" />
+      <Token Text="." UId="1193" />
+      <Component Name="Damper2_Manual/Auto" UId="1194" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1195" />
+  <Token Text=":=" UId="1196" />
+  <Blank Num="1" UId="1197" />
+  <Access Scope="GlobalVariable" UId="1198">
+    <Symbol UId="1199">
+      <Component Name="Damper2_AutoMode" UId="1200">
+        <BooleanAttribute Name="HasQuotes" UId="1201">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1202" />
+  <NewLine Num="2" UId="1203" />
+  <Access Scope="Call" UId="1204">
+    <CallInfo UId="1205" BlockType="FB" Name="DamperController">
+      <Instance Scope="LocalVariable" UId="1206">
+        <Component Name="DamperController3" UId="1207" />
+      </Instance>
+      <Token Text="(" UId="1208" />
+      <Parameter Name="TankLevel" UId="1209">
+        <Blank Num="1" UId="1210" />
+        <Token Text=":=" UId="1211" />
+        <Blank Num="1" UId="1212" />
+        <Access Scope="GlobalVariable" UId="1213">
+          <Symbol UId="1214">
+            <Component Name="MB" UId="1215">
+              <BooleanAttribute Name="HasQuotes" UId="1216">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1217" />
+            <Component Name="Table" UId="1218" />
+            <Token Text="." UId="1219" />
+            <Component Name="RCV1LevelValue" UId="1220" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1221" />
+      <NewLine Num="1" UId="1222" />
+      <Blank Num="19" UId="1223" />
+      <Parameter Name="TankLevelMin" UId="1224">
+        <Blank Num="1" UId="1225" />
+        <Token Text=":=" UId="1226" />
+        <Blank Num="1" UId="1227" />
+        <Access Scope="GlobalVariable" UId="1228">
+          <Symbol UId="1229">
+            <Component Name="MB" UId="1230">
+              <BooleanAttribute Name="HasQuotes" UId="1231">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1232" />
+            <Component Name="Table" UId="1233" />
+            <Token Text="." UId="1234" />
+            <Component Name="LevelRCV1Min" UId="1235" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1236" />
+      <NewLine Num="1" UId="1237" />
+      <Blank Num="19" UId="1238" />
+      <Parameter Name="TankLevelMax" UId="1239">
+        <Blank Num="1" UId="1240" />
+        <Token Text=":=" UId="1241" />
+        <Blank Num="1" UId="1242" />
+        <Access Scope="GlobalVariable" UId="1243">
+          <Symbol UId="1244">
+            <Component Name="MB" UId="1245">
+              <BooleanAttribute Name="HasQuotes" UId="1246">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1247" />
+            <Component Name="Table" UId="1248" />
+            <Token Text="." UId="1249" />
+            <Component Name="LevelRCV1Max" UId="1250" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1251" />
+      <NewLine Num="1" UId="1252" />
+      <Blank Num="19" UId="1253" />
+      <Parameter Name="UsePID" UId="1254">
+        <BooleanAttribute Name="HasQuotes" UId="1255">true</BooleanAttribute>
+        <Blank Num="1" UId="1256" />
+        <Token Text=":=" UId="1257" />
+        <Blank Num="1" UId="1258" />
+        <Access Scope="LiteralConstant" UId="1259">
+          <Constant UId="1260">
+            <ConstantValue UId="1262">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1263" />
+      <NewLine Num="1" UId="1264" />
+      <Blank Num="19" UId="1265" />
+      <Parameter Name="LimitSwitch0" UId="1266">
+        <Blank Num="1" UId="1267" />
+        <Token Text=":=" UId="1268" />
+        <Blank Num="1" UId="1269" />
+        <Access Scope="GlobalVariable" UId="1270">
+          <Symbol UId="1271">
+            <Component Name="RunClose1" UId="1272">
+              <BooleanAttribute Name="HasQuotes" UId="1273">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1274" />
+      <NewLine Num="1" UId="1275" />
+      <Blank Num="19" UId="1276" />
+      <Parameter Name="LimitSwitch100" UId="1277">
+        <Blank Num="1" UId="1278" />
+        <Token Text=":=" UId="1279" />
+        <Blank Num="1" UId="1280" />
+        <Access Scope="GlobalVariable" UId="1281">
+          <Symbol UId="1282">
+            <Component Name="RunOpen1" UId="1283">
+              <BooleanAttribute Name="HasQuotes" UId="1284">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1285" />
+      <NewLine Num="1" UId="1286" />
+      <Blank Num="19" UId="1287" />
+      <Parameter Name="PouseMove" UId="1288">
+        <Blank Num="1" UId="1289" />
+        <Token Text=":=" UId="1290" />
+        <Blank Num="1" UId="1291" />
+        <Access Scope="LiteralConstant" UId="1292">
+          <Constant UId="1293">
+            <ConstantValue UId="1295">5</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1296" />
+      <NewLine Num="1" UId="1297" />
+      <Blank Num="19" UId="1298" />
+      <Parameter Name="PositionDeadzone" UId="1299">
+        <Blank Num="1" UId="1300" />
+        <Token Text=":=" UId="1301" />
+        <Blank Num="1" UId="1302" />
+        <Access Scope="GlobalVariable" UId="1303">
+          <Symbol UId="1304">
+            <Component Name="MB" UId="1305">
+              <BooleanAttribute Name="HasQuotes" UId="1306">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1307" />
+            <Component Name="Table" UId="1308" />
+            <Token Text="." UId="1309" />
+            <Component Name="Damper1_PositionDeadZone" UId="1310" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1311" />
+      <NewLine Num="1" UId="1312" />
+      <Blank Num="19" UId="1313" />
+      <Parameter Name="Open" UId="1314">
+        <Blank Num="1" UId="1315" />
+        <Token Text="=&gt;" UId="1316" />
+        <Blank Num="1" UId="1317" />
+        <Access Scope="GlobalVariable" UId="1318">
+          <Symbol UId="1319">
+            <Component Name="OsmosOut" UId="1320">
+              <BooleanAttribute Name="HasQuotes" UId="1321">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1322" />
+      <NewLine Num="1" UId="1323" />
+      <Blank Num="19" UId="1324" />
+      <Parameter Name="FullMovingTime" UId="1325">
+        <Blank Num="1" UId="1326" />
+        <Token Text=":=" UId="1327" />
+        <Blank Num="1" UId="1328" />
+        <Access Scope="GlobalVariable" UId="1329">
+          <Symbol UId="1330">
+            <Component Name="MB" UId="1331">
+              <BooleanAttribute Name="HasQuotes" UId="1332">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1333" />
+            <Component Name="Table" UId="1334" />
+            <Token Text="." UId="1335" />
+            <Component Name="Damper1_FullMovingTime" UId="1336" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="1337" />
+      <NewLine Num="1" UId="1338" />
+      <Blank Num="19" UId="1339" />
+      <Parameter Name="SwitchAutoMode" UId="1340">
+        <Blank Num="1" UId="1341" />
+        <Token Text=":=" UId="1342" />
+        <Blank Num="1" UId="1343" />
+        <Access Scope="LiteralConstant" UId="1344">
+          <Constant UId="1345">
+            <ConstantValue UId="1347">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="1366" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="1367" />
+  <NewLine Num="4" UId="1368" />
+  <Token Text="IF" UId="1369" />
+  <Blank Num="1" UId="1370" />
+  <Access Scope="GlobalVariable" UId="1371">
+    <Symbol UId="1372">
+      <Component Name="MB" UId="1373">
+        <BooleanAttribute Name="HasQuotes" UId="1374">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1375" />
+      <Component Name="Table" UId="1376" />
+      <Token Text="." UId="1377" />
+      <Component Name="RCV1LevelValue" UId="1378" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1379" />
+  <Token Text="&lt;" UId="1380" />
+  <Blank Num="1" UId="1381" />
+  <Access Scope="GlobalVariable" UId="1382">
+    <Symbol UId="1383">
+      <Component Name="MB" UId="1384">
+        <BooleanAttribute Name="HasQuotes" UId="1385">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1386" />
+      <Component Name="Table" UId="1387" />
+      <Token Text="." UId="1388" />
+      <Component Name="LevelRCV1Min" UId="1389" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1390" />
+  <Token Text="THEN" UId="1391" />
+  <NewLine Num="1" UId="1392" />
+  <Blank Num="4" UId="1393" />
+  <Access Scope="GlobalVariable" UId="1394">
+    <Symbol UId="1395">
+      <Component Name="OsmosAO" UId="1396">
+        <BooleanAttribute Name="HasQuotes" UId="1397">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1398" />
+  <Token Text=":=" UId="1399" />
+  <Blank Num="1" UId="1400" />
+  <Access Scope="LiteralConstant" UId="1401">
+    <Constant UId="1402">
+      <ConstantValue UId="1404">5520</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1405" />
+  <NewLine Num="1" UId="1406" />
+  <Token Text="ELSIF" UId="1407" />
+  <Blank Num="1" UId="1408" />
+  <Access Scope="GlobalVariable" UId="1409">
+    <Symbol UId="1410">
+      <Component Name="MB" UId="1411">
+        <BooleanAttribute Name="HasQuotes" UId="1412">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1413" />
+      <Component Name="Table" UId="1414" />
+      <Token Text="." UId="1415" />
+      <Component Name="RCV1LevelValue" UId="1416" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1417" />
+  <Token Text="&gt;" UId="1418" />
+  <Blank Num="1" UId="1419" />
+  <Access Scope="GlobalVariable" UId="1420">
+    <Symbol UId="1421">
+      <Component Name="MB" UId="1422">
+        <BooleanAttribute Name="HasQuotes" UId="1423">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1424" />
+      <Component Name="Table" UId="1425" />
+      <Token Text="." UId="1426" />
+      <Component Name="LevelRCV1Max" UId="1427" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1428" />
+  <Token Text="THEN" UId="1429" />
+  <NewLine Num="1" UId="1430" />
+  <Blank Num="4" UId="1431" />
+  <Access Scope="GlobalVariable" UId="1432">
+    <Symbol UId="1433">
+      <Component Name="OsmosAO" UId="1434">
+        <BooleanAttribute Name="HasQuotes" UId="1435">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1436" />
+  <Token Text=":=" UId="1437" />
+  <Blank Num="1" UId="1438" />
+  <Access Scope="LiteralConstant" UId="1439">
+    <Constant UId="1440">
+      <ConstantValue UId="1442">27648</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1443" />
+  <NewLine Num="1" UId="1444" />
+  <Token Text="ELSE" UId="1445" />
+  <NewLine Num="1" UId="1446" />
+  <Blank Num="4" UId="1447" />
+  <Access Scope="GlobalVariable" UId="1448">
+    <Symbol UId="1449">
+      <Component Name="OsmosAO" UId="1450">
+        <BooleanAttribute Name="HasQuotes" UId="1451">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1452" />
+  <Token Text=":=" UId="1453" />
+  <Blank Num="1" UId="1454" />
+  <Access Scope="Call" UId="1455">
+    <Instruction Name="REAL_TO_INT" UId="1456">
+      <Token Text="(" UId="1457" />
+      <NamelessParameter UId="1458">
+        <Token Text="(" UId="1459" />
+        <Access Scope="GlobalVariable" UId="1460">
+          <Symbol UId="1461">
+            <Component Name="MB" UId="1462">
+              <BooleanAttribute Name="HasQuotes" UId="1463">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1464" />
+            <Component Name="Table" UId="1465" />
+            <Token Text="." UId="1466" />
+            <Component Name="RCV1LevelValue" UId="1467" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="1468" />
+        <Token Text="-" UId="1469" />
+        <Blank Num="1" UId="1470" />
+        <Access Scope="GlobalVariable" UId="1471">
+          <Symbol UId="1472">
+            <Component Name="MB" UId="1473">
+              <BooleanAttribute Name="HasQuotes" UId="1474">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1475" />
+            <Component Name="Table" UId="1476" />
+            <Token Text="." UId="1477" />
+            <Component Name="LevelRCV1Min" UId="1478" />
+          </Symbol>
+        </Access>
+        <Token Text=")" UId="1479" />
+        <Blank Num="1" UId="1480" />
+        <Token Text="/" UId="1481" />
+        <Blank Num="1" UId="1482" />
+        <Token Text="(" UId="1483" />
+        <Access Scope="GlobalVariable" UId="1484">
+          <Symbol UId="1485">
+            <Component Name="MB" UId="1486">
+              <BooleanAttribute Name="HasQuotes" UId="1487">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1488" />
+            <Component Name="Table" UId="1489" />
+            <Token Text="." UId="1490" />
+            <Component Name="LevelRCV1Max" UId="1491" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="1492" />
+        <Token Text="-" UId="1493" />
+        <Blank Num="1" UId="1494" />
+        <Access Scope="GlobalVariable" UId="1495">
+          <Symbol UId="1496">
+            <Component Name="MB" UId="1497">
+              <BooleanAttribute Name="HasQuotes" UId="1498">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="1499" />
+            <Component Name="Table" UId="1500" />
+            <Token Text="." UId="1501" />
+            <Component Name="LevelRCV1Min" UId="1502" />
+          </Symbol>
+        </Access>
+        <Token Text=")" UId="1503" />
+        <Blank Num="1" UId="1504" />
+        <Token Text="*" UId="1505" />
+        <Blank Num="1" UId="1506" />
+        <Token Text="(" UId="1507" />
+        <Access Scope="LiteralConstant" UId="1508">
+          <Constant UId="1509">
+            <ConstantValue UId="1511">27648</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="1512" />
+        <Token Text="-" UId="1513" />
+        <Blank Num="1" UId="1514" />
+        <Access Scope="LiteralConstant" UId="1515">
+          <Constant UId="1516">
+            <ConstantValue UId="1518">5520</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text=")" UId="1519" />
+        <Blank Num="1" UId="1520" />
+        <Token Text="+" UId="1521" />
+        <Blank Num="1" UId="1522" />
+        <Access Scope="LiteralConstant" UId="1523">
+          <Constant UId="1524">
+            <ConstantValue UId="1526">5520</ConstantValue>
+          </Constant>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="1528" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="1529" />
+  <NewLine Num="1" UId="1530" />
+  <Token Text="END_IF" UId="1531" />
+  <Token Text=";" UId="1532" />
+  <NewLine Num="2" UId="1533" />
+  <Token Text="IF" UId="1534" />
+  <Blank Num="1" UId="1535" />
+  <Access Scope="GlobalVariable" UId="1536">
+    <Symbol UId="1537">
+      <Component Name="Inputs_DB" UId="1538">
+        <BooleanAttribute Name="HasQuotes" UId="1539">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1540" />
+      <Component Name="ErrorRCV2" UId="1541" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1542" />
+  <Token Text="THEN" UId="1543" />
+  <NewLine Num="1" UId="1544" />
+  <Blank Num="4" UId="1545" />
+  <Access Scope="LocalVariable" UId="1546">
+    <Symbol UId="1547">
+      <Component Name="DamperController3" UId="1548" />
+      <Token Text="." UId="1549" />
+      <Component Name="ManualMode" UId="1550" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1551" />
+  <Token Text=":=" UId="1552" />
+  <Blank Num="1" UId="1553" />
+  <Access Scope="LiteralConstant" UId="1554">
+    <Constant UId="1555">
+      <ConstantValue UId="1557">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1558" />
+  <NewLine Num="1" UId="1559" />
+  <Blank Num="4" UId="1560" />
+  <Access Scope="LocalVariable" UId="1561">
+    <Symbol UId="1562">
+      <Component Name="DamperController3" UId="1563" />
+      <Token Text="." UId="1564" />
+      <Component Name="ManaulOpen" UId="1565" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1566" />
+  <Token Text=":=" UId="1567" />
+  <Blank Num="1" UId="1568" />
+  <Access Scope="LiteralConstant" UId="1569">
+    <Constant UId="1570">
+      <ConstantValue UId="1572">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1573" />
+  <NewLine Num="1" UId="1574" />
+  <Blank Num="4" UId="1575" />
+  <Access Scope="LocalVariable" UId="1576">
+    <Symbol UId="1577">
+      <Component Name="DamperController3" UId="1578" />
+      <Token Text="." UId="1579" />
+      <Component Name="ManualClose" UId="1580" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1581" />
+  <Token Text=":=" UId="1582" />
+  <Blank Num="1" UId="1583" />
+  <Access Scope="LiteralConstant" UId="1584">
+    <Constant UId="1585">
+      <ConstantValue UId="1587">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1588" />
+  <NewLine Num="1" UId="1589" />
+  <Token Text="END_IF" UId="1590" />
+  <Token Text=";" UId="1591" />
+  <NewLine Num="1" UId="1592" />
+  <Blank Num="2" UId="1593" />
+  <NewLine Num="3" UId="1594" />
+  <Token Text="IF" UId="1595" />
+  <Blank Num="1" UId="1596" />
+  <Access Scope="GlobalVariable" UId="1597">
+    <Symbol UId="1598">
+      <Component Name="MB" UId="1599">
+        <BooleanAttribute Name="HasQuotes" UId="1600">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1601" />
+      <Component Name="Table" UId="1602" />
+      <Token Text="." UId="1603" />
+      <Component Name="Damper2_Position" UId="1604" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1605" />
+  <Token Text="&gt;" UId="1606" />
+  <Blank Num="1" UId="1607" />
+  <Access Scope="LiteralConstant" UId="1608">
+    <Constant UId="1609">
+      <ConstantValue UId="1611">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="1612" />
+  <Token Text="THEN" UId="1613" />
+  <NewLine Num="1" UId="1614" />
+  <Blank Num="4" UId="1615" />
+  <Access Scope="GlobalVariable" UId="1616">
+    <Symbol UId="1617">
+      <Component Name="MB" UId="1618">
+        <BooleanAttribute Name="HasQuotes" UId="1619">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1620" />
+      <Component Name="Table" UId="1621" />
+      <Token Text="." UId="1622" />
+      <Component Name="Damper2_Close/Open" UId="1623" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1624" />
+  <Token Text=":=" UId="1625" />
+  <Blank Num="1" UId="1626" />
+  <Access Scope="LiteralConstant" UId="1627">
+    <Constant UId="1628">
+      <ConstantValue UId="1630">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1631" />
+  <NewLine Num="1" UId="1632" />
+  <Token Text="ELSE" UId="1633" />
+  <NewLine Num="1" UId="1634" />
+  <Blank Num="4" UId="1635" />
+  <Access Scope="GlobalVariable" UId="1636">
+    <Symbol UId="1637">
+      <Component Name="MB" UId="1638">
+        <BooleanAttribute Name="HasQuotes" UId="1639">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1640" />
+      <Component Name="Table" UId="1641" />
+      <Token Text="." UId="1642" />
+      <Component Name="Damper2_Close/Open" UId="1643" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1644" />
+  <Token Text=":=" UId="1645" />
+  <Blank Num="1" UId="1646" />
+  <Access Scope="LiteralConstant" UId="1647">
+    <Constant UId="1648">
+      <ConstantValue UId="1650">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1651" />
+  <NewLine Num="1" UId="1652" />
+  <Token Text="END_IF" UId="1653" />
+  <Token Text=";" UId="1654" />
+  <NewLine Num="1" UId="1655" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

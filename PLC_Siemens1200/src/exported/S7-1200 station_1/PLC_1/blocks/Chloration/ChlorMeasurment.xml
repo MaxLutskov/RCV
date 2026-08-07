@@ -1,0 +1,1511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:35.3352414Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output">
+    <Member Name="blockDosing" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="EnableMeasurment_TON" Datatype="TON_TIME" Version="1.0" Remanence="Retain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="BlockDosing_TON" Datatype="TON_TIME" Version="1.0" Remanence="Retain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="PT" Datatype="Time" />
+          <Member Name="ET" Datatype="Time" />
+          <Member Name="IN" Datatype="Bool" />
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="enableMeasureTime" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ChlorationCalculate" Datatype="&quot;ChlorationCalculate&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="measuredChlorine" Datatype="Real" />
+        </Section>
+        <Section Name="Output" />
+        <Section Name="InOut">
+          <Member Name="ChlorationParams" Datatype="Struct">
+            <Member Name="SetpointMin" Datatype="Real" />
+            <Member Name="SetpointMax" Datatype="Real" />
+            <Member Name="BaseDose" Datatype="Real" />
+            <Member Name="ActualDose" Datatype="Real" />
+            <Member Name="DoseChangeMax" Datatype="Real" />
+            <Member Name="DosingMin" Datatype="Real" />
+            <Member Name="DosingMax" Datatype="Real" />
+            <Member Name="CorectionCoef" Datatype="Real" />
+          </Member>
+        </Section>
+        <Section Name="Static">
+          <Member Name="setpointDeviation" Datatype="Real" />
+          <Member Name="doseCorection" Datatype="Real" />
+          <Member Name="doseCorectionOld" Datatype="Real" />
+          <Member Name="doseChangeMaxReal" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="blockDosingTime" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="R_TRIG" Datatype="R_TRIG" Version="1.0" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="CLK" Datatype="Bool" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="Q" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut" />
+        <Section Name="Static">
+          <Member Name="Stat_Bit" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Initial" Datatype="Bool" Remanence="Retain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <StartValue>True</StartValue>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>ChlorMeasurment</Name>
+      <Namespace />
+      <Number>21</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Token Text="IF" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Access Scope="GlobalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="MB" UId="25">
+        <BooleanAttribute Name="HasQuotes" UId="26">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="27" />
+      <Component Name="Table" UId="28" />
+      <Token Text="." UId="29" />
+      <Component Name="CycleDay" UId="30" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="31" />
+  <Token Text="&gt;=" UId="32" />
+  <Blank Num="1" UId="33" />
+  <Access Scope="GlobalVariable" UId="34">
+    <Symbol UId="35">
+      <Component Name="MB" UId="36">
+        <BooleanAttribute Name="HasQuotes" UId="37">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="38" />
+      <Component Name="Table" UId="39" />
+      <Token Text="." UId="40" />
+      <Component Name="ChlorMeasureTable" UId="41">
+        <Token Text="[" UId="42" />
+        <Access Scope="LiteralConstant" UId="43">
+          <Constant UId="44">
+            <ConstantValue UId="46">3</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="47" />
+      </Component>
+      <Token Text="." UId="48" />
+      <Component Name="CycleDay" UId="49" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="50" />
+  <Token Text="THEN" UId="51" />
+  <NewLine Num="1" UId="52" />
+  <Blank Num="4" UId="53" />
+  <Access Scope="LocalVariable" UId="54">
+    <Symbol UId="55">
+      <Component Name="enableMeasureTime" UId="56" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="57" />
+  <Token Text=":=" UId="58" />
+  <Blank Num="1" UId="59" />
+  <Access Scope="GlobalVariable" UId="60">
+    <Symbol UId="61">
+      <Component Name="MB" UId="62">
+        <BooleanAttribute Name="HasQuotes" UId="63">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="64" />
+      <Component Name="Table" UId="65" />
+      <Token Text="." UId="66" />
+      <Component Name="ChlorMeasureTable" UId="67">
+        <Token Text="[" UId="68" />
+        <Access Scope="LiteralConstant" UId="69">
+          <Constant UId="70">
+            <ConstantValue UId="72">3</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="73" />
+      </Component>
+      <Token Text="." UId="74" />
+      <Component Name="MeasureTime" UId="75" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="76" />
+  <NewLine Num="1" UId="77" />
+  <Blank Num="4" UId="78" />
+  <Access Scope="LocalVariable" UId="79">
+    <Symbol UId="80">
+      <Component Name="blockDosingTime" UId="81" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="82" />
+  <Token Text=":=" UId="83" />
+  <Blank Num="1" UId="84" />
+  <Access Scope="GlobalVariable" UId="85">
+    <Symbol UId="86">
+      <Component Name="MB" UId="87">
+        <BooleanAttribute Name="HasQuotes" UId="88">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="89" />
+      <Component Name="Table" UId="90" />
+      <Token Text="." UId="91" />
+      <Component Name="ChlorMeasureTable" UId="92">
+        <Token Text="[" UId="93" />
+        <Access Scope="LiteralConstant" UId="94">
+          <Constant UId="95">
+            <ConstantValue UId="97">3</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="98" />
+      </Component>
+      <Token Text="." UId="99" />
+      <Component Name="BlockTime" UId="100" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="101" />
+  <NewLine Num="1" UId="102" />
+  <Token Text="ELSIF" UId="103" />
+  <Blank Num="1" UId="104" />
+  <Access Scope="GlobalVariable" UId="105">
+    <Symbol UId="106">
+      <Component Name="MB" UId="107">
+        <BooleanAttribute Name="HasQuotes" UId="108">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="109" />
+      <Component Name="Table" UId="110" />
+      <Token Text="." UId="111" />
+      <Component Name="CycleDay" UId="112" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="113" />
+  <Token Text="&gt;=" UId="114" />
+  <Blank Num="1" UId="115" />
+  <Access Scope="GlobalVariable" UId="116">
+    <Symbol UId="117">
+      <Component Name="MB" UId="118">
+        <BooleanAttribute Name="HasQuotes" UId="119">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="120" />
+      <Component Name="Table" UId="121" />
+      <Token Text="." UId="122" />
+      <Component Name="ChlorMeasureTable" UId="123">
+        <Token Text="[" UId="124" />
+        <Access Scope="LiteralConstant" UId="125">
+          <Constant UId="126">
+            <ConstantValue UId="128">2</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="129" />
+      </Component>
+      <Token Text="." UId="130" />
+      <Component Name="CycleDay" UId="131" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="132" />
+  <Token Text="THEN" UId="133" />
+  <NewLine Num="1" UId="134" />
+  <Blank Num="4" UId="135" />
+  <Access Scope="LocalVariable" UId="136">
+    <Symbol UId="137">
+      <Component Name="enableMeasureTime" UId="138" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="139" />
+  <Token Text=":=" UId="140" />
+  <Blank Num="1" UId="141" />
+  <Access Scope="GlobalVariable" UId="142">
+    <Symbol UId="143">
+      <Component Name="MB" UId="144">
+        <BooleanAttribute Name="HasQuotes" UId="145">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="146" />
+      <Component Name="Table" UId="147" />
+      <Token Text="." UId="148" />
+      <Component Name="ChlorMeasureTable" UId="149">
+        <Token Text="[" UId="150" />
+        <Access Scope="LiteralConstant" UId="151">
+          <Constant UId="152">
+            <ConstantValue UId="154">2</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="155" />
+      </Component>
+      <Token Text="." UId="156" />
+      <Component Name="MeasureTime" UId="157" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="158" />
+  <NewLine Num="1" UId="159" />
+  <Blank Num="4" UId="160" />
+  <Access Scope="LocalVariable" UId="161">
+    <Symbol UId="162">
+      <Component Name="blockDosingTime" UId="163" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="164" />
+  <Token Text=":=" UId="165" />
+  <Blank Num="1" UId="166" />
+  <Access Scope="GlobalVariable" UId="167">
+    <Symbol UId="168">
+      <Component Name="MB" UId="169">
+        <BooleanAttribute Name="HasQuotes" UId="170">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="171" />
+      <Component Name="Table" UId="172" />
+      <Token Text="." UId="173" />
+      <Component Name="ChlorMeasureTable" UId="174">
+        <Token Text="[" UId="175" />
+        <Access Scope="LiteralConstant" UId="176">
+          <Constant UId="177">
+            <ConstantValue UId="179">2</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="180" />
+      </Component>
+      <Token Text="." UId="181" />
+      <Component Name="BlockTime" UId="182" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="183" />
+  <NewLine Num="1" UId="184" />
+  <Token Text="ELSIF" UId="185" />
+  <Blank Num="1" UId="186" />
+  <Access Scope="GlobalVariable" UId="187">
+    <Symbol UId="188">
+      <Component Name="MB" UId="189">
+        <BooleanAttribute Name="HasQuotes" UId="190">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="191" />
+      <Component Name="Table" UId="192" />
+      <Token Text="." UId="193" />
+      <Component Name="CycleDay" UId="194" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="195" />
+  <Token Text="&gt;=" UId="196" />
+  <Blank Num="1" UId="197" />
+  <Access Scope="GlobalVariable" UId="198">
+    <Symbol UId="199">
+      <Component Name="MB" UId="200">
+        <BooleanAttribute Name="HasQuotes" UId="201">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="202" />
+      <Component Name="Table" UId="203" />
+      <Token Text="." UId="204" />
+      <Component Name="ChlorMeasureTable" UId="205">
+        <Token Text="[" UId="206" />
+        <Access Scope="LiteralConstant" UId="207">
+          <Constant UId="208">
+            <ConstantValue UId="210">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="211" />
+      </Component>
+      <Token Text="." UId="212" />
+      <Component Name="CycleDay" UId="213" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="214" />
+  <Token Text="THEN" UId="215" />
+  <NewLine Num="1" UId="216" />
+  <Blank Num="4" UId="217" />
+  <Access Scope="LocalVariable" UId="218">
+    <Symbol UId="219">
+      <Component Name="enableMeasureTime" UId="220" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="221" />
+  <Token Text=":=" UId="222" />
+  <Blank Num="1" UId="223" />
+  <Access Scope="GlobalVariable" UId="224">
+    <Symbol UId="225">
+      <Component Name="MB" UId="226">
+        <BooleanAttribute Name="HasQuotes" UId="227">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="228" />
+      <Component Name="Table" UId="229" />
+      <Token Text="." UId="230" />
+      <Component Name="ChlorMeasureTable" UId="231">
+        <Token Text="[" UId="232" />
+        <Access Scope="LiteralConstant" UId="233">
+          <Constant UId="234">
+            <ConstantValue UId="236">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="237" />
+      </Component>
+      <Token Text="." UId="238" />
+      <Component Name="MeasureTime" UId="239" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="240" />
+  <NewLine Num="1" UId="241" />
+  <Blank Num="4" UId="242" />
+  <Access Scope="LocalVariable" UId="243">
+    <Symbol UId="244">
+      <Component Name="blockDosingTime" UId="245" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="246" />
+  <Token Text=":=" UId="247" />
+  <Blank Num="1" UId="248" />
+  <Access Scope="GlobalVariable" UId="249">
+    <Symbol UId="250">
+      <Component Name="MB" UId="251">
+        <BooleanAttribute Name="HasQuotes" UId="252">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="253" />
+      <Component Name="Table" UId="254" />
+      <Token Text="." UId="255" />
+      <Component Name="ChlorMeasureTable" UId="256">
+        <Token Text="[" UId="257" />
+        <Access Scope="LiteralConstant" UId="258">
+          <Constant UId="259">
+            <ConstantValue UId="261">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="262" />
+      </Component>
+      <Token Text="." UId="263" />
+      <Component Name="BlockTime" UId="264" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="265" />
+  <NewLine Num="1" UId="266" />
+  <Token Text="ELSIF" UId="267" />
+  <Blank Num="1" UId="268" />
+  <Access Scope="GlobalVariable" UId="269">
+    <Symbol UId="270">
+      <Component Name="MB" UId="271">
+        <BooleanAttribute Name="HasQuotes" UId="272">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="273" />
+      <Component Name="Table" UId="274" />
+      <Token Text="." UId="275" />
+      <Component Name="CycleDay" UId="276" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="277" />
+  <Token Text="&gt;=" UId="278" />
+  <Blank Num="1" UId="279" />
+  <Access Scope="GlobalVariable" UId="280">
+    <Symbol UId="281">
+      <Component Name="MB" UId="282">
+        <BooleanAttribute Name="HasQuotes" UId="283">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="284" />
+      <Component Name="Table" UId="285" />
+      <Token Text="." UId="286" />
+      <Component Name="ChlorMeasureTable" UId="287">
+        <Token Text="[" UId="288" />
+        <Access Scope="LiteralConstant" UId="289">
+          <Constant UId="290">
+            <ConstantValue UId="292">0</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="293" />
+      </Component>
+      <Token Text="." UId="294" />
+      <Component Name="CycleDay" UId="295" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="296" />
+  <Token Text="THEN" UId="297" />
+  <NewLine Num="1" UId="298" />
+  <Blank Num="4" UId="299" />
+  <Access Scope="LocalVariable" UId="300">
+    <Symbol UId="301">
+      <Component Name="enableMeasureTime" UId="302" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="303" />
+  <Token Text=":=" UId="304" />
+  <Blank Num="1" UId="305" />
+  <Access Scope="GlobalVariable" UId="306">
+    <Symbol UId="307">
+      <Component Name="MB" UId="308">
+        <BooleanAttribute Name="HasQuotes" UId="309">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="310" />
+      <Component Name="Table" UId="311" />
+      <Token Text="." UId="312" />
+      <Component Name="ChlorMeasureTable" UId="313">
+        <Token Text="[" UId="314" />
+        <Access Scope="LiteralConstant" UId="315">
+          <Constant UId="316">
+            <ConstantValue UId="318">0</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="319" />
+      </Component>
+      <Token Text="." UId="320" />
+      <Component Name="MeasureTime" UId="321" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="322" />
+  <NewLine Num="1" UId="323" />
+  <Blank Num="4" UId="324" />
+  <Access Scope="LocalVariable" UId="325">
+    <Symbol UId="326">
+      <Component Name="blockDosingTime" UId="327" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="328" />
+  <Token Text=":=" UId="329" />
+  <Blank Num="1" UId="330" />
+  <Access Scope="GlobalVariable" UId="331">
+    <Symbol UId="332">
+      <Component Name="MB" UId="333">
+        <BooleanAttribute Name="HasQuotes" UId="334">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="335" />
+      <Component Name="Table" UId="336" />
+      <Token Text="." UId="337" />
+      <Component Name="ChlorMeasureTable" UId="338">
+        <Token Text="[" UId="339" />
+        <Access Scope="LiteralConstant" UId="340">
+          <Constant UId="341">
+            <ConstantValue UId="343">0</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="344" />
+      </Component>
+      <Token Text="." UId="345" />
+      <Component Name="BlockTime" UId="346" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="347" />
+  <NewLine Num="1" UId="348" />
+  <Token Text="END_IF" UId="349" />
+  <Token Text=";" UId="350" />
+  <NewLine Num="2" UId="351" />
+  <Access Scope="LocalVariable" UId="352">
+    <Symbol UId="353">
+      <Component Name="R_TRIG" UId="354" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="355">
+    <Instruction UId="356">
+      <Token Text="(" UId="357" />
+      <Parameter Name="CLK" UId="358">
+        <Token Text=":=" UId="359" />
+        <Access Scope="GlobalVariable" UId="360">
+          <Symbol UId="361">
+            <Component Name="MB" UId="362">
+              <BooleanAttribute Name="HasQuotes" UId="363">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="364" />
+            <Component Name="Table" UId="365" />
+            <Token Text="." UId="366" />
+            <Component Name="HMI_ChlorModeOn" UId="367" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="368" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="369" />
+  <NewLine Num="2" UId="370" />
+  <Token Text="IF" UId="371" />
+  <Blank Num="1" UId="372" />
+  <Access Scope="LocalVariable" UId="373">
+    <Symbol UId="374">
+      <Component Name="R_TRIG" UId="375" />
+      <Token Text="." UId="376" />
+      <Component Name="Q" UId="377" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="378" />
+  <Token Text="THEN" UId="379" />
+  <NewLine Num="1" UId="380" />
+  <Blank Num="4" UId="381" />
+  <Access Scope="LocalVariable" UId="382">
+    <Symbol UId="383">
+      <Component Name="ChlorationCalculate" UId="384" />
+      <Token Text="." UId="385" />
+      <Component Name="doseCorection" UId="386" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="387" />
+  <Token Text=":=" UId="388" />
+  <Blank Num="1" UId="389" />
+  <Access Scope="LiteralConstant" UId="390">
+    <Constant UId="391">
+      <ConstantValue UId="393">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="394" />
+  <NewLine Num="1" UId="395" />
+  <Blank Num="4" UId="396" />
+  <Access Scope="LocalVariable" UId="397">
+    <Symbol UId="398">
+      <Component Name="ChlorationCalculate" UId="399" />
+      <Token Text="." UId="400" />
+      <Component Name="doseCorectionOld" UId="401" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="402" />
+  <Token Text=":=" UId="403" />
+  <Blank Num="1" UId="404" />
+  <Access Scope="LiteralConstant" UId="405">
+    <Constant UId="406">
+      <ConstantValue UId="408">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="409" />
+  <NewLine Num="1" UId="410" />
+  <Blank Num="4" UId="411" />
+  <Access Scope="LocalVariable" UId="412">
+    <Symbol UId="413">
+      <Component Name="Initial" UId="414" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="415" />
+  <Token Text=":=" UId="416" />
+  <Blank Num="1" UId="417" />
+  <Access Scope="LiteralConstant" UId="418">
+    <Constant UId="419">
+      <ConstantValue UId="421">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="422" />
+  <NewLine Num="1" UId="423" />
+  <Blank Num="4" UId="424" />
+  <Access Scope="GlobalVariable" UId="425">
+    <Symbol UId="426">
+      <Component Name="MB" UId="427">
+        <BooleanAttribute Name="HasQuotes" UId="428">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="429" />
+      <Component Name="Table" UId="430" />
+      <Token Text="." UId="431" />
+      <Component Name="MeasureChanged" UId="432" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="433" />
+  <Token Text=":=" UId="434" />
+  <Blank Num="1" UId="435" />
+  <Access Scope="LiteralConstant" UId="436">
+    <Constant UId="437">
+      <ConstantValue UId="439">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="440" />
+  <NewLine Num="1" UId="441" />
+  <Blank Num="4" UId="442" />
+  <Access Scope="Call" UId="443">
+    <Instruction Name="RESET_TIMER" UId="444">
+      <Token Text="(" UId="445" />
+      <NamelessParameter UId="446">
+        <Access Scope="LocalVariable" UId="447">
+          <Symbol UId="448">
+            <Component Name="EnableMeasurment_TON" UId="449" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="450" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="451" />
+  <NewLine Num="1" UId="452" />
+  <Blank Num="4" UId="453" />
+  <Access Scope="Call" UId="454">
+    <Instruction Name="RESET_TIMER" UId="455">
+      <Token Text="(" UId="456" />
+      <NamelessParameter UId="457">
+        <Access Scope="LocalVariable" UId="458">
+          <Symbol UId="459">
+            <Component Name="BlockDosing_TON" UId="460" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="461" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="462" />
+  <NewLine Num="1" UId="463" />
+  <Token Text="END_IF" UId="464" />
+  <Token Text=";" UId="465" />
+  <NewLine Num="3" UId="466" />
+  <Token Text="IF" UId="467" />
+  <Blank Num="1" UId="468" />
+  <Token Text="NOT" UId="469" />
+  <Blank Num="1" UId="470" />
+  <Access Scope="GlobalVariable" UId="471">
+    <Symbol UId="472">
+      <Component Name="MB" UId="473">
+        <BooleanAttribute Name="HasQuotes" UId="474">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="475" />
+      <Component Name="Table" UId="476" />
+      <Token Text="." UId="477" />
+      <Component Name="HMI_ChlorModeOn" UId="478" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="479" />
+  <Token Text="THEN" UId="480" />
+  <NewLine Num="1" UId="481" />
+  <Blank Num="4" UId="482" />
+  <Access Scope="GlobalVariable" UId="483">
+    <Symbol UId="484">
+      <Component Name="MB" UId="485">
+        <BooleanAttribute Name="HasQuotes" UId="486">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="487" />
+      <Component Name="Table" UId="488" />
+      <Token Text="." UId="489" />
+      <Component Name="MeasureChanged" UId="490" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="491" />
+  <Token Text=":=" UId="492" />
+  <Blank Num="1" UId="493" />
+  <Access Scope="LiteralConstant" UId="494">
+    <Constant UId="495">
+      <ConstantValue UId="497">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="498" />
+  <NewLine Num="1" UId="499" />
+  <Blank Num="4" UId="500" />
+  <Access Scope="Call" UId="501">
+    <Instruction Name="RESET_TIMER" UId="502">
+      <Token Text="(" UId="503" />
+      <NamelessParameter UId="504">
+        <Access Scope="LocalVariable" UId="505">
+          <Symbol UId="506">
+            <Component Name="EnableMeasurment_TON" UId="507" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="508" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="509" />
+  <NewLine Num="1" UId="510" />
+  <Blank Num="4" UId="511" />
+  <Access Scope="Call" UId="512">
+    <Instruction Name="RESET_TIMER" UId="513">
+      <Token Text="(" UId="514" />
+      <NamelessParameter UId="515">
+        <Access Scope="LocalVariable" UId="516">
+          <Symbol UId="517">
+            <Component Name="BlockDosing_TON" UId="518" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="519" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="520" />
+  <NewLine Num="1" UId="521" />
+  <Token Text="END_IF" UId="522" />
+  <Token Text=";" UId="523" />
+  <NewLine Num="3" UId="524" />
+  <Access Scope="GlobalVariable" UId="525">
+    <Symbol UId="526">
+      <Component Name="MB" UId="527">
+        <BooleanAttribute Name="HasQuotes" UId="528">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="529" />
+      <Component Name="Table" UId="530" />
+      <Token Text="." UId="531" />
+      <Component Name="TimeToMeasure" UId="532" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="533" />
+  <Token Text=":=" UId="534" />
+  <Blank Num="1" UId="535" />
+  <Access Scope="LocalVariable" UId="536">
+    <Symbol UId="537">
+      <Component Name="enableMeasureTime" UId="538" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="539" />
+  <Token Text="-" UId="540" />
+  <Blank Num="1" UId="541" />
+  <Access Scope="Call" UId="542">
+    <Instruction Name="DINT_TO_REAL" UId="543">
+      <Token Text="(" UId="544" />
+      <NamelessParameter UId="545">
+        <Access Scope="LocalVariable" UId="546">
+          <Symbol UId="547">
+            <Component Name="EnableMeasurment_TON" UId="548" />
+            <Token Text="." UId="549" />
+            <Component Name="ET" UId="550" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="552" />
+    </Instruction>
+  </Access>
+  <Token Text="/" UId="553" />
+  <Access Scope="LiteralConstant" UId="554">
+    <Constant UId="555">
+      <ConstantValue UId="557">1000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text="/" UId="558" />
+  <Access Scope="LiteralConstant" UId="559">
+    <Constant UId="560">
+      <ConstantValue UId="562">60</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text="/" UId="563" />
+  <Access Scope="LiteralConstant" UId="564">
+    <Constant UId="565">
+      <ConstantValue UId="567">60</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="568" />
+  <NewLine Num="1" UId="569" />
+  <Access Scope="GlobalVariable" UId="570">
+    <Symbol UId="571">
+      <Component Name="MB" UId="572">
+        <BooleanAttribute Name="HasQuotes" UId="573">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="574" />
+      <Component Name="Table" UId="575" />
+      <Token Text="." UId="576" />
+      <Component Name="TimeToBlock" UId="577" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="578" />
+  <Token Text=":=" UId="579" />
+  <Blank Num="1" UId="580" />
+  <Access Scope="LocalVariable" UId="581">
+    <Symbol UId="582">
+      <Component Name="blockDosingTime" UId="583" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="584" />
+  <Token Text="-" UId="585" />
+  <Blank Num="1" UId="586" />
+  <Access Scope="Call" UId="587">
+    <Instruction Name="DINT_TO_REAL" UId="588">
+      <Token Text="(" UId="589" />
+      <NamelessParameter UId="590">
+        <Access Scope="LocalVariable" UId="591">
+          <Symbol UId="592">
+            <Component Name="BlockDosing_TON" UId="593" />
+            <Token Text="." UId="594" />
+            <Component Name="ET" UId="595" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="597" />
+    </Instruction>
+  </Access>
+  <Token Text="/" UId="598" />
+  <Access Scope="LiteralConstant" UId="599">
+    <Constant UId="600">
+      <ConstantValue UId="602">1000</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text="/" UId="603" />
+  <Access Scope="LiteralConstant" UId="604">
+    <Constant UId="605">
+      <ConstantValue UId="607">60</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text="/" UId="608" />
+  <Access Scope="LiteralConstant" UId="609">
+    <Constant UId="610">
+      <ConstantValue UId="612">60</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="613" />
+  <NewLine Num="2" UId="614" />
+  <Access Scope="LocalVariable" UId="615">
+    <Symbol UId="616">
+      <Component Name="blockDosing" UId="617" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="618" />
+  <Token Text=":=" UId="619" />
+  <Blank Num="1" UId="620" />
+  <Access Scope="LocalVariable" UId="621">
+    <Symbol UId="622">
+      <Component Name="BlockDosing_TON" UId="623" />
+      <Token Text="." UId="624" />
+      <Component Name="Q" UId="625" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="626" />
+  <NewLine Num="1" UId="627" />
+  <Access Scope="GlobalVariable" UId="628">
+    <Symbol UId="629">
+      <Component Name="MB" UId="630">
+        <BooleanAttribute Name="HasQuotes" UId="631">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="632" />
+      <Component Name="Table" UId="633" />
+      <Token Text="." UId="634" />
+      <Component Name="MeasureNotEntered" UId="635" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="636" />
+  <Token Text=":=" UId="637" />
+  <Blank Num="1" UId="638" />
+  <Access Scope="LocalVariable" UId="639">
+    <Symbol UId="640">
+      <Component Name="blockDosing" UId="641" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="642" />
+  <NewLine Num="2" UId="643" />
+  <Access Scope="GlobalVariable" UId="644">
+    <Symbol UId="645">
+      <Component Name="MB" UId="646">
+        <BooleanAttribute Name="HasQuotes" UId="647">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="648" />
+      <Component Name="Table" UId="649" />
+      <Token Text="." UId="650" />
+      <Component Name="CriticalMeasureON" UId="651" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="652" />
+  <Token Text=":=" UId="653" />
+  <Blank Num="1" UId="654" />
+  <Access Scope="LiteralConstant" UId="655">
+    <Constant UId="656">
+      <ConstantValue UId="658">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="659" />
+  <NewLine Num="2" UId="660" />
+  <Token Text="IF" UId="661" />
+  <Blank Num="1" UId="662" />
+  <Access Scope="GlobalVariable" UId="663">
+    <Symbol UId="664">
+      <Component Name="MB" UId="665">
+        <BooleanAttribute Name="HasQuotes" UId="666">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="667" />
+      <Component Name="Table" UId="668" />
+      <Token Text="." UId="669" />
+      <Component Name="MeasuredChlor" UId="670" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="671" />
+  <Token Text="&gt;=" UId="672" />
+  <Blank Num="1" UId="673" />
+  <Access Scope="GlobalVariable" UId="674">
+    <Symbol UId="675">
+      <Component Name="MB" UId="676">
+        <BooleanAttribute Name="HasQuotes" UId="677">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="678" />
+      <Component Name="Table" UId="679" />
+      <Token Text="." UId="680" />
+      <Component Name="CriticalMeasure" UId="681" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="682" />
+  <Token Text="THEN" UId="683" />
+  <NewLine Num="1" UId="684" />
+  <Blank Num="4" UId="685" />
+  <Access Scope="GlobalVariable" UId="686">
+    <Symbol UId="687">
+      <Component Name="MB" UId="688">
+        <BooleanAttribute Name="HasQuotes" UId="689">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="690" />
+      <Component Name="Table" UId="691" />
+      <Token Text="." UId="692" />
+      <Component Name="CriticalMeasureON" UId="693" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="694" />
+  <Token Text=":=" UId="695" />
+  <Blank Num="1" UId="696" />
+  <Access Scope="LiteralConstant" UId="697">
+    <Constant UId="698">
+      <ConstantValue UId="700">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="701" />
+  <NewLine Num="1" UId="702" />
+  <Blank Num="4" UId="703" />
+  <Access Scope="GlobalVariable" UId="704">
+    <Symbol UId="705">
+      <Component Name="MB" UId="706">
+        <BooleanAttribute Name="HasQuotes" UId="707">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="708" />
+      <Component Name="Table" UId="709" />
+      <Token Text="." UId="710" />
+      <Component Name="ChlorationParams" UId="711" />
+      <Token Text="." UId="712" />
+      <Component Name="ActualDose" UId="713" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="714" />
+  <Token Text=":=" UId="715" />
+  <Blank Num="1" UId="716" />
+  <Access Scope="LiteralConstant" UId="717">
+    <Constant UId="718">
+      <ConstantValue UId="720">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="721" />
+  <NewLine Num="1" UId="722" />
+  <Token Text="END_IF" UId="723" />
+  <Token Text=";" UId="724" />
+  <NewLine Num="2" UId="725" />
+  <Token Text="IF" UId="726" />
+  <Blank Num="1" UId="727" />
+  <Access Scope="GlobalVariable" UId="728">
+    <Symbol UId="729">
+      <Component Name="MB" UId="730">
+        <BooleanAttribute Name="HasQuotes" UId="731">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="732" />
+      <Component Name="Table" UId="733" />
+      <Token Text="." UId="734" />
+      <Component Name="ChangeChlorMeasure" UId="735" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="736" />
+  <Token Text="THEN" UId="737" />
+  <NewLine Num="1" UId="738" />
+  <Blank Num="4" UId="739" />
+  <Token Text="IF" UId="740" />
+  <Blank Num="1" UId="741" />
+  <Access Scope="LocalVariable" UId="742">
+    <Symbol UId="743">
+      <Component Name="EnableMeasurment_TON" UId="744" />
+      <Token Text="." UId="745" />
+      <Component Name="Q" UId="746" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="747" />
+  <Token Text="OR" UId="748" />
+  <Blank Num="1" UId="749" />
+  <Access Scope="LocalVariable" UId="750">
+    <Symbol UId="751">
+      <Component Name="Initial" UId="752" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="753" />
+  <Token Text="THEN" UId="754" />
+  <NewLine Num="1" UId="755" />
+  <Blank Num="8" UId="756" />
+  <Access Scope="GlobalVariable" UId="757">
+    <Symbol UId="758">
+      <Component Name="MB" UId="759">
+        <BooleanAttribute Name="HasQuotes" UId="760">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="761" />
+      <Component Name="Table" UId="762" />
+      <Token Text="." UId="763" />
+      <Component Name="MeasuredChlor" UId="764" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="765" />
+  <Token Text=":=" UId="766" />
+  <Blank Num="1" UId="767" />
+  <Access Scope="GlobalVariable" UId="768">
+    <Symbol UId="769">
+      <Component Name="MB" UId="770">
+        <BooleanAttribute Name="HasQuotes" UId="771">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="772" />
+      <Component Name="Table" UId="773" />
+      <Token Text="." UId="774" />
+      <Component Name="ChlorMeasuredValue" UId="775" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="776" />
+  <NewLine Num="1" UId="777" />
+  <Blank Num="8" UId="778" />
+  <Access Scope="Call" UId="779">
+    <CallInfo UId="780" BlockType="FB" Name="ChlorationCalculate">
+      <Instance Scope="LocalVariable" UId="781">
+        <Component Name="ChlorationCalculate" UId="782" />
+      </Instance>
+      <Token Text="(" UId="783" />
+      <Parameter Name="ChlorationParams" UId="784">
+        <Blank Num="1" UId="785" />
+        <Token Text=":=" UId="786" />
+        <Blank Num="1" UId="787" />
+        <Access Scope="GlobalVariable" UId="788">
+          <Symbol UId="789">
+            <Component Name="MB" UId="790">
+              <BooleanAttribute Name="HasQuotes" UId="791">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="792" />
+            <Component Name="Table" UId="793" />
+            <Token Text="." UId="794" />
+            <Component Name="ChlorationParams" UId="795" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="796" />
+      <NewLine Num="1" UId="797" />
+      <Blank Num="29" UId="798" />
+      <Parameter Name="measuredChlorine" UId="799">
+        <Blank Num="1" UId="800" />
+        <Token Text=":=" UId="801" />
+        <Blank Num="1" UId="802" />
+        <Access Scope="GlobalVariable" UId="803">
+          <Symbol UId="804">
+            <Component Name="MB" UId="805">
+              <BooleanAttribute Name="HasQuotes" UId="806">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="807" />
+            <Component Name="Table" UId="808" />
+            <Token Text="." UId="809" />
+            <Component Name="ChlorMeasuredValue" UId="810" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="811" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="812" />
+  <NewLine Num="1" UId="813" />
+  <Blank Num="8" UId="814" />
+  <Access Scope="GlobalVariable" UId="815">
+    <Symbol UId="816">
+      <Component Name="MB" UId="817">
+        <BooleanAttribute Name="HasQuotes" UId="818">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="819" />
+      <Component Name="Table" UId="820" />
+      <Token Text="." UId="821" />
+      <Component Name="MeasureChanged" UId="822" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="823" />
+  <Token Text=":=" UId="824" />
+  <Blank Num="1" UId="825" />
+  <Access Scope="LiteralConstant" UId="826">
+    <Constant UId="827">
+      <ConstantValue UId="829">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="830" />
+  <NewLine Num="1" UId="831" />
+  <Blank Num="8" UId="832" />
+  <Access Scope="Call" UId="833">
+    <Instruction Name="RESET_TIMER" UId="834">
+      <Token Text="(" UId="835" />
+      <NamelessParameter UId="836">
+        <Access Scope="LocalVariable" UId="837">
+          <Symbol UId="838">
+            <Component Name="EnableMeasurment_TON" UId="839" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="840" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="841" />
+  <NewLine Num="1" UId="842" />
+  <Blank Num="8" UId="843" />
+  <Access Scope="Call" UId="844">
+    <Instruction Name="RESET_TIMER" UId="845">
+      <Token Text="(" UId="846" />
+      <NamelessParameter UId="847">
+        <Access Scope="LocalVariable" UId="848">
+          <Symbol UId="849">
+            <Component Name="BlockDosing_TON" UId="850" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="851" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="852" />
+  <NewLine Num="1" UId="853" />
+  <Blank Num="4" UId="854" />
+  <Token Text="END_IF" UId="855" />
+  <Token Text=";" UId="856" />
+  <NewLine Num="1" UId="857" />
+  <Blank Num="4" UId="858" />
+  <Access Scope="GlobalVariable" UId="859">
+    <Symbol UId="860">
+      <Component Name="MB" UId="861">
+        <BooleanAttribute Name="HasQuotes" UId="862">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="863" />
+      <Component Name="Table" UId="864" />
+      <Token Text="." UId="865" />
+      <Component Name="ChangeChlorMeasure" UId="866" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="867" />
+  <Token Text=":=" UId="868" />
+  <Blank Num="1" UId="869" />
+  <Access Scope="LiteralConstant" UId="870">
+    <Constant UId="871">
+      <ConstantValue UId="873">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="874" />
+  <NewLine Num="1" UId="875" />
+  <Blank Num="4" UId="876" />
+  <Access Scope="LocalVariable" UId="877">
+    <Symbol UId="878">
+      <Component Name="Initial" UId="879" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="880" />
+  <Token Text=":=" UId="881" />
+  <Blank Num="1" UId="882" />
+  <Access Scope="LiteralConstant" UId="883">
+    <Constant UId="884">
+      <ConstantValue UId="886">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="887" />
+  <NewLine Num="1" UId="888" />
+  <Blank Num="4" UId="889" />
+  <Access Scope="LocalVariable" UId="890">
+    <Symbol UId="891">
+      <Component Name="BlockDosing_TON" UId="892" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="893">
+    <Instruction UId="894">
+      <Token Text="(" UId="895" />
+      <Parameter Name="IN" UId="896">
+        <Blank Num="1" UId="897" />
+        <Token Text=":=" UId="898" />
+        <Blank Num="1" UId="899" />
+        <Access Scope="LiteralConstant" UId="900">
+          <Constant UId="901">
+            <ConstantValue UId="903">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="904" />
+      <NewLine Num="1" UId="905" />
+      <Blank Num="21" UId="906" />
+      <Parameter Name="PT" UId="907">
+        <Blank Num="1" UId="908" />
+        <Token Text=":=" UId="909" />
+        <Blank Num="1" UId="910" />
+        <Access Scope="Call" UId="911">
+          <Instruction Name="REAL_TO_DINT" UId="912">
+            <Token Text="(" UId="913" />
+            <NamelessParameter UId="914">
+              <Access Scope="LocalVariable" UId="915">
+                <Symbol UId="916">
+                  <Component Name="blockDosingTime" UId="917" />
+                </Symbol>
+              </Access>
+            </NamelessParameter>
+            <Token Text=")" UId="919" />
+          </Instruction>
+        </Access>
+        <Blank Num="1" UId="920" />
+        <Token Text="*" UId="921" />
+        <Blank Num="1" UId="922" />
+        <Access Scope="LiteralConstant" UId="923">
+          <Constant UId="924">
+            <ConstantValue UId="926">1000</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="927" />
+        <Token Text="*" UId="928" />
+        <Blank Num="1" UId="929" />
+        <Access Scope="LiteralConstant" UId="930">
+          <Constant UId="931">
+            <ConstantValue UId="933">60</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="*" UId="934" />
+        <Access Scope="LiteralConstant" UId="935">
+          <Constant UId="936">
+            <ConstantValue UId="938">60</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="939" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="940" />
+  <NewLine Num="1" UId="941" />
+  <Blank Num="4" UId="942" />
+  <Access Scope="LocalVariable" UId="943">
+    <Symbol UId="944">
+      <Component Name="EnableMeasurment_TON" UId="945" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="946">
+    <Instruction UId="947">
+      <Token Text="(" UId="948" />
+      <Parameter Name="IN" UId="949">
+        <Blank Num="1" UId="950" />
+        <Token Text=":=" UId="951" />
+        <Blank Num="1" UId="952" />
+        <Access Scope="LiteralConstant" UId="953">
+          <Constant UId="954">
+            <ConstantValue UId="956">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="957" />
+      <NewLine Num="1" UId="958" />
+      <Blank Num="26" UId="959" />
+      <Parameter Name="PT" UId="960">
+        <Blank Num="1" UId="961" />
+        <Token Text=":=" UId="962" />
+        <Blank Num="1" UId="963" />
+        <Access Scope="Call" UId="964">
+          <Instruction Name="REAL_TO_DINT" UId="965">
+            <Token Text="(" UId="966" />
+            <NamelessParameter UId="967">
+              <Access Scope="LocalVariable" UId="968">
+                <Symbol UId="969">
+                  <Component Name="enableMeasureTime" UId="970" />
+                </Symbol>
+              </Access>
+            </NamelessParameter>
+            <Token Text=")" UId="972" />
+          </Instruction>
+        </Access>
+        <Blank Num="1" UId="973" />
+        <Token Text="*" UId="974" />
+        <Blank Num="1" UId="975" />
+        <Access Scope="LiteralConstant" UId="976">
+          <Constant UId="977">
+            <ConstantValue UId="979">1000</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="980" />
+        <Token Text="*" UId="981" />
+        <Blank Num="1" UId="982" />
+        <Access Scope="LiteralConstant" UId="983">
+          <Constant UId="984">
+            <ConstantValue UId="986">60</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="*" UId="987" />
+        <Access Scope="LiteralConstant" UId="988">
+          <Constant UId="989">
+            <ConstantValue UId="991">60</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="992" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="993" />
+  <NewLine Num="1" UId="994" />
+  <Token Text="END_IF" UId="995" />
+  <Token Text=";" UId="996" />
+  <NewLine Num="2" UId="997" />
+  <Token Text="IF" UId="998" />
+  <Blank Num="1" UId="999" />
+  <Access Scope="LocalVariable" UId="1000">
+    <Symbol UId="1001">
+      <Component Name="EnableMeasurment_TON" UId="1002" />
+      <Token Text="." UId="1003" />
+      <Component Name="Q" UId="1004" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1005" />
+  <Token Text="THEN" UId="1006" />
+  <NewLine Num="1" UId="1007" />
+  <Blank Num="4" UId="1008" />
+  <Access Scope="GlobalVariable" UId="1009">
+    <Symbol UId="1010">
+      <Component Name="MB" UId="1011">
+        <BooleanAttribute Name="HasQuotes" UId="1012">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1013" />
+      <Component Name="Table" UId="1014" />
+      <Token Text="." UId="1015" />
+      <Component Name="MeasureChanged" UId="1016" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1017" />
+  <Token Text=":=" UId="1018" />
+  <Blank Num="1" UId="1019" />
+  <Access Scope="LiteralConstant" UId="1020">
+    <Constant UId="1021">
+      <ConstantValue UId="1023">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1024" />
+  <NewLine Num="1" UId="1025" />
+  <Token Text="END_IF" UId="1026" />
+  <Token Text=";" UId="1027" />
+  <NewLine Num="2" UId="1028" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

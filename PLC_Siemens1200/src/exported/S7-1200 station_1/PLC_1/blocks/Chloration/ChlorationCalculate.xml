@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:35.0422009Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="measuredChlorine" Datatype="Real" Remanence="Retain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="ChlorationParams" Datatype="Struct" Accessibility="Public">
+      <Member Name="SetpointMin" Datatype="Real" />
+      <Member Name="SetpointMax" Datatype="Real" />
+      <Member Name="BaseDose" Datatype="Real" />
+      <Member Name="ActualDose" Datatype="Real" />
+      <Member Name="DoseChangeMax" Datatype="Real" />
+      <Member Name="DosingMin" Datatype="Real" />
+      <Member Name="DosingMax" Datatype="Real" />
+      <Member Name="CorectionCoef" Datatype="Real" />
+    </Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="setpointDeviation" Datatype="Real" Remanence="Retain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="doseCorection" Datatype="Real" Remanence="Retain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="doseCorectionOld" Datatype="Real" Remanence="Retain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="doseChangeMaxReal" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>ChlorationCalculate</Name>
+      <Namespace />
+      <Number>7</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Token Text="IF" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Token Text="NOT" UId="23" />
+  <Blank Num="1" UId="24" />
+  <Access Scope="GlobalVariable" UId="25">
+    <Symbol UId="26">
+      <Component Name="MB" UId="27">
+        <BooleanAttribute Name="HasQuotes" UId="28">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="29" />
+      <Component Name="Table" UId="30" />
+      <Token Text="." UId="31" />
+      <Component Name="ChangeChlorMeasure" UId="32" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="33" />
+  <Token Text="THEN" UId="34" />
+  <NewLine Num="1" UId="35" />
+  <Blank Num="4" UId="36" />
+  <Token Text="RETURN" UId="37" />
+  <Token Text=";" UId="38" />
+  <NewLine Num="1" UId="39" />
+  <Token Text="END_IF" UId="40" />
+  <Token Text=";" UId="41" />
+  <NewLine Num="2" UId="42" />
+  <Token Text="IF" UId="43" />
+  <Blank Num="1" UId="44" />
+  <Access Scope="LocalVariable" UId="45">
+    <Symbol UId="46">
+      <Component Name="measuredChlorine" UId="47" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="48" />
+  <Token Text="&lt;=" UId="49" />
+  <Blank Num="1" UId="50" />
+  <Access Scope="GlobalVariable" UId="51">
+    <Symbol UId="52">
+      <Component Name="MB" UId="53">
+        <BooleanAttribute Name="HasQuotes" UId="54">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="55" />
+      <Component Name="Table" UId="56" />
+      <Token Text="." UId="57" />
+      <Component Name="Chlor_SetpointMin" UId="58" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="59" />
+  <Token Text="OR" UId="60" />
+  <NewLine Num="1" UId="61" />
+  <Blank Num="4" UId="62" />
+  <Access Scope="LocalVariable" UId="63">
+    <Symbol UId="64">
+      <Component Name="measuredChlorine" UId="65" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="66" />
+  <Token Text="&gt;=" UId="67" />
+  <Blank Num="1" UId="68" />
+  <Access Scope="GlobalVariable" UId="69">
+    <Symbol UId="70">
+      <Component Name="MB" UId="71">
+        <BooleanAttribute Name="HasQuotes" UId="72">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="73" />
+      <Component Name="Table" UId="74" />
+      <Token Text="." UId="75" />
+      <Component Name="Chlor_SetpointMax" UId="76" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="77" />
+  <Token Text="THEN" UId="78" />
+  <NewLine Num="1" UId="79" />
+  <Blank Num="4" UId="80" />
+  <NewLine Num="1" UId="81" />
+  <Blank Num="4" UId="82" />
+  <Access Scope="LocalVariable" UId="83">
+    <Symbol UId="84">
+      <Component Name="setpointDeviation" UId="85" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="86" />
+  <Token Text=":=" UId="87" />
+  <Blank Num="1" UId="88" />
+  <Token Text="(" UId="89" />
+  <Token Text="(" UId="90" />
+  <Token Text="(" UId="91" />
+  <Access Scope="GlobalVariable" UId="92">
+    <Symbol UId="93">
+      <Component Name="MB" UId="94">
+        <BooleanAttribute Name="HasQuotes" UId="95">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="96" />
+      <Component Name="Table" UId="97" />
+      <Token Text="." UId="98" />
+      <Component Name="Chlor_SetpointMax" UId="99" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="100" />
+  <Token Text="+" UId="101" />
+  <Blank Num="1" UId="102" />
+  <Access Scope="GlobalVariable" UId="103">
+    <Symbol UId="104">
+      <Component Name="MB" UId="105">
+        <BooleanAttribute Name="HasQuotes" UId="106">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="107" />
+      <Component Name="Table" UId="108" />
+      <Token Text="." UId="109" />
+      <Component Name="Chlor_SetpointMin" UId="110" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="111" />
+  <Blank Num="1" UId="112" />
+  <Token Text="/" UId="113" />
+  <Blank Num="1" UId="114" />
+  <Access Scope="LiteralConstant" UId="115">
+    <Constant UId="116">
+      <ConstantValue UId="118">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="119" />
+  <Blank Num="1" UId="120" />
+  <Token Text="-" UId="121" />
+  <Blank Num="1" UId="122" />
+  <Access Scope="LocalVariable" UId="123">
+    <Symbol UId="124">
+      <Component Name="measuredChlorine" UId="125" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="126" />
+  <Token Text="*" UId="127" />
+  <Blank Num="1" UId="128" />
+  <Access Scope="GlobalVariable" UId="129">
+    <Symbol UId="130">
+      <Component Name="MB" UId="131">
+        <BooleanAttribute Name="HasQuotes" UId="132">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="133" />
+      <Component Name="Table" UId="134" />
+      <Token Text="." UId="135" />
+      <Component Name="Chlor_Corection" UId="136" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="137" />
+  <NewLine Num="1" UId="138" />
+  <Blank Num="4" UId="139" />
+  <NewLine Num="1" UId="140" />
+  <Blank Num="4" UId="141" />
+  <Access Scope="LocalVariable" UId="142">
+    <Symbol UId="143">
+      <Component Name="doseCorection" UId="144" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="145" />
+  <Token Text=":=" UId="146" />
+  <Blank Num="1" UId="147" />
+  <Access Scope="LocalVariable" UId="148">
+    <Symbol UId="149">
+      <Component Name="doseCorectionOld" UId="150" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="151" />
+  <Token Text="*" UId="152" />
+  <Blank Num="1" UId="153" />
+  <Token Text="(" UId="154" />
+  <Access Scope="LiteralConstant" UId="155">
+    <Constant UId="156">
+      <ConstantValue UId="158">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="159" />
+  <Token Text="+" UId="160" />
+  <Blank Num="1" UId="161" />
+  <Access Scope="LocalVariable" UId="162">
+    <Symbol UId="163">
+      <Component Name="setpointDeviation" UId="164" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="165" />
+  <Token Text=";" UId="166" />
+  <NewLine Num="1" UId="167" />
+  <Blank Num="4" UId="168" />
+  <NewLine Num="1" UId="169" />
+  <Blank Num="4" UId="170" />
+  <Access Scope="LocalVariable" UId="171">
+    <Symbol UId="172">
+      <Component Name="doseChangeMaxReal" UId="173" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="174" />
+  <Token Text=":=" UId="175" />
+  <Blank Num="1" UId="176" />
+  <Access Scope="LocalVariable" UId="177">
+    <Symbol UId="178">
+      <Component Name="ChlorationParams" UId="179" />
+      <Token Text="." UId="180" />
+      <Component Name="DoseChangeMax" UId="181" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="182" />
+  <Token Text="/" UId="183" />
+  <Blank Num="1" UId="184" />
+  <Access Scope="LiteralConstant" UId="185">
+    <Constant UId="186">
+      <ConstantValue UId="188">100</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="189" />
+  <NewLine Num="1" UId="190" />
+  <Blank Num="4" UId="191" />
+  <NewLine Num="1" UId="192" />
+  <Blank Num="4" UId="193" />
+  <Token Text="IF" UId="194" />
+  <Blank Num="1" UId="195" />
+  <Access Scope="LocalVariable" UId="196">
+    <Symbol UId="197">
+      <Component Name="doseCorection" UId="198" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="199" />
+  <Token Text="-" UId="200" />
+  <Blank Num="1" UId="201" />
+  <Access Scope="LocalVariable" UId="202">
+    <Symbol UId="203">
+      <Component Name="doseCorectionOld" UId="204" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="205" />
+  <Token Text="&gt;" UId="206" />
+  <Blank Num="1" UId="207" />
+  <Access Scope="LocalVariable" UId="208">
+    <Symbol UId="209">
+      <Component Name="doseChangeMaxReal" UId="210" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="211" />
+  <Token Text="THEN" UId="212" />
+  <NewLine Num="1" UId="213" />
+  <Blank Num="8" UId="214" />
+  <Access Scope="LocalVariable" UId="215">
+    <Symbol UId="216">
+      <Component Name="doseCorection" UId="217" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="218" />
+  <Token Text=":=" UId="219" />
+  <Blank Num="1" UId="220" />
+  <Access Scope="LocalVariable" UId="221">
+    <Symbol UId="222">
+      <Component Name="doseCorectionOld" UId="223" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="224" />
+  <Token Text="*" UId="225" />
+  <Blank Num="1" UId="226" />
+  <Token Text="(" UId="227" />
+  <Access Scope="LiteralConstant" UId="228">
+    <Constant UId="229">
+      <ConstantValue UId="231">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="232" />
+  <Token Text="+" UId="233" />
+  <Blank Num="1" UId="234" />
+  <Access Scope="LocalVariable" UId="235">
+    <Symbol UId="236">
+      <Component Name="doseChangeMaxReal" UId="237" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="238" />
+  <Token Text=";" UId="239" />
+  <NewLine Num="1" UId="240" />
+  <Blank Num="4" UId="241" />
+  <Token Text="ELSIF" UId="242" />
+  <Blank Num="1" UId="243" />
+  <Access Scope="LocalVariable" UId="244">
+    <Symbol UId="245">
+      <Component Name="doseCorection" UId="246" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="247" />
+  <Token Text="-" UId="248" />
+  <Blank Num="1" UId="249" />
+  <Access Scope="LocalVariable" UId="250">
+    <Symbol UId="251">
+      <Component Name="doseCorectionOld" UId="252" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="253" />
+  <Token Text="&lt;" UId="254" />
+  <Blank Num="1" UId="255" />
+  <Token Text="-" UId="256" />
+  <Blank Num="1" UId="257" />
+  <Token Text="(" UId="258" />
+  <Access Scope="LocalVariable" UId="259">
+    <Symbol UId="260">
+      <Component Name="doseChangeMaxReal" UId="261" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="262" />
+  <Blank Num="1" UId="263" />
+  <Token Text="THEN" UId="264" />
+  <NewLine Num="1" UId="265" />
+  <Blank Num="8" UId="266" />
+  <Access Scope="LocalVariable" UId="267">
+    <Symbol UId="268">
+      <Component Name="doseCorection" UId="269" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="270" />
+  <Token Text=":=" UId="271" />
+  <Blank Num="1" UId="272" />
+  <Access Scope="LocalVariable" UId="273">
+    <Symbol UId="274">
+      <Component Name="doseCorectionOld" UId="275" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="276" />
+  <Token Text="*" UId="277" />
+  <Blank Num="1" UId="278" />
+  <Token Text="(" UId="279" />
+  <Access Scope="LiteralConstant" UId="280">
+    <Constant UId="281">
+      <ConstantValue UId="283">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="284" />
+  <Token Text="-" UId="285" />
+  <Blank Num="1" UId="286" />
+  <Access Scope="LocalVariable" UId="287">
+    <Symbol UId="288">
+      <Component Name="doseChangeMaxReal" UId="289" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="290" />
+  <Token Text=";" UId="291" />
+  <NewLine Num="1" UId="292" />
+  <Blank Num="4" UId="293" />
+  <Token Text="END_IF" UId="294" />
+  <Token Text=";" UId="295" />
+  <NewLine Num="1" UId="296" />
+  <Blank Num="4" UId="297" />
+  <NewLine Num="1" UId="298" />
+  <Blank Num="4" UId="299" />
+  <Access Scope="LocalVariable" UId="300">
+    <Symbol UId="301">
+      <Component Name="ChlorationParams" UId="302" />
+      <Token Text="." UId="303" />
+      <Component Name="ActualDose" UId="304" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="305" />
+  <Token Text=":=" UId="306" />
+  <Blank Num="1" UId="307" />
+  <Access Scope="GlobalVariable" UId="308">
+    <Symbol UId="309">
+      <Component Name="MB" UId="310">
+        <BooleanAttribute Name="HasQuotes" UId="311">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="312" />
+      <Component Name="Table" UId="313" />
+      <Token Text="." UId="314" />
+      <Component Name="Chlor_BaseDose" UId="315" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="316" />
+  <Token Text="*" UId="317" />
+  <Blank Num="1" UId="318" />
+  <Access Scope="LocalVariable" UId="319">
+    <Symbol UId="320">
+      <Component Name="doseCorection" UId="321" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="322" />
+  <NewLine Num="1" UId="323" />
+  <Blank Num="4" UId="324" />
+  <NewLine Num="1" UId="325" />
+  <Blank Num="4" UId="326" />
+  <Token Text="IF" UId="327" />
+  <Blank Num="1" UId="328" />
+  <Access Scope="LocalVariable" UId="329">
+    <Symbol UId="330">
+      <Component Name="ChlorationParams" UId="331" />
+      <Token Text="." UId="332" />
+      <Component Name="ActualDose" UId="333" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="334" />
+  <Token Text="&gt;=" UId="335" />
+  <Blank Num="1" UId="336" />
+  <Access Scope="LocalVariable" UId="337">
+    <Symbol UId="338">
+      <Component Name="ChlorationParams" UId="339" />
+      <Token Text="." UId="340" />
+      <Component Name="DosingMax" UId="341" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="342" />
+  <Token Text="THEN" UId="343" />
+  <NewLine Num="1" UId="344" />
+  <Blank Num="8" UId="345" />
+  <Access Scope="LocalVariable" UId="346">
+    <Symbol UId="347">
+      <Component Name="doseCorection" UId="348" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="349" />
+  <Token Text=":=" UId="350" />
+  <Blank Num="1" UId="351" />
+  <Access Scope="LocalVariable" UId="352">
+    <Symbol UId="353">
+      <Component Name="ChlorationParams" UId="354" />
+      <Token Text="." UId="355" />
+      <Component Name="DosingMax" UId="356" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="357" />
+  <Token Text="/" UId="358" />
+  <Blank Num="1" UId="359" />
+  <Access Scope="GlobalVariable" UId="360">
+    <Symbol UId="361">
+      <Component Name="MB" UId="362">
+        <BooleanAttribute Name="HasQuotes" UId="363">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="364" />
+      <Component Name="Table" UId="365" />
+      <Token Text="." UId="366" />
+      <Component Name="Chlor_BaseDose" UId="367" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="368" />
+  <NewLine Num="1" UId="369" />
+  <Blank Num="8" UId="370" />
+  <Access Scope="LocalVariable" UId="371">
+    <Symbol UId="372">
+      <Component Name="ChlorationParams" UId="373" />
+      <Token Text="." UId="374" />
+      <Component Name="ActualDose" UId="375" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="376" />
+  <Token Text=":=" UId="377" />
+  <Blank Num="1" UId="378" />
+  <Access Scope="GlobalVariable" UId="379">
+    <Symbol UId="380">
+      <Component Name="MB" UId="381">
+        <BooleanAttribute Name="HasQuotes" UId="382">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="383" />
+      <Component Name="Table" UId="384" />
+      <Token Text="." UId="385" />
+      <Component Name="Chlor_BaseDose" UId="386" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="387" />
+  <Token Text="*" UId="388" />
+  <Blank Num="1" UId="389" />
+  <Access Scope="LocalVariable" UId="390">
+    <Symbol UId="391">
+      <Component Name="doseCorection" UId="392" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="393" />
+  <NewLine Num="1" UId="394" />
+  <Blank Num="4" UId="395" />
+  <Token Text="ELSIF" UId="396" />
+  <Blank Num="1" UId="397" />
+  <Access Scope="LocalVariable" UId="398">
+    <Symbol UId="399">
+      <Component Name="ChlorationParams" UId="400" />
+      <Token Text="." UId="401" />
+      <Component Name="ActualDose" UId="402" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="403" />
+  <Token Text="&lt;=" UId="404" />
+  <Blank Num="1" UId="405" />
+  <Access Scope="LocalVariable" UId="406">
+    <Symbol UId="407">
+      <Component Name="ChlorationParams" UId="408" />
+      <Token Text="." UId="409" />
+      <Component Name="DosingMin" UId="410" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="411" />
+  <Token Text="THEN" UId="412" />
+  <NewLine Num="1" UId="413" />
+  <Blank Num="8" UId="414" />
+  <Access Scope="LocalVariable" UId="415">
+    <Symbol UId="416">
+      <Component Name="doseCorection" UId="417" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="418" />
+  <Token Text=":=" UId="419" />
+  <Blank Num="1" UId="420" />
+  <Access Scope="LocalVariable" UId="421">
+    <Symbol UId="422">
+      <Component Name="ChlorationParams" UId="423" />
+      <Token Text="." UId="424" />
+      <Component Name="DosingMin" UId="425" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="426" />
+  <Token Text="/" UId="427" />
+  <Blank Num="1" UId="428" />
+  <Access Scope="GlobalVariable" UId="429">
+    <Symbol UId="430">
+      <Component Name="MB" UId="431">
+        <BooleanAttribute Name="HasQuotes" UId="432">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="433" />
+      <Component Name="Table" UId="434" />
+      <Token Text="." UId="435" />
+      <Component Name="Chlor_BaseDose" UId="436" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="437" />
+  <NewLine Num="1" UId="438" />
+  <Blank Num="8" UId="439" />
+  <Access Scope="LocalVariable" UId="440">
+    <Symbol UId="441">
+      <Component Name="ChlorationParams" UId="442" />
+      <Token Text="." UId="443" />
+      <Component Name="ActualDose" UId="444" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="445" />
+  <Token Text=":=" UId="446" />
+  <Blank Num="1" UId="447" />
+  <Access Scope="GlobalVariable" UId="448">
+    <Symbol UId="449">
+      <Component Name="MB" UId="450">
+        <BooleanAttribute Name="HasQuotes" UId="451">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="452" />
+      <Component Name="Table" UId="453" />
+      <Token Text="." UId="454" />
+      <Component Name="Chlor_BaseDose" UId="455" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="456" />
+  <Token Text="*" UId="457" />
+  <Blank Num="1" UId="458" />
+  <Access Scope="LocalVariable" UId="459">
+    <Symbol UId="460">
+      <Component Name="doseCorection" UId="461" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="462" />
+  <NewLine Num="1" UId="463" />
+  <Blank Num="4" UId="464" />
+  <Token Text="END_IF" UId="465" />
+  <Token Text=";" UId="466" />
+  <NewLine Num="1" UId="467" />
+  <Blank Num="4" UId="468" />
+  <NewLine Num="1" UId="469" />
+  <Blank Num="4" UId="470" />
+  <Access Scope="LocalVariable" UId="471">
+    <Symbol UId="472">
+      <Component Name="doseCorectionOld" UId="473" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="474" />
+  <Token Text=":=" UId="475" />
+  <Blank Num="1" UId="476" />
+  <Access Scope="LocalVariable" UId="477">
+    <Symbol UId="478">
+      <Component Name="doseCorection" UId="479" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="480" />
+  <NewLine Num="1" UId="481" />
+  <Blank Num="4" UId="482" />
+  <NewLine Num="1" UId="483" />
+  <Token Text="END_IF" UId="484" />
+  <Token Text=";" UId="485" />
+  <NewLine Num="8" UId="486" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

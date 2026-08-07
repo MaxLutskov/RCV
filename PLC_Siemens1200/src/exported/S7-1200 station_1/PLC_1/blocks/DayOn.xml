@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:26.2872607Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.OB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="CaughtUp" Datatype="Bool" Accessibility="Public" Informative="true">
+      <Comment>
+        <MultiLanguageText Lang="en-US">OB call is caught up because time was set forward</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SecondTime" Datatype="Bool" Accessibility="Public" Informative="true">
+      <Comment>
+        <MultiLanguageText Lang="en-US">OB call is started a second time because time was set backward</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>DayOn</Name>
+      <Namespace />
+      <Number>10</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SecondaryType>TimeOfDay</SecondaryType>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Token Text="IF" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Access Scope="GlobalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="MB" UId="25">
+        <BooleanAttribute Name="HasQuotes" UId="26">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="27" />
+      <Component Name="Table" UId="28" />
+      <Token Text="." UId="29" />
+      <Component Name="HMI_CycleOn" UId="30" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="31" />
+  <Token Text="THEN" UId="32" />
+  <NewLine Num="1" UId="33" />
+  <Blank Num="4" UId="34" />
+  <Access Scope="GlobalVariable" UId="35">
+    <Symbol UId="36">
+      <Component Name="MB" UId="37">
+        <BooleanAttribute Name="HasQuotes" UId="38">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="39" />
+      <Component Name="Table" UId="40" />
+      <Token Text="." UId="41" />
+      <Component Name="CycleDay" UId="42" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="43" />
+  <Token Text=":=" UId="44" />
+  <Blank Num="1" UId="45" />
+  <Access Scope="GlobalVariable" UId="46">
+    <Symbol UId="47">
+      <Component Name="MB" UId="48">
+        <BooleanAttribute Name="HasQuotes" UId="49">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="50" />
+      <Component Name="Table" UId="51" />
+      <Token Text="." UId="52" />
+      <Component Name="CycleDay" UId="53" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="54" />
+  <Token Text="+" UId="55" />
+  <Blank Num="1" UId="56" />
+  <Access Scope="LiteralConstant" UId="57">
+    <Constant UId="58">
+      <ConstantValue UId="60">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="61" />
+  <NewLine Num="1" UId="62" />
+  <Blank Num="4" UId="63" />
+  <Token Text="IF" UId="64" />
+  <Blank Num="1" UId="65" />
+  <Access Scope="GlobalVariable" UId="66">
+    <Symbol UId="67">
+      <Component Name="MB" UId="68">
+        <BooleanAttribute Name="HasQuotes" UId="69">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="70" />
+      <Component Name="Table" UId="71" />
+      <Token Text="." UId="72" />
+      <Component Name="CycleDay" UId="73" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="74" />
+  <Token Text="=" UId="75" />
+  <Blank Num="1" UId="76" />
+  <Access Scope="GlobalVariable" UId="77">
+    <Symbol UId="78">
+      <Component Name="MB" UId="79">
+        <BooleanAttribute Name="HasQuotes" UId="80">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="81" />
+      <Component Name="Table" UId="82" />
+      <Token Text="." UId="83" />
+      <Component Name="CycleStartDay" UId="84">
+        <Token Text="[" UId="85" />
+        <Access Scope="LiteralConstant" UId="86">
+          <Constant UId="87">
+            <ConstantValue UId="89">0</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="90" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="91" />
+  <Token Text="THEN" UId="92" />
+  <NewLine Num="1" UId="93" />
+  <Blank Num="8" UId="94" />
+  <Access Scope="GlobalVariable" UId="95">
+    <Symbol UId="96">
+      <Component Name="MB" UId="97">
+        <BooleanAttribute Name="HasQuotes" UId="98">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="99" />
+      <Component Name="Table" UId="100" />
+      <Token Text="." UId="101" />
+      <Component Name="UsePID" UId="102" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="103" />
+  <Token Text=":=" UId="104" />
+  <Blank Num="1" UId="105" />
+  <Access Scope="LiteralConstant" UId="106">
+    <Constant UId="107">
+      <ConstantValue UId="109">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="110" />
+  <NewLine Num="1" UId="111" />
+  <Blank Num="4" UId="112" />
+  <Token Text="END_IF" UId="113" />
+  <Token Text=";" UId="114" />
+  <NewLine Num="1" UId="115" />
+  <Blank Num="4" UId="116" />
+  <Token Text="IF" UId="117" />
+  <Blank Num="1" UId="118" />
+  <Access Scope="GlobalVariable" UId="119">
+    <Symbol UId="120">
+      <Component Name="MB" UId="121">
+        <BooleanAttribute Name="HasQuotes" UId="122">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="123" />
+      <Component Name="Table" UId="124" />
+      <Token Text="." UId="125" />
+      <Component Name="CycleDay" UId="126" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="127" />
+  <Token Text="=" UId="128" />
+  <Blank Num="1" UId="129" />
+  <Access Scope="GlobalVariable" UId="130">
+    <Symbol UId="131">
+      <Component Name="MB" UId="132">
+        <BooleanAttribute Name="HasQuotes" UId="133">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="134" />
+      <Component Name="Table" UId="135" />
+      <Token Text="." UId="136" />
+      <Component Name="CycleStartDay" UId="137">
+        <Token Text="[" UId="138" />
+        <Access Scope="LiteralConstant" UId="139">
+          <Constant UId="140">
+            <ConstantValue UId="142">4</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="143" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="144" />
+  <Token Text="THEN" UId="145" />
+  <NewLine Num="1" UId="146" />
+  <Blank Num="8" UId="147" />
+  <Access Scope="GlobalVariable" UId="148">
+    <Symbol UId="149">
+      <Component Name="MB" UId="150">
+        <BooleanAttribute Name="HasQuotes" UId="151">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="152" />
+      <Component Name="Table" UId="153" />
+      <Token Text="." UId="154" />
+      <Component Name="UsePID" UId="155" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="156" />
+  <Token Text=":=" UId="157" />
+  <Blank Num="1" UId="158" />
+  <Access Scope="LiteralConstant" UId="159">
+    <Constant UId="160">
+      <ConstantValue UId="162">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="163" />
+  <NewLine Num="1" UId="164" />
+  <Blank Num="4" UId="165" />
+  <Token Text="END_IF" UId="166" />
+  <Token Text=";" UId="167" />
+  <NewLine Num="1" UId="168" />
+  <Blank Num="4" UId="169" />
+  <NewLine Num="1" UId="170" />
+  <Blank Num="4" UId="171" />
+  <Token Text="IF" UId="172" />
+  <Blank Num="1" UId="173" />
+  <Access Scope="GlobalVariable" UId="174">
+    <Symbol UId="175">
+      <Component Name="MB" UId="176">
+        <BooleanAttribute Name="HasQuotes" UId="177">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="178" />
+      <Component Name="Table" UId="179" />
+      <Token Text="." UId="180" />
+      <Component Name="CycleDay" UId="181" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="182" />
+  <Token Text="=" UId="183" />
+  <Blank Num="1" UId="184" />
+  <Access Scope="GlobalVariable" UId="185">
+    <Symbol UId="186">
+      <Component Name="MB" UId="187">
+        <BooleanAttribute Name="HasQuotes" UId="188">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="189" />
+      <Component Name="Table" UId="190" />
+      <Token Text="." UId="191" />
+      <Component Name="ChlorationCounter_SwitchDay" UId="192" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="193" />
+  <Token Text="AND" UId="194" />
+  <Blank Num="1" UId="195" />
+  <Access Scope="GlobalVariable" UId="196">
+    <Symbol UId="197">
+      <Component Name="MB" UId="198">
+        <BooleanAttribute Name="HasQuotes" UId="199">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="200" />
+      <Component Name="Table" UId="201" />
+      <Token Text="." UId="202" />
+      <Component Name="ChlorationCounter_SwitchOn" UId="203" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="204" />
+  <Token Text="THEN" UId="205" />
+  <NewLine Num="1" UId="206" />
+  <Blank Num="8" UId="207" />
+  <Access Scope="GlobalVariable" UId="208">
+    <Symbol UId="209">
+      <Component Name="MB" UId="210">
+        <BooleanAttribute Name="HasQuotes" UId="211">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="212" />
+      <Component Name="Table" UId="213" />
+      <Token Text="." UId="214" />
+      <Component Name="Chloration_ChooseCounter" UId="215" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="216" />
+  <Token Text=":=" UId="217" />
+  <Blank Num="1" UId="218" />
+  <Access Scope="LiteralConstant" UId="219">
+    <Constant UId="220">
+      <ConstantValue UId="222">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="223" />
+  <NewLine Num="1" UId="224" />
+  <Blank Num="4" UId="225" />
+  <Token Text="END_IF" UId="226" />
+  <Token Text=";" UId="227" />
+  <NewLine Num="1" UId="228" />
+  <Token Text="END_IF" UId="229" />
+  <Token Text=";" UId="230" />
+  <NewLine Num="1" UId="231" />
+  <Access Scope="GlobalVariable" UId="232">
+    <Symbol UId="233">
+      <Component Name="MB" UId="234">
+        <BooleanAttribute Name="HasQuotes" UId="235">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="236" />
+      <Component Name="Table" UId="237" />
+      <Token Text="." UId="238" />
+      <Component Name="DayChangeFlag" UId="239" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="240" />
+  <Token Text=":=" UId="241" />
+  <Blank Num="1" UId="242" />
+  <Access Scope="LiteralConstant" UId="243">
+    <Constant UId="244">
+      <ConstantValue UId="246">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="247" />
+  <NewLine Num="1" UId="248" />
+  <Access Scope="GlobalVariable" UId="249">
+    <Symbol UId="250">
+      <Component Name="MB" UId="251">
+        <BooleanAttribute Name="HasQuotes" UId="252">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="253" />
+      <Component Name="Table" UId="254" />
+      <Token Text="." UId="255" />
+      <Component Name="WaterCounterIn_DailyCount" UId="256" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="257" />
+  <Token Text=":=" UId="258" />
+  <Blank Num="1" UId="259" />
+  <Access Scope="LiteralConstant" UId="260">
+    <Constant UId="261">
+      <ConstantValue UId="263">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="264" />
+  <NewLine Num="1" UId="265" />
+  <Access Scope="GlobalVariable" UId="266">
+    <Symbol UId="267">
+      <Component Name="MB" UId="268">
+        <BooleanAttribute Name="HasQuotes" UId="269">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="270" />
+      <Component Name="Table" UId="271" />
+      <Token Text="." UId="272" />
+      <Component Name="WaterCounterOut_DailyCount" UId="273" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="274" />
+  <Token Text=":=" UId="275" />
+  <Blank Num="1" UId="276" />
+  <Access Scope="LiteralConstant" UId="277">
+    <Constant UId="278">
+      <ConstantValue UId="280">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="281" />
+  <NewLine Num="1" UId="282" />
+  <Access Scope="GlobalVariable" UId="283">
+    <Symbol UId="284">
+      <Component Name="MB" UId="285">
+        <BooleanAttribute Name="HasQuotes" UId="286">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="287" />
+      <Component Name="Table" UId="288" />
+      <Token Text="." UId="289" />
+      <Component Name="Doser1_DailyPulses" UId="290" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="291" />
+  <Token Text=":=" UId="292" />
+  <Blank Num="1" UId="293" />
+  <Access Scope="LiteralConstant" UId="294">
+    <Constant UId="295">
+      <ConstantValue UId="297">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="298" />
+  <NewLine Num="1" UId="299" />
+  <Access Scope="GlobalVariable" UId="300">
+    <Symbol UId="301">
+      <Component Name="MB" UId="302">
+        <BooleanAttribute Name="HasQuotes" UId="303">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="304" />
+      <Component Name="Table" UId="305" />
+      <Token Text="." UId="306" />
+      <Component Name="Doser2_DailyPulses" UId="307" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="308" />
+  <Token Text=":=" UId="309" />
+  <Blank Num="1" UId="310" />
+  <Access Scope="LiteralConstant" UId="311">
+    <Constant UId="312">
+      <ConstantValue UId="314">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="315" />
+  <NewLine Num="7" UId="316" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.OB>
+</Document>

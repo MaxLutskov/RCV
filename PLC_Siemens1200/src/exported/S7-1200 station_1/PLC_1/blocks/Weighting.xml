@@ -1,0 +1,1922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:25.6583691Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="buffer1" Datatype="Array[0..1] of Word" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="buffer2" Datatype="Array[0..1] of Word" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Enable" Datatype="Bool" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ManualValueProvided1" Datatype="Bool" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ManualValueProvided2" Datatype="Bool" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ManualValue1" Datatype="Real" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ManualValue2" Datatype="Real" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="WeightHandlers" Datatype="Array[0..1] of &quot;WeightHandler&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="ValueMin" Datatype="Real" />
+          <Member Name="ValueMax" Datatype="Real" />
+          <Member Name="OutputMin" Datatype="Real" />
+          <Member Name="OutputMax" Datatype="Real" />
+          <Member Name="ValueOffset" Datatype="Real" />
+          <Member Name="Value" Datatype="Real" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="Output" Datatype="Real" />
+          <Member Name="Error" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut" />
+        <Section Name="Static">
+          <Member Name="ConvertedValue" Datatype="Real" />
+          <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="PT" Datatype="Time" />
+                <Member Name="ET" Datatype="Time" />
+                <Member Name="IN" Datatype="Bool" />
+                <Member Name="Q" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TankWeigher1" Datatype="&quot;TankWeigher&quot;" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="Input">
+          <Member Name="WeightDelay" Datatype="Time" />
+          <Member Name="WeightDeadZone" Datatype="Real" />
+          <Member Name="DayTour" Datatype="Int" />
+          <Member Name="CalendarDay" Datatype="UInt" />
+          <Member Name="CalendarMonth" Datatype="UInt" />
+        </Section>
+        <Section Name="Output">
+          <Member Name="IsWeightMessured" Datatype="Bool" />
+          <Member Name="IsFeedLoaded" Datatype="Bool" />
+          <Member Name="IsFeedConsumed" Datatype="Bool" />
+        </Section>
+        <Section Name="InOut">
+          <Member Name="ref_RetainData" Datatype="&quot;WeightRetainData&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="ArrayConsumedFeed1" Datatype="Array[1..30] of Real" />
+                <Member Name="ArrayConsumedFeed2" Datatype="Array[1..30] of Real" />
+                <Member Name="ArrayLoadedFeed1" Datatype="Array[1..30] of Real" />
+                <Member Name="ArrayLoadedFeed2" Datatype="Array[1..30] of Real" />
+                <Member Name="ArrayDayTour" Datatype="Array[1..30] of Int" />
+                <Member Name="ArrayCalendarMonth" Datatype="Array[1..30] of UInt" />
+                <Member Name="ArrayCalendarDay" Datatype="Array[1..30] of UInt" />
+                <Member Name="ConsumedFeed1" Datatype="Real" />
+                <Member Name="LoadedFeed1" Datatype="Real" />
+                <Member Name="PreviousWeight1" Datatype="Real" />
+                <Member Name="ConsumedFeed2" Datatype="Real" />
+                <Member Name="LoadedFeed2" Datatype="Real" />
+                <Member Name="PreviousWeight2" Datatype="Real" />
+                <Member Name="PreviousDayTour" Datatype="Int" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+        <Section Name="Static">
+          <Member Name="TankDetector1" Datatype="&quot;TankDetector&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="WeightValue" Datatype="Real" />
+                <Member Name="WeightDelay" Datatype="Time" />
+                <Member Name="WeightError" Datatype="Bool" />
+                <Member Name="DeadZone" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="IsWeightMeasured" Datatype="Bool" />
+                <Member Name="IsFeedLoaded" Datatype="Bool" />
+                <Member Name="IsFeedConsumed" Datatype="Bool" />
+                <Member Name="MeasuredWeight" Datatype="Real" />
+              </Section>
+              <Section Name="InOut">
+                <Member Name="Ref_ConsumedFeed" Datatype="Real" />
+                <Member Name="Ref_LoadedFeed" Datatype="Real" />
+                <Member Name="Ref_PreviousWeight" Datatype="Real" />
+              </Section>
+              <Section Name="Static">
+                <Member Name="PreviousWeight1" Datatype="Real" />
+                <Member Name="PreviousWeight2" Datatype="Real" />
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="TankRegistrator1" Datatype="&quot;TankRegistrator&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="CurrentConsumedFeed1" Datatype="Real" />
+                <Member Name="CurrentConsumedFeed2" Datatype="Real" />
+                <Member Name="CurrentLoadedFeed1" Datatype="Real" />
+                <Member Name="CurrentLoadedFeed2" Datatype="Real" />
+                <Member Name="DayTour" Datatype="Int" />
+                <Member Name="CalendarDay" Datatype="UInt" />
+                <Member Name="CalendarMonth" Datatype="UInt" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="ResetCounters" Datatype="Bool" />
+              </Section>
+              <Section Name="InOut">
+                <Member Name="ref_RetainData" Datatype="&quot;WeightRetainData&quot;">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="ArrayConsumedFeed1" Datatype="Array[1..30] of Real" />
+                      <Member Name="ArrayConsumedFeed2" Datatype="Array[1..30] of Real" />
+                      <Member Name="ArrayLoadedFeed1" Datatype="Array[1..30] of Real" />
+                      <Member Name="ArrayLoadedFeed2" Datatype="Array[1..30] of Real" />
+                      <Member Name="ArrayDayTour" Datatype="Array[1..30] of Int" />
+                      <Member Name="ArrayCalendarMonth" Datatype="Array[1..30] of UInt" />
+                      <Member Name="ArrayCalendarDay" Datatype="Array[1..30] of UInt" />
+                      <Member Name="ConsumedFeed1" Datatype="Real" />
+                      <Member Name="LoadedFeed1" Datatype="Real" />
+                      <Member Name="PreviousWeight1" Datatype="Real" />
+                      <Member Name="ConsumedFeed2" Datatype="Real" />
+                      <Member Name="LoadedFeed2" Datatype="Real" />
+                      <Member Name="PreviousWeight2" Datatype="Real" />
+                      <Member Name="PreviousDayTour" Datatype="Int" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+              <Section Name="Static">
+                <Member Name="i" Datatype="Int" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="TankDetector2" Datatype="&quot;TankDetector&quot;">
+            <Sections>
+              <Section Name="Input">
+                <Member Name="WeightValue" Datatype="Real" />
+                <Member Name="WeightDelay" Datatype="Time" />
+                <Member Name="WeightError" Datatype="Bool" />
+                <Member Name="DeadZone" Datatype="Real" />
+              </Section>
+              <Section Name="Output">
+                <Member Name="IsWeightMeasured" Datatype="Bool" />
+                <Member Name="IsFeedLoaded" Datatype="Bool" />
+                <Member Name="IsFeedConsumed" Datatype="Bool" />
+                <Member Name="MeasuredWeight" Datatype="Real" />
+              </Section>
+              <Section Name="InOut">
+                <Member Name="Ref_ConsumedFeed" Datatype="Real" />
+                <Member Name="Ref_LoadedFeed" Datatype="Real" />
+                <Member Name="Ref_PreviousWeight" Datatype="Real" />
+              </Section>
+              <Section Name="Static">
+                <Member Name="PreviousWeight1" Datatype="Real" />
+                <Member Name="PreviousWeight2" Datatype="Real" />
+                <Member Name="TON1" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TON2" Datatype="TON_TIME" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="PT" Datatype="Time" />
+                      <Member Name="ET" Datatype="Time" />
+                      <Member Name="IN" Datatype="Bool" />
+                      <Member Name="Q" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="RetainData" Datatype="&quot;WeightRetainData&quot;" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="ArrayConsumedFeed1" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayConsumedFeed2" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayLoadedFeed1" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayLoadedFeed2" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayDayTour" Datatype="Array[1..30] of Int" />
+          <Member Name="ArrayCalendarMonth" Datatype="Array[1..30] of UInt" />
+          <Member Name="ArrayCalendarDay" Datatype="Array[1..30] of UInt" />
+          <Member Name="ConsumedFeed1" Datatype="Real" />
+          <Member Name="LoadedFeed1" Datatype="Real" />
+          <Member Name="PreviousWeight1" Datatype="Real" />
+          <Member Name="ConsumedFeed2" Datatype="Real" />
+          <Member Name="LoadedFeed2" Datatype="Real" />
+          <Member Name="PreviousWeight2" Datatype="Real" />
+          <Member Name="PreviousDayTour" Datatype="Int" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TimeNow" Datatype="DTL" Version="1.0" Remanence="SetInIDB" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="Temp1" Datatype="DWord" />
+    <Member Name="Temp2" Datatype="DWord" />
+    <Member Name="Ret" Datatype="Int" />
+  </Section>
+  <Section Name="Constant">
+    <Member Name="CLOR_DENSITY" Datatype="Real" Accessibility="Public">
+      <StartValue>1.2</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>Weighting</Name>
+      <Namespace />
+      <Number>18</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <Access Scope="LocalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="Enable" UId="23" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="24" />
+  <Token Text=":=" UId="25" />
+  <Blank Num="1" UId="26" />
+  <Access Scope="GlobalVariable" UId="27">
+    <Symbol UId="28">
+      <Component Name="MB" UId="29">
+        <BooleanAttribute Name="HasQuotes" UId="30">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="31" />
+      <Component Name="Table" UId="32" />
+      <Token Text="." UId="33" />
+      <Component Name="WeightingEnable" UId="34" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="35" />
+  <NewLine Num="2" UId="36" />
+  <Access Scope="GlobalVariable" UId="37">
+    <Symbol UId="38">
+      <Component Name="ModbusLoad" UId="39">
+        <BooleanAttribute Name="HasQuotes" UId="40">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="41">
+    <Instruction UId="42">
+      <Token Text="(" UId="43" />
+      <Parameter Name="REQ" UId="44">
+        <Blank Num="1" UId="45" />
+        <Token Text=":=" UId="46" />
+        <Access Scope="GlobalVariable" UId="47">
+          <Symbol UId="48">
+            <Component Name="FirstScan" UId="49">
+              <BooleanAttribute Name="HasQuotes" UId="50">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="51" />
+      <NewLine Num="1" UId="52" />
+      <Blank Num="12" UId="53" />
+      <Parameter Name="PORT" UId="54">
+        <Blank Num="1" UId="55" />
+        <Token Text=":=" UId="56" />
+        <Blank Num="1" UId="57" />
+        <Access Scope="GlobalConstant" UId="58">
+          <Constant Name="Local~CM_1241_(RS422_485)_1" UId="59" />
+        </Access>
+      </Parameter>
+      <Token Text="," UId="62" />
+      <NewLine Num="1" UId="63" />
+      <Blank Num="12" UId="64" />
+      <Parameter Name="BAUD" UId="65">
+        <Blank Num="1" UId="66" />
+        <Token Text=":=" UId="67" />
+        <Blank Num="1" UId="68" />
+        <Access Scope="LiteralConstant" UId="69">
+          <Constant UId="70">
+            <ConstantValue UId="72">9600</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="73" />
+      <NewLine Num="1" UId="74" />
+      <Blank Num="12" UId="75" />
+      <Parameter Name="PARITY" UId="76">
+        <Blank Num="1" UId="77" />
+        <Token Text=":=" UId="78" />
+        <Blank Num="1" UId="79" />
+        <Access Scope="LiteralConstant" UId="80">
+          <Constant UId="81">
+            <ConstantValue UId="83">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="84" />
+      <NewLine Num="1" UId="85" />
+      <Blank Num="12" UId="86" />
+      <Parameter Name="RESP_TO" UId="87">
+        <Blank Num="1" UId="88" />
+        <Token Text=":=" UId="89" />
+        <Blank Num="1" UId="90" />
+        <Access Scope="LiteralConstant" UId="91">
+          <Constant UId="92">
+            <ConstantValue UId="94">100</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="95" />
+      <NewLine Num="1" UId="96" />
+      <Blank Num="12" UId="97" />
+      <Parameter Name="MB_DB" UId="98">
+        <Blank Num="1" UId="99" />
+        <Token Text=":=" UId="100" />
+        <Blank Num="1" UId="101" />
+        <Access Scope="GlobalVariable" UId="102">
+          <Symbol UId="103">
+            <Component Name="ModbusMaster" UId="104">
+              <BooleanAttribute Name="HasQuotes" UId="105">true</BooleanAttribute>
+            </Component>
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="106" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="107" />
+  <NewLine Num="2" UId="108" />
+  <Access Scope="GlobalVariable" UId="109">
+    <Symbol UId="110">
+      <Component Name="ModbusMaster" UId="111">
+        <BooleanAttribute Name="HasQuotes" UId="112">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="113">
+    <Instruction UId="114">
+      <Token Text="(" UId="115" />
+      <Parameter Name="REQ" UId="116">
+        <Blank Num="1" UId="117" />
+        <Token Text=":=" UId="118" />
+        <Blank Num="1" UId="119" />
+        <Access Scope="GlobalVariable" UId="120">
+          <Symbol UId="121">
+            <Component Name="ModbusLoad" UId="122">
+              <BooleanAttribute Name="HasQuotes" UId="123">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="124" />
+            <Component Name="DONE" UId="125" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="126" />
+      <NewLine Num="1" UId="127" />
+      <Blank Num="14" UId="128" />
+      <Parameter Name="MB_ADDR" UId="129">
+        <Blank Num="1" UId="130" />
+        <Token Text=":=" UId="131" />
+        <Blank Num="1" UId="132" />
+        <Access Scope="LiteralConstant" UId="133">
+          <Constant UId="134">
+            <ConstantValue UId="136">16</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="137" />
+      <NewLine Num="1" UId="138" />
+      <Blank Num="14" UId="139" />
+      <Parameter Name="MODE" UId="140">
+        <Blank Num="1" UId="141" />
+        <Token Text=":=" UId="142" />
+        <Blank Num="1" UId="143" />
+        <Access Scope="LiteralConstant" UId="144">
+          <Constant UId="145">
+            <ConstantValue UId="147">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="148" />
+      <NewLine Num="1" UId="149" />
+      <Blank Num="14" UId="150" />
+      <Parameter Name="DATA_ADDR" UId="151">
+        <Blank Num="1" UId="152" />
+        <Token Text=":=" UId="153" />
+        <Blank Num="1" UId="154" />
+        <Access Scope="LiteralConstant" UId="155">
+          <Constant UId="156">
+            <ConstantValue UId="158">40063</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="159" />
+      <NewLine Num="1" UId="160" />
+      <Blank Num="14" UId="161" />
+      <Parameter Name="DATA_LEN" UId="162">
+        <Blank Num="1" UId="163" />
+        <Token Text=":=" UId="164" />
+        <Blank Num="1" UId="165" />
+        <Access Scope="LiteralConstant" UId="166">
+          <Constant UId="167">
+            <ConstantValue UId="169">2</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="170" />
+      <NewLine Num="1" UId="171" />
+      <Blank Num="14" UId="172" />
+      <Parameter Name="DATA_PTR" UId="173">
+        <Blank Num="1" UId="174" />
+        <Token Text=":=" UId="175" />
+        <Blank Num="1" UId="176" />
+        <Access Scope="GlobalVariable" UId="177">
+          <Symbol UId="178">
+            <Component Name="MB" UId="179">
+              <BooleanAttribute Name="HasQuotes" UId="180">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="181" />
+            <Component Name="Table" UId="182" />
+            <Token Text="." UId="183" />
+            <Component Name="SensorWeightVoltage1" UId="184" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="185" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="186" />
+  <NewLine Num="2" UId="187" />
+  <Access Scope="GlobalVariable" UId="188">
+    <Symbol UId="189">
+      <Component Name="ModbusMaster" UId="190">
+        <BooleanAttribute Name="HasQuotes" UId="191">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="192">
+    <Instruction UId="193">
+      <Token Text="(" UId="194" />
+      <Parameter Name="REQ" UId="195">
+        <Blank Num="1" UId="196" />
+        <Token Text=":=" UId="197" />
+        <Blank Num="1" UId="198" />
+        <Access Scope="GlobalVariable" UId="199">
+          <Symbol UId="200">
+            <Component Name="ModbusLoad" UId="201">
+              <BooleanAttribute Name="HasQuotes" UId="202">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="203" />
+            <Component Name="DONE" UId="204" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="205" />
+      <NewLine Num="1" UId="206" />
+      <Blank Num="14" UId="207" />
+      <Parameter Name="MB_ADDR" UId="208">
+        <Blank Num="1" UId="209" />
+        <Token Text=":=" UId="210" />
+        <Blank Num="1" UId="211" />
+        <Access Scope="LiteralConstant" UId="212">
+          <Constant UId="213">
+            <ConstantValue UId="215">17</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="216" />
+      <NewLine Num="1" UId="217" />
+      <Blank Num="14" UId="218" />
+      <Parameter Name="MODE" UId="219">
+        <Blank Num="1" UId="220" />
+        <Token Text=":=" UId="221" />
+        <Blank Num="1" UId="222" />
+        <Access Scope="LiteralConstant" UId="223">
+          <Constant UId="224">
+            <ConstantValue UId="226">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="227" />
+      <NewLine Num="1" UId="228" />
+      <Blank Num="14" UId="229" />
+      <Parameter Name="DATA_ADDR" UId="230">
+        <Blank Num="1" UId="231" />
+        <Token Text=":=" UId="232" />
+        <Blank Num="1" UId="233" />
+        <Access Scope="LiteralConstant" UId="234">
+          <Constant UId="235">
+            <ConstantValue UId="237">40063</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="238" />
+      <NewLine Num="1" UId="239" />
+      <Blank Num="14" UId="240" />
+      <Parameter Name="DATA_LEN" UId="241">
+        <Blank Num="1" UId="242" />
+        <Token Text=":=" UId="243" />
+        <Blank Num="1" UId="244" />
+        <Access Scope="LiteralConstant" UId="245">
+          <Constant UId="246">
+            <ConstantValue UId="248">2</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="249" />
+      <NewLine Num="1" UId="250" />
+      <Blank Num="14" UId="251" />
+      <Parameter Name="DATA_PTR" UId="252">
+        <Blank Num="1" UId="253" />
+        <Token Text=":=" UId="254" />
+        <Blank Num="1" UId="255" />
+        <Access Scope="GlobalVariable" UId="256">
+          <Symbol UId="257">
+            <Component Name="MB" UId="258">
+              <BooleanAttribute Name="HasQuotes" UId="259">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="260" />
+            <Component Name="Table" UId="261" />
+            <Token Text="." UId="262" />
+            <Component Name="SensorWeightVoltage2" UId="263" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="264" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="265" />
+  <NewLine Num="2" UId="266" />
+  <Access Scope="GlobalVariable" UId="267">
+    <Symbol UId="268">
+      <Component Name="ModbusMaster" UId="269">
+        <BooleanAttribute Name="HasQuotes" UId="270">true</BooleanAttribute>
+      </Component>
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="271">
+    <Instruction UId="272">
+      <Token Text="(" UId="273" />
+      <Parameter Name="REQ" UId="274">
+        <Blank Num="1" UId="275" />
+        <Token Text=":=" UId="276" />
+        <Blank Num="1" UId="277" />
+        <Access Scope="GlobalVariable" UId="278">
+          <Symbol UId="279">
+            <Component Name="ModbusLoad" UId="280">
+              <BooleanAttribute Name="HasQuotes" UId="281">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="282" />
+            <Component Name="DONE" UId="283" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="284" />
+      <NewLine Num="1" UId="285" />
+      <Blank Num="14" UId="286" />
+      <Parameter Name="MB_ADDR" UId="287">
+        <Blank Num="1" UId="288" />
+        <Token Text=":=" UId="289" />
+        <Blank Num="1" UId="290" />
+        <Access Scope="LiteralConstant" UId="291">
+          <Constant UId="292">
+            <ConstantValue UId="294">18</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="295" />
+      <NewLine Num="1" UId="296" />
+      <Blank Num="14" UId="297" />
+      <Parameter Name="MODE" UId="298">
+        <Blank Num="1" UId="299" />
+        <Token Text=":=" UId="300" />
+        <Blank Num="1" UId="301" />
+        <Access Scope="LiteralConstant" UId="302">
+          <Constant UId="303">
+            <ConstantValue UId="305">0</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="306" />
+      <NewLine Num="1" UId="307" />
+      <Blank Num="14" UId="308" />
+      <Parameter Name="DATA_ADDR" UId="309">
+        <Blank Num="1" UId="310" />
+        <Token Text=":=" UId="311" />
+        <Blank Num="1" UId="312" />
+        <Access Scope="LiteralConstant" UId="313">
+          <Constant UId="314">
+            <ConstantValue UId="316">40005</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="317" />
+      <NewLine Num="1" UId="318" />
+      <Blank Num="14" UId="319" />
+      <Parameter Name="DATA_LEN" UId="320">
+        <Blank Num="1" UId="321" />
+        <Token Text=":=" UId="322" />
+        <Blank Num="1" UId="323" />
+        <Access Scope="LiteralConstant" UId="324">
+          <Constant UId="325">
+            <ConstantValue UId="327">2</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="328" />
+      <NewLine Num="1" UId="329" />
+      <Blank Num="14" UId="330" />
+      <Parameter Name="DATA_PTR" UId="331">
+        <Blank Num="1" UId="332" />
+        <Token Text=":=" UId="333" />
+        <Blank Num="1" UId="334" />
+        <Access Scope="GlobalVariable" UId="335">
+          <Symbol UId="336">
+            <Component Name="MB" UId="337">
+              <BooleanAttribute Name="HasQuotes" UId="338">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="339" />
+            <Component Name="Table" UId="340" />
+            <Token Text="." UId="341" />
+            <Component Name="WaterTemperature" UId="342" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="343" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="344" />
+  <NewLine Num="3" UId="345" />
+  <Token Text="IF" UId="346" />
+  <Blank Num="1" UId="347" />
+  <Token Text="NOT" UId="348" />
+  <Blank Num="1" UId="349" />
+  <Access Scope="LocalVariable" UId="350">
+    <Symbol UId="351">
+      <Component Name="Enable" UId="352" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="353" />
+  <Token Text="THEN" UId="354" />
+  <NewLine Num="1" UId="355" />
+  <Blank Num="4" UId="356" />
+  <Token Text="IF" UId="357" />
+  <Blank Num="1" UId="358" />
+  <Access Scope="GlobalVariable" UId="359">
+    <Symbol UId="360">
+      <Component Name="MB" UId="361">
+        <BooleanAttribute Name="HasQuotes" UId="362">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="363" />
+      <Component Name="Table" UId="364" />
+      <Token Text="." UId="365" />
+      <Component Name="Weighting_SaveManualValue" UId="366" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="367" />
+  <Token Text="THEN" UId="368" />
+  <NewLine Num="1" UId="369" />
+  <Blank Num="8" UId="370" />
+  <Token Text="IF" UId="371" />
+  <Blank Num="1" UId="372" />
+  <Access Scope="GlobalVariable" UId="373">
+    <Symbol UId="374">
+      <Component Name="MB" UId="375">
+        <BooleanAttribute Name="HasQuotes" UId="376">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="377" />
+      <Component Name="Table" UId="378" />
+      <Token Text="." UId="379" />
+      <Component Name="Weighting_ManualValue1" UId="380" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="381" />
+  <Token Text="&lt;&gt;" UId="382" />
+  <Blank Num="1" UId="383" />
+  <Access Scope="LiteralConstant" UId="384">
+    <Constant UId="385">
+      <ConstantValue UId="387">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="388" />
+  <Token Text="THEN" UId="389" />
+  <NewLine Num="1" UId="390" />
+  <Blank Num="12" UId="391" />
+  <Access Scope="LocalVariable" UId="392">
+    <Symbol UId="393">
+      <Component Name="ManualValueProvided1" UId="394" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="395" />
+  <Token Text=":=" UId="396" />
+  <Blank Num="1" UId="397" />
+  <Access Scope="LiteralConstant" UId="398">
+    <Constant UId="399">
+      <ConstantValue UId="401">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="402" />
+  <NewLine Num="1" UId="403" />
+  <Blank Num="12" UId="404" />
+  <Access Scope="LocalVariable" UId="405">
+    <Symbol UId="406">
+      <Component Name="ManualValue1" UId="407" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="408" />
+  <Token Text=":=" UId="409" />
+  <Blank Num="1" UId="410" />
+  <Access Scope="GlobalVariable" UId="411">
+    <Symbol UId="412">
+      <Component Name="MB" UId="413">
+        <BooleanAttribute Name="HasQuotes" UId="414">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="415" />
+      <Component Name="Table" UId="416" />
+      <Token Text="." UId="417" />
+      <Component Name="Weighting_ManualValue1" UId="418" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="419" />
+  <Token Text="*" UId="420" />
+  <Blank Num="1" UId="421" />
+  <Access Scope="LocalConstant" UId="422">
+    <Constant Name="CLOR_DENSITY" UId="423" />
+  </Access>
+  <Token Text=";" UId="426" />
+  <NewLine Num="1" UId="427" />
+  <Blank Num="8" UId="428" />
+  <Token Text="END_IF" UId="429" />
+  <Token Text=";" UId="430" />
+  <NewLine Num="1" UId="431" />
+  <Blank Num="8" UId="432" />
+  <Token Text="IF" UId="433" />
+  <Blank Num="1" UId="434" />
+  <Access Scope="GlobalVariable" UId="435">
+    <Symbol UId="436">
+      <Component Name="MB" UId="437">
+        <BooleanAttribute Name="HasQuotes" UId="438">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="439" />
+      <Component Name="Table" UId="440" />
+      <Token Text="." UId="441" />
+      <Component Name="Weighting_ManualValue2" UId="442" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="443" />
+  <Token Text="&lt;&gt;" UId="444" />
+  <Blank Num="1" UId="445" />
+  <Access Scope="LiteralConstant" UId="446">
+    <Constant UId="447">
+      <ConstantValue UId="449">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="450" />
+  <Token Text="THEN" UId="451" />
+  <NewLine Num="1" UId="452" />
+  <Blank Num="12" UId="453" />
+  <Access Scope="LocalVariable" UId="454">
+    <Symbol UId="455">
+      <Component Name="ManualValueProvided2" UId="456" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="457" />
+  <Token Text=":=" UId="458" />
+  <Blank Num="1" UId="459" />
+  <Access Scope="LiteralConstant" UId="460">
+    <Constant UId="461">
+      <ConstantValue UId="463">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="464" />
+  <NewLine Num="1" UId="465" />
+  <Blank Num="12" UId="466" />
+  <Access Scope="LocalVariable" UId="467">
+    <Symbol UId="468">
+      <Component Name="ManualValue2" UId="469" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="470" />
+  <Token Text=":=" UId="471" />
+  <Blank Num="1" UId="472" />
+  <Access Scope="GlobalVariable" UId="473">
+    <Symbol UId="474">
+      <Component Name="MB" UId="475">
+        <BooleanAttribute Name="HasQuotes" UId="476">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="477" />
+      <Component Name="Table" UId="478" />
+      <Token Text="." UId="479" />
+      <Component Name="Weighting_ManualValue1" UId="480" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="481" />
+  <Token Text="*" UId="482" />
+  <Blank Num="1" UId="483" />
+  <Access Scope="LocalConstant" UId="484">
+    <Constant Name="CLOR_DENSITY" UId="485" />
+  </Access>
+  <Token Text=";" UId="488" />
+  <NewLine Num="1" UId="489" />
+  <Blank Num="8" UId="490" />
+  <Token Text="END_IF" UId="491" />
+  <Token Text=";" UId="492" />
+  <NewLine Num="1" UId="493" />
+  <Blank Num="4" UId="494" />
+  <Token Text="END_IF" UId="495" />
+  <Token Text=";" UId="496" />
+  <NewLine Num="1" UId="497" />
+  <Token Text="ELSE" UId="498" />
+  <NewLine Num="1" UId="499" />
+  <Blank Num="4" UId="500" />
+  <Access Scope="LocalVariable" UId="501">
+    <Symbol UId="502">
+      <Component Name="ManualValueProvided1" UId="503" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="504" />
+  <Token Text=":=" UId="505" />
+  <Blank Num="1" UId="506" />
+  <Access Scope="LiteralConstant" UId="507">
+    <Constant UId="508">
+      <ConstantValue UId="510">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="511" />
+  <NewLine Num="1" UId="512" />
+  <Blank Num="4" UId="513" />
+  <Access Scope="LocalVariable" UId="514">
+    <Symbol UId="515">
+      <Component Name="ManualValue1" UId="516" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="517" />
+  <Token Text=":=" UId="518" />
+  <Blank Num="1" UId="519" />
+  <Access Scope="LiteralConstant" UId="520">
+    <Constant UId="521">
+      <ConstantValue UId="523">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="524" />
+  <NewLine Num="1" UId="525" />
+  <Blank Num="4" UId="526" />
+  <Access Scope="LocalVariable" UId="527">
+    <Symbol UId="528">
+      <Component Name="ManualValueProvided2" UId="529" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="530" />
+  <Token Text=":=" UId="531" />
+  <Blank Num="1" UId="532" />
+  <Access Scope="LiteralConstant" UId="533">
+    <Constant UId="534">
+      <ConstantValue UId="536">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="537" />
+  <NewLine Num="1" UId="538" />
+  <Blank Num="4" UId="539" />
+  <Access Scope="LocalVariable" UId="540">
+    <Symbol UId="541">
+      <Component Name="ManualValue1" UId="542" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="543" />
+  <Token Text=":=" UId="544" />
+  <Blank Num="1" UId="545" />
+  <Access Scope="LiteralConstant" UId="546">
+    <Constant UId="547">
+      <ConstantValue UId="549">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="550" />
+  <NewLine Num="1" UId="551" />
+  <Token Text="END_IF" UId="552" />
+  <Token Text=";" UId="553" />
+  <NewLine Num="2" UId="554" />
+  <Token Text="IF" UId="555" />
+  <Blank Num="1" UId="556" />
+  <Access Scope="GlobalVariable" UId="557">
+    <Symbol UId="558">
+      <Component Name="MB" UId="559">
+        <BooleanAttribute Name="HasQuotes" UId="560">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="561" />
+      <Component Name="Table" UId="562" />
+      <Token Text="." UId="563" />
+      <Component Name="Weighting_SaveManualValue" UId="564" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="565" />
+  <Token Text="THEN" UId="566" />
+  <NewLine Num="1" UId="567" />
+  <Blank Num="4" UId="568" />
+  <Access Scope="GlobalVariable" UId="569">
+    <Symbol UId="570">
+      <Component Name="MB" UId="571">
+        <BooleanAttribute Name="HasQuotes" UId="572">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="573" />
+      <Component Name="Table" UId="574" />
+      <Token Text="." UId="575" />
+      <Component Name="Weighting_SaveManualValue" UId="576" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="577" />
+  <Token Text=":=" UId="578" />
+  <Blank Num="1" UId="579" />
+  <Access Scope="LiteralConstant" UId="580">
+    <Constant UId="581">
+      <ConstantValue UId="583">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="584" />
+  <NewLine Num="1" UId="585" />
+  <Token Text="END_IF" UId="586" />
+  <Token Text=";" UId="587" />
+  <NewLine Num="4" UId="588" />
+  <Access Scope="Call" UId="589">
+    <CallInfo UId="590" BlockType="FB" Name="WeightHandler">
+      <Instance Scope="LocalVariable" UId="591">
+        <Component Name="WeightHandlers" UId="592">
+          <Token Text="[" UId="593" />
+          <Access Scope="LiteralConstant" UId="594">
+            <Constant UId="595">
+              <ConstantValue UId="597">0</ConstantValue>
+            </Constant>
+          </Access>
+          <Token Text="]" UId="598" />
+        </Component>
+      </Instance>
+      <Token Text="(" UId="599" />
+      <NewLine Num="1" UId="600" />
+      <Blank Num="19" UId="601" />
+      <Parameter Name="Value" UId="602">
+        <Blank Num="1" UId="603" />
+        <Token Text=":=" UId="604" />
+        <Blank Num="1" UId="605" />
+        <Access Scope="GlobalVariable" UId="606">
+          <Symbol UId="607">
+            <Component Name="MB" UId="608">
+              <BooleanAttribute Name="HasQuotes" UId="609">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="610" />
+            <Component Name="Table" UId="611" />
+            <Token Text="." UId="612" />
+            <Component Name="SensorWeightVoltage1" UId="613" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="614" />
+      <NewLine Num="1" UId="615" />
+      <Blank Num="19" UId="616" />
+      <Parameter Name="ValueMin" UId="617">
+        <Blank Num="1" UId="618" />
+        <Token Text=":=" UId="619" />
+        <Blank Num="1" UId="620" />
+        <Access Scope="GlobalVariable" UId="621">
+          <Symbol UId="622">
+            <Component Name="MB" UId="623">
+              <BooleanAttribute Name="HasQuotes" UId="624">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="625" />
+            <Component Name="Table" UId="626" />
+            <Token Text="." UId="627" />
+            <Component Name="WeightVoltageMin1" UId="628" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="629" />
+      <NewLine Num="1" UId="630" />
+      <Blank Num="19" UId="631" />
+      <Parameter Name="ValueMax" UId="632">
+        <Blank Num="1" UId="633" />
+        <Token Text=":=" UId="634" />
+        <Blank Num="1" UId="635" />
+        <Access Scope="GlobalVariable" UId="636">
+          <Symbol UId="637">
+            <Component Name="MB" UId="638">
+              <BooleanAttribute Name="HasQuotes" UId="639">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="640" />
+            <Component Name="Table" UId="641" />
+            <Token Text="." UId="642" />
+            <Component Name="WeightVoltageMax1" UId="643" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="644" />
+      <NewLine Num="1" UId="645" />
+      <Blank Num="19" UId="646" />
+      <Parameter Name="ValueOffset" UId="647">
+        <Blank Num="1" UId="648" />
+        <Token Text=":=" UId="649" />
+        <Blank Num="1" UId="650" />
+        <Access Scope="GlobalVariable" UId="651">
+          <Symbol UId="652">
+            <Component Name="MB" UId="653">
+              <BooleanAttribute Name="HasQuotes" UId="654">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="655" />
+            <Component Name="Table" UId="656" />
+            <Token Text="." UId="657" />
+            <Component Name="WeightValueOffset1" UId="658" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="659" />
+      <NewLine Num="1" UId="660" />
+      <Blank Num="19" UId="661" />
+      <Parameter Name="OutputMin" UId="662">
+        <Blank Num="1" UId="663" />
+        <Token Text=":=" UId="664" />
+        <Blank Num="1" UId="665" />
+        <Access Scope="GlobalVariable" UId="666">
+          <Symbol UId="667">
+            <Component Name="MB" UId="668">
+              <BooleanAttribute Name="HasQuotes" UId="669">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="670" />
+            <Component Name="Table" UId="671" />
+            <Token Text="." UId="672" />
+            <Component Name="WeightValueMin1" UId="673" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="674" />
+      <NewLine Num="1" UId="675" />
+      <Blank Num="19" UId="676" />
+      <Parameter Name="OutputMax" UId="677">
+        <Blank Num="1" UId="678" />
+        <Token Text=":=" UId="679" />
+        <Blank Num="1" UId="680" />
+        <Access Scope="GlobalVariable" UId="681">
+          <Symbol UId="682">
+            <Component Name="MB" UId="683">
+              <BooleanAttribute Name="HasQuotes" UId="684">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="685" />
+            <Component Name="Table" UId="686" />
+            <Token Text="." UId="687" />
+            <Component Name="WeightValueMax1" UId="688" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="689" />
+      <NewLine Num="1" UId="690" />
+      <Blank Num="19" UId="691" />
+      <Parameter Name="Output" UId="692">
+        <Blank Num="1" UId="693" />
+        <Token Text="=&gt;" UId="694" />
+        <Blank Num="1" UId="695" />
+        <Access Scope="GlobalVariable" UId="696">
+          <Symbol UId="697">
+            <Component Name="MB" UId="698">
+              <BooleanAttribute Name="HasQuotes" UId="699">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="700" />
+            <Component Name="Table" UId="701" />
+            <Token Text="." UId="702" />
+            <Component Name="WeightValue1" UId="703" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="705" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="706" />
+  <NewLine Num="2" UId="707" />
+  <Access Scope="Call" UId="708">
+    <CallInfo UId="709" BlockType="FB" Name="WeightHandler">
+      <Instance Scope="LocalVariable" UId="710">
+        <Component Name="WeightHandlers" UId="711">
+          <Token Text="[" UId="712" />
+          <Access Scope="LiteralConstant" UId="713">
+            <Constant UId="714">
+              <ConstantValue UId="716">1</ConstantValue>
+            </Constant>
+          </Access>
+          <Token Text="]" UId="717" />
+        </Component>
+      </Instance>
+      <Token Text="(" UId="718" />
+      <NewLine Num="1" UId="719" />
+      <Blank Num="19" UId="720" />
+      <Parameter Name="Value" UId="721">
+        <Blank Num="1" UId="722" />
+        <Token Text=":=" UId="723" />
+        <Blank Num="1" UId="724" />
+        <Access Scope="GlobalVariable" UId="725">
+          <Symbol UId="726">
+            <Component Name="MB" UId="727">
+              <BooleanAttribute Name="HasQuotes" UId="728">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="729" />
+            <Component Name="Table" UId="730" />
+            <Token Text="." UId="731" />
+            <Component Name="SensorWeightVoltage2" UId="732" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="733" />
+      <NewLine Num="1" UId="734" />
+      <Blank Num="19" UId="735" />
+      <Parameter Name="ValueMin" UId="736">
+        <Blank Num="1" UId="737" />
+        <Token Text=":=" UId="738" />
+        <Blank Num="1" UId="739" />
+        <Access Scope="GlobalVariable" UId="740">
+          <Symbol UId="741">
+            <Component Name="MB" UId="742">
+              <BooleanAttribute Name="HasQuotes" UId="743">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="744" />
+            <Component Name="Table" UId="745" />
+            <Token Text="." UId="746" />
+            <Component Name="WeightVoltageMin2" UId="747" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="748" />
+      <NewLine Num="1" UId="749" />
+      <Blank Num="19" UId="750" />
+      <Parameter Name="ValueMax" UId="751">
+        <Blank Num="1" UId="752" />
+        <Token Text=":=" UId="753" />
+        <Blank Num="1" UId="754" />
+        <Access Scope="GlobalVariable" UId="755">
+          <Symbol UId="756">
+            <Component Name="MB" UId="757">
+              <BooleanAttribute Name="HasQuotes" UId="758">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="759" />
+            <Component Name="Table" UId="760" />
+            <Token Text="." UId="761" />
+            <Component Name="WeightVoltageMax2" UId="762" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="763" />
+      <NewLine Num="1" UId="764" />
+      <Blank Num="19" UId="765" />
+      <Parameter Name="ValueOffset" UId="766">
+        <Blank Num="1" UId="767" />
+        <Token Text=":=" UId="768" />
+        <Blank Num="1" UId="769" />
+        <Access Scope="GlobalVariable" UId="770">
+          <Symbol UId="771">
+            <Component Name="MB" UId="772">
+              <BooleanAttribute Name="HasQuotes" UId="773">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="774" />
+            <Component Name="Table" UId="775" />
+            <Token Text="." UId="776" />
+            <Component Name="WeightValueOffset2" UId="777" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="778" />
+      <NewLine Num="1" UId="779" />
+      <Blank Num="19" UId="780" />
+      <Parameter Name="OutputMin" UId="781">
+        <Blank Num="1" UId="782" />
+        <Token Text=":=" UId="783" />
+        <Blank Num="1" UId="784" />
+        <Access Scope="GlobalVariable" UId="785">
+          <Symbol UId="786">
+            <Component Name="MB" UId="787">
+              <BooleanAttribute Name="HasQuotes" UId="788">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="789" />
+            <Component Name="Table" UId="790" />
+            <Token Text="." UId="791" />
+            <Component Name="WeightValueMin2" UId="792" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="793" />
+      <NewLine Num="1" UId="794" />
+      <Blank Num="19" UId="795" />
+      <Parameter Name="OutputMax" UId="796">
+        <Blank Num="1" UId="797" />
+        <Token Text=":=" UId="798" />
+        <Blank Num="1" UId="799" />
+        <Access Scope="GlobalVariable" UId="800">
+          <Symbol UId="801">
+            <Component Name="MB" UId="802">
+              <BooleanAttribute Name="HasQuotes" UId="803">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="804" />
+            <Component Name="Table" UId="805" />
+            <Token Text="." UId="806" />
+            <Component Name="WeightValueMax2" UId="807" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="808" />
+      <NewLine Num="1" UId="809" />
+      <Blank Num="19" UId="810" />
+      <Parameter Name="Output" UId="811">
+        <Blank Num="1" UId="812" />
+        <Token Text="=&gt;" UId="813" />
+        <Blank Num="1" UId="814" />
+        <Access Scope="GlobalVariable" UId="815">
+          <Symbol UId="816">
+            <Component Name="MB" UId="817">
+              <BooleanAttribute Name="HasQuotes" UId="818">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="819" />
+            <Component Name="Table" UId="820" />
+            <Token Text="." UId="821" />
+            <Component Name="WeightValue2" UId="822" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="824" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="825" />
+  <NewLine Num="2" UId="826" />
+  <Access Scope="LocalVariable" UId="827">
+    <Symbol UId="828">
+      <Component Name="Ret" UId="829" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="830" />
+  <Token Text=":=" UId="831" />
+  <Blank Num="1" UId="832" />
+  <Access Scope="Call" UId="833">
+    <Instruction Name="RD_SYS_T" UId="834">
+      <Token Text="(" UId="835" />
+      <NamelessParameter UId="836">
+        <Access Scope="LocalVariable" UId="837">
+          <Symbol UId="838">
+            <Component Name="TimeNow" UId="839" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="841" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="842" />
+  <NewLine Num="2" UId="843" />
+  <Access Scope="Call" UId="844">
+    <CallInfo UId="845" BlockType="FB" Name="TankWeigher">
+      <Instance Scope="LocalVariable" UId="846">
+        <Component Name="TankWeigher1" UId="847" />
+      </Instance>
+      <Token Text="(" UId="848" />
+      <Parameter Name="WeightDelay" UId="849">
+        <Token Text=":=" UId="850" />
+        <Access Scope="GlobalVariable" UId="851">
+          <Symbol UId="852">
+            <Component Name="MB" UId="853">
+              <BooleanAttribute Name="HasQuotes" UId="854">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="855" />
+            <Component Name="Table" UId="856" />
+            <Token Text="." UId="857" />
+            <Component Name="WeightingDelay" UId="858" />
+          </Symbol>
+        </Access>
+        <Token Text="*" UId="859" />
+        <Access Scope="LiteralConstant" UId="860">
+          <Constant UId="861">
+            <ConstantValue UId="863">1000</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="864" />
+      <NewLine Num="1" UId="865" />
+      <Blank Num="14" UId="866" />
+      <Parameter Name="WeightDeadZone" UId="867">
+        <Token Text=":=" UId="868" />
+        <Access Scope="GlobalVariable" UId="869">
+          <Symbol UId="870">
+            <Component Name="MB" UId="871">
+              <BooleanAttribute Name="HasQuotes" UId="872">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="873" />
+            <Component Name="Table" UId="874" />
+            <Token Text="." UId="875" />
+            <Component Name="WeightingDeadZone" UId="876" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="877" />
+      <NewLine Num="1" UId="878" />
+      <Blank Num="14" UId="879" />
+      <Parameter Name="DayTour" UId="880">
+        <Token Text=":=" UId="881" />
+        <Access Scope="GlobalVariable" UId="882">
+          <Symbol UId="883">
+            <Component Name="MB" UId="884">
+              <BooleanAttribute Name="HasQuotes" UId="885">true</BooleanAttribute>
+            </Component>
+            <Token Text="." UId="886" />
+            <Component Name="Table" UId="887" />
+            <Token Text="." UId="888" />
+            <Component Name="CycleDay" UId="889" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="890" />
+      <NewLine Num="1" UId="891" />
+      <Blank Num="14" UId="892" />
+      <Parameter Name="CalendarMonth" UId="893">
+        <Blank Num="1" UId="894" />
+        <Token Text=":=" UId="895" />
+        <Blank Num="1" UId="896" />
+        <Access Scope="LocalVariable" UId="897">
+          <Symbol UId="898">
+            <Component Name="TimeNow" UId="899" />
+            <Token Text="." UId="900" />
+            <Component Name="MONTH" UId="901" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="902" />
+      <NewLine Num="1" UId="903" />
+      <Blank Num="14" UId="904" />
+      <Parameter Name="CalendarDay" UId="905">
+        <Blank Num="1" UId="906" />
+        <Token Text=":=" UId="907" />
+        <Blank Num="1" UId="908" />
+        <Access Scope="LocalVariable" UId="909">
+          <Symbol UId="910">
+            <Component Name="TimeNow" UId="911" />
+            <Token Text="." UId="912" />
+            <Component Name="DAY" UId="913" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="914" />
+      <NewLine Num="1" UId="915" />
+      <Blank Num="14" UId="916" />
+      <Parameter Name="ref_RetainData" UId="917">
+        <Token Text=":=" UId="918" />
+        <Access Scope="LocalVariable" UId="919">
+          <Symbol UId="920">
+            <Component Name="RetainData" UId="921" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <NewLine Num="1" UId="922" />
+      <Token Text=")" UId="926" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="927" />
+  <NewLine Num="2" UId="928" />
+  <Token Text="IF" UId="929" />
+  <Blank Num="1" UId="930" />
+  <Access Scope="LocalVariable" UId="931">
+    <Symbol UId="932">
+      <Component Name="ManualValueProvided1" UId="933" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="934" />
+  <Token Text="THEN" UId="935" />
+  <NewLine Num="1" UId="936" />
+  <Blank Num="4" UId="937" />
+  <Access Scope="GlobalVariable" UId="938">
+    <Symbol UId="939">
+      <Component Name="MB" UId="940">
+        <BooleanAttribute Name="HasQuotes" UId="941">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="942" />
+      <Component Name="Table" UId="943" />
+      <Token Text="." UId="944" />
+      <Component Name="WeightValue1" UId="945" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="946" />
+  <Token Text=":=" UId="947" />
+  <Blank Num="1" UId="948" />
+  <Access Scope="LocalVariable" UId="949">
+    <Symbol UId="950">
+      <Component Name="ManualValue1" UId="951" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="952" />
+  <NewLine Num="1" UId="953" />
+  <Token Text="END_IF" UId="954" />
+  <Token Text=";" UId="955" />
+  <NewLine Num="2" UId="956" />
+  <Token Text="IF" UId="957" />
+  <Blank Num="1" UId="958" />
+  <Access Scope="LocalVariable" UId="959">
+    <Symbol UId="960">
+      <Component Name="ManualValueProvided2" UId="961" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="962" />
+  <Token Text="THEN" UId="963" />
+  <NewLine Num="1" UId="964" />
+  <Blank Num="4" UId="965" />
+  <Access Scope="GlobalVariable" UId="966">
+    <Symbol UId="967">
+      <Component Name="MB" UId="968">
+        <BooleanAttribute Name="HasQuotes" UId="969">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="970" />
+      <Component Name="Table" UId="971" />
+      <Token Text="." UId="972" />
+      <Component Name="WeightValue2" UId="973" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="974" />
+  <Token Text=":=" UId="975" />
+  <Blank Num="1" UId="976" />
+  <Access Scope="LocalVariable" UId="977">
+    <Symbol UId="978">
+      <Component Name="ManualValue2" UId="979" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="980" />
+  <NewLine Num="1" UId="981" />
+  <Token Text="END_IF" UId="982" />
+  <Token Text=";" UId="983" />
+  <NewLine Num="2" UId="984" />
+  <Access Scope="GlobalVariable" UId="985">
+    <Symbol UId="986">
+      <Component Name="MB" UId="987">
+        <BooleanAttribute Name="HasQuotes" UId="988">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="989" />
+      <Component Name="Table" UId="990" />
+      <Token Text="." UId="991" />
+      <Component Name="WeightValue1Liters" UId="992" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="993" />
+  <Token Text=":=" UId="994" />
+  <Blank Num="1" UId="995" />
+  <Access Scope="GlobalVariable" UId="996">
+    <Symbol UId="997">
+      <Component Name="MB" UId="998">
+        <BooleanAttribute Name="HasQuotes" UId="999">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1000" />
+      <Component Name="Table" UId="1001" />
+      <Token Text="." UId="1002" />
+      <Component Name="WeightValue1" UId="1003" />
+    </Symbol>
+  </Access>
+  <Token Text="/" UId="1004" />
+  <Blank Num="1" UId="1005" />
+  <Access Scope="LocalConstant" UId="1006">
+    <Constant Name="CLOR_DENSITY" UId="1007" />
+  </Access>
+  <Token Text=";" UId="1010" />
+  <NewLine Num="1" UId="1011" />
+  <Access Scope="GlobalVariable" UId="1012">
+    <Symbol UId="1013">
+      <Component Name="MB" UId="1014">
+        <BooleanAttribute Name="HasQuotes" UId="1015">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1016" />
+      <Component Name="Table" UId="1017" />
+      <Token Text="." UId="1018" />
+      <Component Name="WeightValue2Liters" UId="1019" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1020" />
+  <Token Text=":=" UId="1021" />
+  <Blank Num="1" UId="1022" />
+  <Access Scope="GlobalVariable" UId="1023">
+    <Symbol UId="1024">
+      <Component Name="MB" UId="1025">
+        <BooleanAttribute Name="HasQuotes" UId="1026">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1027" />
+      <Component Name="Table" UId="1028" />
+      <Token Text="." UId="1029" />
+      <Component Name="WeightValue2" UId="1030" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1031" />
+  <Token Text="/" UId="1032" />
+  <Blank Num="1" UId="1033" />
+  <Access Scope="LocalConstant" UId="1034">
+    <Constant Name="CLOR_DENSITY" UId="1035" />
+  </Access>
+  <Token Text=";" UId="1038" />
+  <NewLine Num="2" UId="1039" />
+  <Access Scope="GlobalVariable" UId="1040">
+    <Symbol UId="1041">
+      <Component Name="MB" UId="1042">
+        <BooleanAttribute Name="HasQuotes" UId="1043">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1044" />
+      <Component Name="Table" UId="1045" />
+      <Token Text="." UId="1046" />
+      <Component Name="WeightingStat_CalendarDay" UId="1047" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1048" />
+  <Token Text=":=" UId="1049" />
+  <Blank Num="1" UId="1050" />
+  <Access Scope="LocalVariable" UId="1051">
+    <Symbol UId="1052">
+      <Component Name="RetainData" UId="1053" />
+      <Token Text="." UId="1054" />
+      <Component Name="ArrayCalendarDay" UId="1055" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1056" />
+  <NewLine Num="1" UId="1057" />
+  <Access Scope="GlobalVariable" UId="1058">
+    <Symbol UId="1059">
+      <Component Name="MB" UId="1060">
+        <BooleanAttribute Name="HasQuotes" UId="1061">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1062" />
+      <Component Name="Table" UId="1063" />
+      <Token Text="." UId="1064" />
+      <Component Name="WeightingStat_CalendarMonth" UId="1065" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1066" />
+  <Token Text=":=" UId="1067" />
+  <Blank Num="1" UId="1068" />
+  <Access Scope="LocalVariable" UId="1069">
+    <Symbol UId="1070">
+      <Component Name="RetainData" UId="1071" />
+      <Token Text="." UId="1072" />
+      <Component Name="ArrayCalendarMonth" UId="1073" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1074" />
+  <NewLine Num="1" UId="1075" />
+  <Access Scope="GlobalVariable" UId="1076">
+    <Symbol UId="1077">
+      <Component Name="MB" UId="1078">
+        <BooleanAttribute Name="HasQuotes" UId="1079">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1080" />
+      <Component Name="Table" UId="1081" />
+      <Token Text="." UId="1082" />
+      <Component Name="WeightingStat_DayCycle" UId="1083" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1084" />
+  <Token Text=":=" UId="1085" />
+  <Blank Num="1" UId="1086" />
+  <Access Scope="LocalVariable" UId="1087">
+    <Symbol UId="1088">
+      <Component Name="RetainData" UId="1089" />
+      <Token Text="." UId="1090" />
+      <Component Name="ArrayDayTour" UId="1091" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1092" />
+  <NewLine Num="1" UId="1093" />
+  <Access Scope="GlobalVariable" UId="1094">
+    <Symbol UId="1095">
+      <Component Name="MB" UId="1096">
+        <BooleanAttribute Name="HasQuotes" UId="1097">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1098" />
+      <Component Name="Table" UId="1099" />
+      <Token Text="." UId="1100" />
+      <Component Name="WeightingStat_Counsumed1" UId="1101" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1102" />
+  <Token Text=":=" UId="1103" />
+  <Blank Num="1" UId="1104" />
+  <Access Scope="LocalVariable" UId="1105">
+    <Symbol UId="1106">
+      <Component Name="RetainData" UId="1107" />
+      <Token Text="." UId="1108" />
+      <Component Name="ArrayConsumedFeed1" UId="1109" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1110" />
+  <NewLine Num="1" UId="1111" />
+  <Access Scope="GlobalVariable" UId="1112">
+    <Symbol UId="1113">
+      <Component Name="MB" UId="1114">
+        <BooleanAttribute Name="HasQuotes" UId="1115">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1116" />
+      <Component Name="Table" UId="1117" />
+      <Token Text="." UId="1118" />
+      <Component Name="WeightingStat_Load1" UId="1119" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1120" />
+  <Token Text=":=" UId="1121" />
+  <Blank Num="1" UId="1122" />
+  <Access Scope="LocalVariable" UId="1123">
+    <Symbol UId="1124">
+      <Component Name="RetainData" UId="1125" />
+      <Token Text="." UId="1126" />
+      <Component Name="ArrayLoadedFeed1" UId="1127" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1128" />
+  <NewLine Num="1" UId="1129" />
+  <Access Scope="GlobalVariable" UId="1130">
+    <Symbol UId="1131">
+      <Component Name="MB" UId="1132">
+        <BooleanAttribute Name="HasQuotes" UId="1133">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1134" />
+      <Component Name="Table" UId="1135" />
+      <Token Text="." UId="1136" />
+      <Component Name="WeightingStat_Counsumed2" UId="1137" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1138" />
+  <Token Text=":=" UId="1139" />
+  <Blank Num="1" UId="1140" />
+  <Access Scope="LocalVariable" UId="1141">
+    <Symbol UId="1142">
+      <Component Name="RetainData" UId="1143" />
+      <Token Text="." UId="1144" />
+      <Component Name="ArrayConsumedFeed2" UId="1145" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1146" />
+  <NewLine Num="1" UId="1147" />
+  <Access Scope="GlobalVariable" UId="1148">
+    <Symbol UId="1149">
+      <Component Name="MB" UId="1150">
+        <BooleanAttribute Name="HasQuotes" UId="1151">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1152" />
+      <Component Name="Table" UId="1153" />
+      <Token Text="." UId="1154" />
+      <Component Name="WeightingStat_Load2" UId="1155" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1156" />
+  <Token Text=":=" UId="1157" />
+  <Blank Num="1" UId="1158" />
+  <Access Scope="LocalVariable" UId="1159">
+    <Symbol UId="1160">
+      <Component Name="RetainData" UId="1161" />
+      <Token Text="." UId="1162" />
+      <Component Name="ArrayLoadedFeed2" UId="1163" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1164" />
+  <NewLine Num="1" UId="1165" />
+  <Access Scope="GlobalVariable" UId="1166">
+    <Symbol UId="1167">
+      <Component Name="MB" UId="1168">
+        <BooleanAttribute Name="HasQuotes" UId="1169">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1170" />
+      <Component Name="Table" UId="1171" />
+      <Token Text="." UId="1172" />
+      <Component Name="WeightSensor1Error" UId="1173" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1174" />
+  <Token Text=":=" UId="1175" />
+  <Blank Num="1" UId="1176" />
+  <Access Scope="LocalVariable" UId="1177">
+    <Symbol UId="1178">
+      <Component Name="WeightHandlers" UId="1179">
+        <Token Text="[" UId="1180" />
+        <Access Scope="LiteralConstant" UId="1181">
+          <Constant UId="1182">
+            <ConstantValue UId="1184">0</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1185" />
+      </Component>
+      <Token Text="." UId="1186" />
+      <Component Name="Error" UId="1187" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1188" />
+  <NewLine Num="1" UId="1189" />
+  <Access Scope="GlobalVariable" UId="1190">
+    <Symbol UId="1191">
+      <Component Name="MB" UId="1192">
+        <BooleanAttribute Name="HasQuotes" UId="1193">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="1194" />
+      <Component Name="Table" UId="1195" />
+      <Token Text="." UId="1196" />
+      <Component Name="WeightSensor2Error" UId="1197" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1198" />
+  <Token Text=":=" UId="1199" />
+  <Blank Num="1" UId="1200" />
+  <Access Scope="LocalVariable" UId="1201">
+    <Symbol UId="1202">
+      <Component Name="WeightHandlers" UId="1203">
+        <Token Text="[" UId="1204" />
+        <Access Scope="LiteralConstant" UId="1205">
+          <Constant UId="1206">
+            <ConstantValue UId="1208">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1209" />
+      </Component>
+      <Token Text="." UId="1210" />
+      <Component Name="Error" UId="1211" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1212" />
+  <NewLine Num="4" UId="1213" />
+  <Blank Num="4" UId="1214" />
+  <NewLine Num="2" UId="1215" />
+  <Blank Num="4" UId="1216" />
+  <NewLine Num="8" UId="1217" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

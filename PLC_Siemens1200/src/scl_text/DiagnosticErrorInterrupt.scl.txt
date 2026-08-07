@@ -1,0 +1,4 @@
+IO state of the HW object
+Hardware identifier
+Channel number
+=true if more than one error is present

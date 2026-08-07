@@ -1,0 +1,11 @@
+ IF "MB".Table.WaterConsumption < 0 THEN
+     "OsmosAO" := 5520;
+ ELSIF "MB".Table.WaterConsumption > 80.0 THEN
+     "OsmosAO" := 27648;
+ ELSE
+     "OsmosAO" := REAL_TO_INT(("MB".Table.WaterConsumption - "MB".Table.RecerculationFlow) / (80) * (27648 - 5520) + 5520);
+ END_IF;
+ "MB".Table.FlowWithouRecerculation := "MB".Table.WaterConsumption - "MB".Table.RecerculationFlow;
+ IF "MB".Table.FlowWithouRecerculation < 0 THEN
+     "MB".Table.FlowWithouRecerculation := 0;
+ END_IF;

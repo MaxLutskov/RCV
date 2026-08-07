@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <DocumentInfo>
+    <Created>2026-07-10T11:12:34.3299646Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Basic/Comfort/Advanced</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+      <Product>
+        <DisplayName>WinCC Unified</DisplayName>
+        <DisplayVersion>V20</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="CurrentConsumedFeed1" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="CurrentConsumedFeed2" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="CurrentLoadedFeed1" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="CurrentLoadedFeed2" Datatype="Real" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="DayTour" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="CalendarDay" Datatype="UInt" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="CalendarMonth" Datatype="UInt" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="ResetCounters" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="InOut">
+    <Member Name="ref_RetainData" Datatype="&quot;WeightRetainData&quot;" Accessibility="Public">
+      <Sections>
+        <Section Name="None">
+          <Member Name="ArrayConsumedFeed1" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayConsumedFeed2" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayLoadedFeed1" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayLoadedFeed2" Datatype="Array[1..30] of Real" />
+          <Member Name="ArrayDayTour" Datatype="Array[1..30] of Int" />
+          <Member Name="ArrayCalendarMonth" Datatype="Array[1..30] of UInt" />
+          <Member Name="ArrayCalendarDay" Datatype="Array[1..30] of UInt" />
+          <Member Name="ConsumedFeed1" Datatype="Real" />
+          <Member Name="LoadedFeed1" Datatype="Real" />
+          <Member Name="PreviousWeight1" Datatype="Real" />
+          <Member Name="ConsumedFeed2" Datatype="Real" />
+          <Member Name="LoadedFeed2" Datatype="Real" />
+          <Member Name="PreviousWeight2" Datatype="Real" />
+          <Member Name="PreviousDayTour" Datatype="Int" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="i" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant">
+    <Member Name="c_ARRAY_SIZE" Datatype="Int" Accessibility="Public">
+      <StartValue>30</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>TankRegistrator</Name>
+      <Namespace />
+      <Number>24</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v4">
+  <NewLine Num="1" UId="21" />
+  <Token Text="IF" UId="22" />
+  <Blank Num="1" UId="23" />
+  <Access Scope="LocalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="ref_RetainData" UId="26" />
+      <Token Text="." UId="27" />
+      <Component Name="PreviousDayTour" UId="28" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="29" />
+  <Token Text="&lt;&gt;" UId="30" />
+  <Blank Num="1" UId="31" />
+  <Access Scope="LocalVariable" UId="32">
+    <Symbol UId="33">
+      <Component Name="DayTour" UId="34" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="35" />
+  <Token Text="THEN" UId="36" />
+  <NewLine Num="1" UId="37" />
+  <Blank Num="4" UId="38" />
+  <Token Text="FOR" UId="39" />
+  <Blank Num="1" UId="40" />
+  <Access Scope="LocalVariable" UId="41">
+    <Symbol UId="42">
+      <Component Name="i" UId="43" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="44" />
+  <Token Text=":=" UId="45" />
+  <Blank Num="1" UId="46" />
+  <Access Scope="LiteralConstant" UId="47">
+    <Constant UId="48">
+      <ConstantValue UId="50">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="51" />
+  <Token Text="TO" UId="52" />
+  <Blank Num="1" UId="53" />
+  <Token Text="(" UId="54" />
+  <Access Scope="LocalConstant" UId="55">
+    <Constant Name="c_ARRAY_SIZE" UId="56" />
+  </Access>
+  <Blank Num="1" UId="59" />
+  <Token Text="-" UId="60" />
+  <Blank Num="1" UId="61" />
+  <Access Scope="LiteralConstant" UId="62">
+    <Constant UId="63">
+      <ConstantValue UId="65">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="66" />
+  <Blank Num="1" UId="67" />
+  <Token Text="DO" UId="68" />
+  <NewLine Num="1" UId="69" />
+  <Blank Num="8" UId="70" />
+  <Access Scope="LocalVariable" UId="71">
+    <Symbol UId="72">
+      <Component Name="ref_RetainData" UId="73" />
+      <Token Text="." UId="74" />
+      <Component Name="ArrayConsumedFeed1" UId="75">
+        <Token Text="[" UId="76" />
+        <Access Scope="LocalConstant" UId="77">
+          <Constant UId="78">
+            <ConstantValue UId="80">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="81" />
+        <Token Text="-" UId="82" />
+        <Blank Num="1" UId="83" />
+        <Access Scope="LocalVariable" UId="84">
+          <Symbol UId="85">
+            <Component Name="i" UId="86" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="87" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="88" />
+  <Token Text=":=" UId="89" />
+  <Blank Num="1" UId="90" />
+  <Access Scope="LocalVariable" UId="91">
+    <Symbol UId="92">
+      <Component Name="ref_RetainData" UId="93" />
+      <Token Text="." UId="94" />
+      <Component Name="ArrayConsumedFeed1" UId="95">
+        <Token Text="[" UId="96" />
+        <Access Scope="LocalConstant" UId="97">
+          <Constant UId="98">
+            <ConstantValue UId="100">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="101" />
+        <Token Text="-" UId="102" />
+        <Blank Num="1" UId="103" />
+        <Access Scope="LocalVariable" UId="104">
+          <Symbol UId="105">
+            <Component Name="i" UId="106" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="107" />
+        <Token Text="-" UId="108" />
+        <Blank Num="1" UId="109" />
+        <Access Scope="LiteralConstant" UId="110">
+          <Constant UId="111">
+            <ConstantValue UId="113">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="114" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="115" />
+  <NewLine Num="1" UId="116" />
+  <Blank Num="8" UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="ref_RetainData" UId="120" />
+      <Token Text="." UId="121" />
+      <Component Name="ArrayLoadedFeed1" UId="122">
+        <Token Text="[" UId="123" />
+        <Access Scope="LocalConstant" UId="124">
+          <Constant UId="125">
+            <ConstantValue UId="127">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="128" />
+        <Token Text="-" UId="129" />
+        <Blank Num="1" UId="130" />
+        <Access Scope="LocalVariable" UId="131">
+          <Symbol UId="132">
+            <Component Name="i" UId="133" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="134" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="135" />
+  <Token Text=":=" UId="136" />
+  <Blank Num="1" UId="137" />
+  <Access Scope="LocalVariable" UId="138">
+    <Symbol UId="139">
+      <Component Name="ref_RetainData" UId="140" />
+      <Token Text="." UId="141" />
+      <Component Name="ArrayLoadedFeed1" UId="142">
+        <Token Text="[" UId="143" />
+        <Access Scope="LocalConstant" UId="144">
+          <Constant UId="145">
+            <ConstantValue UId="147">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="148" />
+        <Token Text="-" UId="149" />
+        <Blank Num="1" UId="150" />
+        <Access Scope="LocalVariable" UId="151">
+          <Symbol UId="152">
+            <Component Name="i" UId="153" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="154" />
+        <Token Text="-" UId="155" />
+        <Blank Num="1" UId="156" />
+        <Access Scope="LiteralConstant" UId="157">
+          <Constant UId="158">
+            <ConstantValue UId="160">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="161" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="162" />
+  <NewLine Num="1" UId="163" />
+  <Blank Num="8" UId="164" />
+  <Access Scope="LocalVariable" UId="165">
+    <Symbol UId="166">
+      <Component Name="ref_RetainData" UId="167" />
+      <Token Text="." UId="168" />
+      <Component Name="ArrayConsumedFeed2" UId="169">
+        <Token Text="[" UId="170" />
+        <Access Scope="LocalConstant" UId="171">
+          <Constant UId="172">
+            <ConstantValue UId="174">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="175" />
+        <Token Text="-" UId="176" />
+        <Blank Num="1" UId="177" />
+        <Access Scope="LocalVariable" UId="178">
+          <Symbol UId="179">
+            <Component Name="i" UId="180" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="181" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="182" />
+  <Token Text=":=" UId="183" />
+  <Blank Num="1" UId="184" />
+  <Access Scope="LocalVariable" UId="185">
+    <Symbol UId="186">
+      <Component Name="ref_RetainData" UId="187" />
+      <Token Text="." UId="188" />
+      <Component Name="ArrayConsumedFeed2" UId="189">
+        <Token Text="[" UId="190" />
+        <Access Scope="LocalConstant" UId="191">
+          <Constant UId="192">
+            <ConstantValue UId="194">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="195" />
+        <Token Text="-" UId="196" />
+        <Blank Num="1" UId="197" />
+        <Access Scope="LocalVariable" UId="198">
+          <Symbol UId="199">
+            <Component Name="i" UId="200" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="201" />
+        <Token Text="-" UId="202" />
+        <Blank Num="1" UId="203" />
+        <Access Scope="LiteralConstant" UId="204">
+          <Constant UId="205">
+            <ConstantValue UId="207">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="208" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="209" />
+  <NewLine Num="1" UId="210" />
+  <Blank Num="8" UId="211" />
+  <Access Scope="LocalVariable" UId="212">
+    <Symbol UId="213">
+      <Component Name="ref_RetainData" UId="214" />
+      <Token Text="." UId="215" />
+      <Component Name="ArrayLoadedFeed2" UId="216">
+        <Token Text="[" UId="217" />
+        <Access Scope="LocalConstant" UId="218">
+          <Constant UId="219">
+            <ConstantValue UId="221">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="222" />
+        <Token Text="-" UId="223" />
+        <Blank Num="1" UId="224" />
+        <Access Scope="LocalVariable" UId="225">
+          <Symbol UId="226">
+            <Component Name="i" UId="227" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="228" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="229" />
+  <Token Text=":=" UId="230" />
+  <Blank Num="1" UId="231" />
+  <Access Scope="LocalVariable" UId="232">
+    <Symbol UId="233">
+      <Component Name="ref_RetainData" UId="234" />
+      <Token Text="." UId="235" />
+      <Component Name="ArrayLoadedFeed2" UId="236">
+        <Token Text="[" UId="237" />
+        <Access Scope="LocalConstant" UId="238">
+          <Constant UId="239">
+            <ConstantValue UId="241">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="242" />
+        <Token Text="-" UId="243" />
+        <Blank Num="1" UId="244" />
+        <Access Scope="LocalVariable" UId="245">
+          <Symbol UId="246">
+            <Component Name="i" UId="247" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="248" />
+        <Token Text="-" UId="249" />
+        <Blank Num="1" UId="250" />
+        <Access Scope="LiteralConstant" UId="251">
+          <Constant UId="252">
+            <ConstantValue UId="254">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="255" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="256" />
+  <NewLine Num="1" UId="257" />
+  <Blank Num="8" UId="258" />
+  <Access Scope="LocalVariable" UId="259">
+    <Symbol UId="260">
+      <Component Name="ref_RetainData" UId="261" />
+      <Token Text="." UId="262" />
+      <Component Name="ArrayDayTour" UId="263">
+        <Token Text="[" UId="264" />
+        <Access Scope="LocalConstant" UId="265">
+          <Constant UId="266">
+            <ConstantValue UId="268">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="269" />
+        <Token Text="-" UId="270" />
+        <Blank Num="1" UId="271" />
+        <Access Scope="LocalVariable" UId="272">
+          <Symbol UId="273">
+            <Component Name="i" UId="274" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="275" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="276" />
+  <Token Text=":=" UId="277" />
+  <Blank Num="1" UId="278" />
+  <Access Scope="LocalVariable" UId="279">
+    <Symbol UId="280">
+      <Component Name="ref_RetainData" UId="281" />
+      <Token Text="." UId="282" />
+      <Component Name="ArrayDayTour" UId="283">
+        <Token Text="[" UId="284" />
+        <Access Scope="LocalConstant" UId="285">
+          <Constant UId="286">
+            <ConstantValue UId="288">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="289" />
+        <Token Text="-" UId="290" />
+        <Blank Num="1" UId="291" />
+        <Access Scope="LocalVariable" UId="292">
+          <Symbol UId="293">
+            <Component Name="i" UId="294" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="295" />
+        <Token Text="-" UId="296" />
+        <Blank Num="1" UId="297" />
+        <Access Scope="LiteralConstant" UId="298">
+          <Constant UId="299">
+            <ConstantValue UId="301">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="302" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="303" />
+  <NewLine Num="1" UId="304" />
+  <Blank Num="8" UId="305" />
+  <Access Scope="LocalVariable" UId="306">
+    <Symbol UId="307">
+      <Component Name="ref_RetainData" UId="308" />
+      <Token Text="." UId="309" />
+      <Component Name="ArrayCalendarDay" UId="310">
+        <Token Text="[" UId="311" />
+        <Access Scope="LocalConstant" UId="312">
+          <Constant UId="313">
+            <ConstantValue UId="315">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="316" />
+        <Token Text="-" UId="317" />
+        <Blank Num="1" UId="318" />
+        <Access Scope="LocalVariable" UId="319">
+          <Symbol UId="320">
+            <Component Name="i" UId="321" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="322" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="323" />
+  <Token Text=":=" UId="324" />
+  <Blank Num="1" UId="325" />
+  <Access Scope="LocalVariable" UId="326">
+    <Symbol UId="327">
+      <Component Name="ref_RetainData" UId="328" />
+      <Token Text="." UId="329" />
+      <Component Name="ArrayCalendarDay" UId="330">
+        <Token Text="[" UId="331" />
+        <Access Scope="LocalConstant" UId="332">
+          <Constant UId="333">
+            <ConstantValue UId="335">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="336" />
+        <Token Text="-" UId="337" />
+        <Blank Num="1" UId="338" />
+        <Access Scope="LocalVariable" UId="339">
+          <Symbol UId="340">
+            <Component Name="i" UId="341" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="342" />
+        <Token Text="-" UId="343" />
+        <Blank Num="1" UId="344" />
+        <Access Scope="LiteralConstant" UId="345">
+          <Constant UId="346">
+            <ConstantValue UId="348">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="349" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="350" />
+  <NewLine Num="1" UId="351" />
+  <Blank Num="8" UId="352" />
+  <Access Scope="LocalVariable" UId="353">
+    <Symbol UId="354">
+      <Component Name="ref_RetainData" UId="355" />
+      <Token Text="." UId="356" />
+      <Component Name="ArrayCalendarMonth" UId="357">
+        <Token Text="[" UId="358" />
+        <Access Scope="LocalConstant" UId="359">
+          <Constant UId="360">
+            <ConstantValue UId="362">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="363" />
+        <Token Text="-" UId="364" />
+        <Blank Num="1" UId="365" />
+        <Access Scope="LocalVariable" UId="366">
+          <Symbol UId="367">
+            <Component Name="i" UId="368" />
+          </Symbol>
+        </Access>
+        <Token Text="]" UId="369" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="370" />
+  <Token Text=":=" UId="371" />
+  <Blank Num="1" UId="372" />
+  <Access Scope="LocalVariable" UId="373">
+    <Symbol UId="374">
+      <Component Name="ref_RetainData" UId="375" />
+      <Token Text="." UId="376" />
+      <Component Name="ArrayCalendarMonth" UId="377">
+        <Token Text="[" UId="378" />
+        <Access Scope="LocalConstant" UId="379">
+          <Constant UId="380">
+            <ConstantValue UId="382">c_ARRAY_SIZE</ConstantValue>
+          </Constant>
+        </Access>
+        <Blank Num="1" UId="383" />
+        <Token Text="-" UId="384" />
+        <Blank Num="1" UId="385" />
+        <Access Scope="LocalVariable" UId="386">
+          <Symbol UId="387">
+            <Component Name="i" UId="388" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="389" />
+        <Token Text="-" UId="390" />
+        <Blank Num="1" UId="391" />
+        <Access Scope="LiteralConstant" UId="392">
+          <Constant UId="393">
+            <ConstantValue UId="395">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="396" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="397" />
+  <NewLine Num="1" UId="398" />
+  <Blank Num="4" UId="399" />
+  <Token Text="END_FOR" UId="400" />
+  <Token Text=";" UId="401" />
+  <NewLine Num="1" UId="402" />
+  <Blank Num="4" UId="403" />
+  <Access Scope="LocalVariable" UId="404">
+    <Symbol UId="405">
+      <Component Name="ref_RetainData" UId="406" />
+      <Token Text="." UId="407" />
+      <Component Name="PreviousDayTour" UId="408" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="409" />
+  <Token Text=":=" UId="410" />
+  <Blank Num="1" UId="411" />
+  <Access Scope="LocalVariable" UId="412">
+    <Symbol UId="413">
+      <Component Name="DayTour" UId="414" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="415" />
+  <NewLine Num="1" UId="416" />
+  <Blank Num="4" UId="417" />
+  <Access Scope="LocalVariable" UId="418">
+    <Symbol UId="419">
+      <Component Name="ResetCounters" UId="420" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="421" />
+  <Token Text=":=" UId="422" />
+  <Blank Num="1" UId="423" />
+  <Access Scope="LiteralConstant" UId="424">
+    <Constant UId="425">
+      <ConstantValue UId="427">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="428" />
+  <NewLine Num="1" UId="429" />
+  <Token Text="ELSE" UId="430" />
+  <NewLine Num="1" UId="431" />
+  <Blank Num="4" UId="432" />
+  <Access Scope="LocalVariable" UId="433">
+    <Symbol UId="434">
+      <Component Name="ResetCounters" UId="435" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="436" />
+  <Token Text=":=" UId="437" />
+  <Blank Num="1" UId="438" />
+  <Access Scope="LiteralConstant" UId="439">
+    <Constant UId="440">
+      <ConstantValue UId="442">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="443" />
+  <NewLine Num="1" UId="444" />
+  <Token Text="END_IF" UId="445" />
+  <Token Text=";" UId="446" />
+  <NewLine Num="1" UId="447" />
+  <Blank Num="4" UId="448" />
+  <NewLine Num="1" UId="449" />
+  <Blank Num="4" UId="450" />
+  <Access Scope="LocalVariable" UId="451">
+    <Symbol UId="452">
+      <Component Name="ref_RetainData" UId="453" />
+      <Token Text="." UId="454" />
+      <Component Name="ArrayConsumedFeed1" UId="455">
+        <Token Text="[" UId="456" />
+        <Access Scope="LiteralConstant" UId="457">
+          <Constant UId="458">
+            <ConstantValue UId="460">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="461" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="462" />
+  <Token Text=":=" UId="463" />
+  <Blank Num="1" UId="464" />
+  <Access Scope="LocalVariable" UId="465">
+    <Symbol UId="466">
+      <Component Name="CurrentConsumedFeed1" UId="467" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="468" />
+  <NewLine Num="1" UId="469" />
+  <Blank Num="4" UId="470" />
+  <Access Scope="LocalVariable" UId="471">
+    <Symbol UId="472">
+      <Component Name="ref_RetainData" UId="473" />
+      <Token Text="." UId="474" />
+      <Component Name="ArrayLoadedFeed1" UId="475">
+        <Token Text="[" UId="476" />
+        <Access Scope="LiteralConstant" UId="477">
+          <Constant UId="478">
+            <ConstantValue UId="480">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="481" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="482" />
+  <Token Text=":=" UId="483" />
+  <Blank Num="1" UId="484" />
+  <Access Scope="LocalVariable" UId="485">
+    <Symbol UId="486">
+      <Component Name="CurrentLoadedFeed1" UId="487" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="488" />
+  <NewLine Num="1" UId="489" />
+  <Blank Num="4" UId="490" />
+  <Access Scope="LocalVariable" UId="491">
+    <Symbol UId="492">
+      <Component Name="ref_RetainData" UId="493" />
+      <Token Text="." UId="494" />
+      <Component Name="ArrayConsumedFeed2" UId="495">
+        <Token Text="[" UId="496" />
+        <Access Scope="LiteralConstant" UId="497">
+          <Constant UId="498">
+            <ConstantValue UId="500">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="501" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="502" />
+  <Token Text=":=" UId="503" />
+  <Blank Num="1" UId="504" />
+  <Access Scope="LocalVariable" UId="505">
+    <Symbol UId="506">
+      <Component Name="CurrentConsumedFeed2" UId="507" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="508" />
+  <NewLine Num="1" UId="509" />
+  <Blank Num="4" UId="510" />
+  <Access Scope="LocalVariable" UId="511">
+    <Symbol UId="512">
+      <Component Name="ref_RetainData" UId="513" />
+      <Token Text="." UId="514" />
+      <Component Name="ArrayLoadedFeed2" UId="515">
+        <Token Text="[" UId="516" />
+        <Access Scope="LiteralConstant" UId="517">
+          <Constant UId="518">
+            <ConstantValue UId="520">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="521" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="522" />
+  <Token Text=":=" UId="523" />
+  <Blank Num="1" UId="524" />
+  <Access Scope="LocalVariable" UId="525">
+    <Symbol UId="526">
+      <Component Name="CurrentLoadedFeed2" UId="527" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="528" />
+  <NewLine Num="1" UId="529" />
+  <Blank Num="4" UId="530" />
+  <Access Scope="LocalVariable" UId="531">
+    <Symbol UId="532">
+      <Component Name="ref_RetainData" UId="533" />
+      <Token Text="." UId="534" />
+      <Component Name="ArrayDayTour" UId="535">
+        <Token Text="[" UId="536" />
+        <Access Scope="LiteralConstant" UId="537">
+          <Constant UId="538">
+            <ConstantValue UId="540">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="541" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="542" />
+  <Token Text=":=" UId="543" />
+  <Blank Num="1" UId="544" />
+  <Access Scope="LocalVariable" UId="545">
+    <Symbol UId="546">
+      <Component Name="DayTour" UId="547" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="548" />
+  <NewLine Num="1" UId="549" />
+  <Blank Num="4" UId="550" />
+  <Access Scope="LocalVariable" UId="551">
+    <Symbol UId="552">
+      <Component Name="ref_RetainData" UId="553" />
+      <Token Text="." UId="554" />
+      <Component Name="ArrayCalendarDay" UId="555">
+        <Token Text="[" UId="556" />
+        <Access Scope="LiteralConstant" UId="557">
+          <Constant UId="558">
+            <ConstantValue UId="560">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="561" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="562" />
+  <Token Text=":=" UId="563" />
+  <Blank Num="1" UId="564" />
+  <Access Scope="LocalVariable" UId="565">
+    <Symbol UId="566">
+      <Component Name="CalendarDay" UId="567" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="568" />
+  <NewLine Num="1" UId="569" />
+  <Blank Num="4" UId="570" />
+  <Access Scope="LocalVariable" UId="571">
+    <Symbol UId="572">
+      <Component Name="ref_RetainData" UId="573" />
+      <Token Text="." UId="574" />
+      <Component Name="ArrayCalendarMonth" UId="575">
+        <Token Text="[" UId="576" />
+        <Access Scope="LiteralConstant" UId="577">
+          <Constant UId="578">
+            <ConstantValue UId="580">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="581" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="582" />
+  <Token Text=":=" UId="583" />
+  <Blank Num="1" UId="584" />
+  <Access Scope="LocalVariable" UId="585">
+    <Symbol UId="586">
+      <Component Name="CalendarMonth" UId="587" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="588" />
+  <NewLine Num="1" UId="589" />
+  <Blank Num="4" UId="590" />
+  <NewLine Num="2" UId="591" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

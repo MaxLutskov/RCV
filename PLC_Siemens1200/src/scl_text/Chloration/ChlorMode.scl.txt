@@ -1,0 +1,3 @@
+#WaterPulse_RT(CLK := "WaterCounterOutPulse");
+ChlorationAlgorithm
+ Statement section REGION
